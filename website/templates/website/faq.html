@@ -1,0 +1,439 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<!---Css Style===============-->
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
+<title>HCCCI - FAQ's</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container frequent">
+    <h1 class="text-center my-4">Frequently Asked Questions</h1>
+    
+    <!-- Navigation for Tabs -->
+    <div class="nav nav-justified nav-pills mb-4 frequent2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active navbuttons" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">STUDENT</a>
+        <a class="nav-link navbuttons" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">TEACHER</a>
+        <a class="nav-link navbuttons" id="pills-unifast-tab" data-bs-toggle="pill" href="#pills-unifast" role="tab" aria-controls="pills-unifast" aria-selected="false">Unifast FAQ</a>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="pills-tabContent">
+        <!-- STUDENT FAQs -->
+        <div class="tab-pane fade show active ft1 border shadow p-5" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <h4>How to log in to my account?</h4>
+            <ul>
+                <li><a href="https://lms.hccci.edu.ph/login/index.php">Click Here</a> and click login</li>
+            </ul>
+            <h4>What is my username account?</h4>
+            <ul>
+                <li>Enter your <b>first initials</b> and <b>last name and the year you first enrolled in Holy Child Central Colleges.</b></li>
+                <li><b>Example:</b> Juan Dela Cruz (jcdelacruz2020@hccci.edu.ph)</li>
+            </ul>
+            <h4>What is my password account?</h4>
+            <ul>
+                <li>Enter your default password given by the school's IT</li>
+            </ul>
+            <h4>How to edit my default password?</h4>
+            <ul>
+                <li>Step 1: Open your <b>Microsoft</b> account.</li>
+                <li>Step 2: Select Change Password</li>
+            </ul>
+            <h4>How to view my subject?</h4>
+            <ul>
+                <li>Open your LMS account and click the subject button.</li>
+            </ul>
+            <h4>How to know if the teachers already provided my subjects?</h4>
+            <ul>
+                <li>Check your subject module.</li>
+            </ul>
+            <h4>How to view my calendar module?</h4>
+            <ul>
+                <li>Open your LMS account and click the Calendar button.</li>
+            </ul>
+            <h4>How to view my LMS inbox?</h4>
+            <ul>
+                <li>Open your LMS account and click the Inbox button.</li>
+            </ul>
+            <h4>How to review my finances?</h4>
+            <ul>
+                <li>Open your LMS account and click My Finance button.</li>
+            </ul>
+            <h4>How to check my Attendance?</h4>
+            <ul>
+                <li>Enter your subject and click the attendance button on the navigation bar.</li>
+            </ul>
+            <h4>How to list my attendance today?</h4>
+            <ul>
+                <li>Open your subject schedule and check the box on the left side of the screen.</li>
+            </ul>
+            <h4>How to take my quizzes?</h4>
+            <ul>
+                <li>Open your subject schedule and click quiz.</li>
+            </ul>
+            <h4>How to manage my assignments?</h4>
+            <ul>
+                <li>Check if you already submitted the assignment.</li>
+            </ul>
+            <h4>How to pass my assignments?</h4>
+            <ul>
+                <li>Drag or open your file to upload and click save changes.</li>
+            </ul>
+            <h4>How to chat with my classmates or teachers?</h4>
+            <ul>
+                <li>Open your inbox and search for the preferred person to chat.</li>
+            </ul>
+            <h4>How to enter a group chat?</h4>
+            <ul>
+                <li>Click the group in your inbox button.</li>
+            </ul>
+            <h4>What are the references of my books?</h4>
+            <ul>
+                <li>Your teacher will post the reference book as one of your activities.</li>
+            </ul>
+            <h4>How to enter a class activity?</h4>
+            <ul>
+                <li>Select the activity of your subject.</li>
+            </ul>
+            <h4>How to know my class schedule?</h4>
+            <ul>
+                <li>Your calendar module will notify you of your class schedule or scheduled activity.</li>
+            </ul>
+            <h4>How to know if the teacher already started the class?</h4>
+            <ul>
+                <li>Class scheduled will be announced by your teacher and will be indicated on your subject name.</li>
+            </ul>
+            <h4>How to know if the teacher already provided an assignment?</h4>
+            <ul>
+                <li>Check your subject always.</li>
+            </ul>
+            <h4>How to access my web conference class?</h4>
+            <ul>
+                <li>Select your subject class BigBlueButton and join the class.</li>
+            </ul>
+            <h4>How to know my scores in quizzes and exams and review?</h4>
+            <ul>
+                <li>Click the review after the said activity has been completed.</li>
+            </ul>
+            <h4>How to pass my solutions in math subject exams or quizzes?</h4>
+            <ul>
+                <li>Open the designated activity of the teacher and upload your evidence of solution.</li>
+            </ul>
+            <h4>How to log out of my account?</h4>
+            <ul>
+                <li>Select your name in the upper right corner of the screen then click the log out button.</li>
+            </ul>
+            <h4>How to visit my profile?</h4>
+            <ul>
+                <li>Select your name in the upper right corner of the screen then click the profile button.</li>
+            </ul>
+            <h3><b>(MOBILE FAQs):</b></h3>
+            <h4>How can I get the school mobile app?</h4>
+            <ul>
+                <li>The School app is available for free from Google Play and the Apple Store. See HCCCI app downloads for links. You can also install the app directly from your mobile device by searching for 'Holy Child Central Colleges.'</li>
+            </ul>
+            <h4>I can't get the app to work. What do I do?</h4>
+            <ul>
+                <li>The School app will ONLY work with LMS sites that have been set up to allow it. Please talk to your LMS administrator if you have any problems connecting.</li>
+            </ul>
+            <h4>I can't see my course on the app. What do I do?</h4>
+            <ul>
+                <li>Check with your course tutor that you are correctly enrolled.</li>
+            </ul>
+            <h4>Why can't I upload my assignment on the app?</h4>
+            <ul>
+                <li>Check with your School site administrator.</li>
+            </ul>
+            <h4>Why can't I sometimes access the app or submit anything to it?</h4>
+            <ul>
+                <li>This could be because of interruptions in your internet connection. Wait a while and try again. If you continue to have problems, contact your LMS site administrator.</li>
+            </ul>
+            <h4>Is there a space limit on my files?</h4>
+            <ul>
+                <li>Assignments will have a size limit which you can see. For other space limit questions, check with your Moodle site administrator.</li>
+            </ul>
+            <h4>Who should I contact for help with the app?</h4>
+            <ul>
+                <li>Your School site administrator can assist you in getting the app to work correctly.</li>
+            </ul>
+            <h4>How to download my subject course?</h4>
+            <ul>
+                <li>Go to the dashboard and click Download course.</li>
+            </ul>
+        </div>
+
+        <!-- TEACHER FAQs -->
+        <div class="tab-pane fade border shadow p-5" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <h4>How to log in to my account?</h4>
+            <ul>
+                <li><a href="https://lms.hccci.edu.ph/login/index.php">Click Here</a> and click login</li>
+            </ul>
+            <h4>What is my log in account?</h4>
+            <ul>
+                <li>Enter your first initials and last name.</li>
+                <li><b>Example:</b> Juan Dela Cruz</li>
+                <li>(jcdelacruz2020@hccci.edu.ph)</li>
+            </ul>
+            <h4>What is my password?</h4>
+            <ul>
+                <li>Enter your default password given by your school IT</li>
+            </ul>
+            <h4>How to edit my password?</h4>
+            <ul>
+                <li>Step 1: Open your Microsoft account.</li>
+                <li>Step 2: Select Change password</li>
+            </ul>
+            <h4>How to edit my course settings?</h4>
+            <ul>
+                <li>Step 1: Go to your subject</li>
+                <li>Step 2: Click course management</li>
+                <li>Step 3: Under COURSE click Edit Course settings</li>
+                <li>Step 4: You can add images and course descriptions for the course you have</li>
+            </ul>
+            <h4>Enrolling Student</h4>
+            <ul>
+                <li>Step 1: Go to your subject</li>
+                <li>Step 2: Click course management</li>
+                <li>Step 3: Under STUDENTS click Participants</li>
+                <li>Step 4: Click Enroll users, Select Users then search</li>
+                <li>Step 5: Click the Enroll Users on the lower part to add the one you search</li>
+            </ul>
+            <h4>How to set up my Grade or Grading system?</h4>
+            <ul>
+                <li>Step 1: Go to <b>My grades</b></li>
+                <li>Step 2: Click on the subject you wanted to add a grading system</li>
+                <li>Step 3: Click on <b>Set up</b> then <b>Add Category</b></li>
+                <li>Step 4: Write your <b>grade name</b> then <b>Aggregation</b>: Simple weighted mean of grades</li>
+                <li>Step 5: Then Save Changes</li>
+            </ul>
+            <h4>Adding Syllabus</h4>
+            <ul>
+                <li>Step 1: Go to your subject</li>
+                <li>Step 2: Click on <b>TURN EDITING ON</b></li>
+                <li>Step 3: Click on <b>add an activity or resource</b></li>
+                <li>Step 4: Select file, and look for the documents you want to upload for your lectures. You can actually add 2 or more documents at the same time.</li>
+                <li>Step 5: Then Click on Save and return to course</li>
+            </ul>
+            <h4>Adding Lecture</h4>
+            <ul>
+                <li>Step 1: Go to your subject</li>
+                <li>Step 2: Click on <b>TURN EDITING ON</b></li>
+                <li>Step 3: Click on <b>add an activity or resource</b></li>
+                <li>Step 4: Select Quiz or Assignment</li>
+                <li>Step 5: Fill out the information needed for the quiz you will make</li>
+                <li>Step 6: Then Click on Save and return to course</li>
+            </ul>
+            <h4>How to add a question to the Question bank?</h4>
+            <ul>
+                <li>Step 1: Go to your subject, click the show sidebars icon on your left side, look for administration on the lower part then click Question Bank.</li>
+                <li>Step 2: Click on import, Choose Aiken format</li>
+                <li>Step 3: If your questions are from the Microsoft word save it as plain text document or .txt extension file.</li>
+                <li>Step 4: Make sure you save it in plain text document with a simple format</li>
+            </ul>
+            <h4>How do I remove questions and categories from the Question bank?</h4>
+            <ul>
+                <li>Step 1: Enter your course.</li>
+                <li>Step 2: Click on the gear icon.</li>
+                <li>Step 3: Select more…</li>
+                <li>Step 4: Click on questions.</li>
+                <li>Step 5: Select the desired question bank.</li>
+                <li>Step 6: Check the box to show subcategories.</li>
+                <li>Step 7: Scroll down to the bottom of the page and click on Show all</li>
+                <li>Step 8: Tick the box to select all.</li>
+                <li>Step 9: Scroll down to the bottom and click on Delete.</li>
+                <li>Step 10: Looking at the dropdown, we can see that the questions are deleted but not the categories.</li>
+                <li>Step 11: Click on the categories tab.</li>
+                <li>Step 12: Click on the Trash can to delete the category.</li>
+            </ul>
+            <h4>How do I create an Essay question?</h4>
+            <ul>
+                <li>Enter your course.</li>
+                <li>Click on the Gear icon.</li>
+                <li>Select More.</li>
+                <li>Click on Questions.</li>
+                <li>Click on Create a new question.</li>
+                <li>Select Essay.</li>
+                <li>Click on Add.</li>
+                <li>Type in the Question name field.</li>
+                <li>Type the writing prompt on the Question text field.</li>
+                <li>Click on Save changes.</li>
+            </ul>
+            <h4>How do I manually grade quiz questions?</h4>
+            <ul>
+                <li>Step 1: Enter the course.</li>
+                <li>Step 2: Click on the link to the quiz activity.</li>
+                <li>Step 3: Click the gear icon.</li>
+                <li>Step 4: Select Manual Grading.</li>
+            </ul>
+            <h4>How do I remove a student attempt from a Quiz?</h4>
+            <ul>
+                <li>Step 1: Enter your course.</li>
+                <li>Step 2: Click the link to the quiz.</li>
+                <li>Step 3: Click on the Attempts link.</li>
+                <li>Step 4: Scroll down the page and locate the attempt you want to delete.</li>
+                <li>Step 5: Check the box of the attempt.</li>
+                <li>Step 6: Click on the Delete selected attempts button.</li>
+                <li>Step 7: Click on Yes to confirm deletion.</li>
+            </ul>
+            <h4>How to add URL / Web articles / Videos from the internet?</h4>
+            <ul>
+                <li>Step 1: First find the link or resources or URL in the internet you wanted to add, copy it</li>
+                <li>Step 2: Go to your Subject where you wanted to add URL / Web articles / Videos from the internet then Click on Turn Editing On</li>
+                <li>Step 3: Click add an activity or resource</li>
+                <li>Step 4: Look for URL</li>
+                <li>Step 5: Paste the URL copied in the internet in the external URL area</li>
+                <li>Step 6: Then Save and return to course</li>
+            </ul>
+            <h4>How to Add my Power Point Presentation to my LMS?</h4>
+            <ul>
+                <li>Step 1: Go to <b>Scormhero.com</b> and create an account</li>
+                <li>Step 2: Once logged in, Drag or Manually choose your PowerPoint presentation file</li>
+                <li>Step 3: Click download</li>
+                <li>Step 4: Go to your Subject where you wanted to add your PowerPoint presentation then Click on <b>Turn Editing On</b></li>
+                <li>Step 5: Click on <b>Scorm Package</b></li>
+                <li>Step 6: Drag your file to the package file, then <b>Save and return to course</b></li>
+            </ul>
+            <h4>How to view my SmartArt on my LMS?</h4>
+            <ul>
+                <li>Step 1: Choose your SmartArt that doesn’t show in your LMS, then right-click and copy</li>
+                <li>Step 2: Once copied paste as Picture</li>
+                <li>Step 3: Then Re-upload your file to your existing content.</li>
+            </ul>
+            <h4>Can I put audio files in LMS?</h4>
+            <ul>
+                <li>Yes, you can upload audio files into the LMS like any other file resource up to the maximum file size allowed (20MB per upload) for your LMS site. You should ensure that the files have been recorded or re-encoded as MP3 files. The LMS contains a built-in player for MP3 files.</li>
+            </ul>
+            <h4>How to start a web conference with students?</h4>
+            <ul>
+                <li>Step 1: Go to the course/subject wherein you want to add an online conference and, in the dashboard, click on “Turn Editing On” option.</li>
+                <li>Step 2: click on “Add an activity or resource” option.</li>
+                <li>Step 3: Click activities then “BigBlueButtonBN”.</li>
+                <li>Step 4: After you edit your activity click “Save and display”.</li>
+            </ul>
+            <h4>How to create a group chat with students?</h4>
+            <ul>
+                <li>Step 1: In the dashboard, click on “Turn Editing On” option.</li>
+                <li>Step 2: Go to the course wherein you want to add Group chat and then click on “Add activity or resource” option.</li>
+                <li>Step 3: Here you will get plenty of options, in order to add chat feature, click on “Chat” option.</li>
+                <li>Step 4: Enter the details such as the name of the Chat room and description.</li>
+            </ul>
+            <h4>How to create a calendar block?</h4>
+            <ul>
+                <li>Step 1: In the Calendar block, click the month title, and when the Calendar opens, click New event (top-right).</li>
+                <li>Step 2: Select the type of event (Course, Group, or User). Anyone can create a user event, but only instructors can create Course or Group events.</li>
+                <li>Step 3: In the Event title field, enter a name for the event.</li>
+                <li>Step 4: (Optional) In the Description field, enter a brief description of the event.</li>
+                <li>Step 5: For Date, select the date and start-time for the event.</li>
+                <li>Step 6: Click Save changes and the course calendar will open displaying the new event.</li>
+            </ul>
+            <h4>How to export the calendar?</h4>
+            <ul>
+                <li>Step 1: Open the Calendar in LMS (either through the Upcoming Events or Calendar blocks).</li>
+                <li>Step 2: At the bottom of the Calendar page, click Export calendar. The Export page will open.</li>
+                <li>Step 3: Select the export options, including the events you would like to include and the timeframe. To export all events for your course, including personal and university-wide events select All events and Recent and next 60 days. Click Export. You will be prompted to download an iCal (.ics) file.</li>
+                <li>Step 4: Import this file (or copy the unique URL) to your personal calendar.</li>
+            </ul>
+            <h4>How to drag and drop my file to description?</h4>
+            <ul>
+                <li>Drag directly your file into the description and click “Save and display”.</li>
+            </ul>
+            <h4>How to view the overall grades of the student?</h4>
+            <ul>
+                <li>Click the grades button then select your subject and view the student grades report.</li>
+            </ul>
+            <h4>How can I make objects in the course visible or invisible to students?</h4>
+            <ul>
+                <li>There are two ways to control visibility in the object's settings:</li>
+                <li>Edit the Visible: Show/Hide setting.</li>
+                <li>Edit the Restrict Access setting using dates.</li>
+            </ul>
+            <h4>Where have my Settings and Navigation blocks gone?</h4>
+            <p>You may have accidentally moved the blocks to the dock. If so, Settings and Navigation tabs will display at the top left of the course page. To undock a block:</p>
+            <ul>
+                <li>Hover your mouse pointer over the relevant tab. The block displays next to the tab.</li>
+                <li>Click the Undock this item icon. The block displays in the block column.</li>
+            </ul>
+            <h4>All but one of my topics have disappeared. How do I get them to display again?</h4>
+            <ul>
+                <li>With editing turned on, click the Show section icon for each of the hidden sections. The remaining topics will display.</li>
+            </ul>
+            <h4>I can't edit anything in my course. How do I get into editing mode?</h4>
+            <p>Does the Turn editing on button display at the top right of the screen?</p>
+            <ul>
+                <li>If yes, click it to enable editing.</li>
+                <li>If the Turn editing off button displays instead (meaning that editing is enabled), your screen may have frozen for a reason unrelated to LMS. Try logging out of the Schools app and logging in again.</li>
+            </ul>
+            <h4>I can't drag-and-drop items on the course home page—what's going on?</h4>
+            <p>Your profile settings may have been reset during a recent upgrade. Edit your profile settings as follows to restore drag-and-drop functionality:</p>
+            <ul>
+                <li>Click Turn editing on.</li>
+                <li>In the Settings block, select My profile settings, then Edit profile.</li>
+                <li>In the General section, at AJAX and Javascript, select Yes: use advanced web features from the drop-down list. Click Update profile.</li>
+            </ul>
+            <h4>I need to see how my course will display for a student. How can I organize this?</h4>
+            <ul>
+                <li>You can view your course much as a student will see it by switching roles within the course. Note that this view does not always reflect exactly what a student will see.</li>
+            </ul>
+            <h4>My students aren't responding as requested to forum posts. How can I get them to follow the discussion?</h4>
+            <ul>
+                <li>Edit the forum settings. For Subscription mode, choose Forced subscription. An email will be sent to each student every time a new post is made to the forum.</li>
+            </ul>
+            <h4>How do I hide my students' grades from them?</h4>
+            <ul>
+                <li>On the Edit settings page, there is a setting, <b>Show gradebook to students</b>: If you leave this setting as <b>Yes</b>, a student can view a list of all their grades for the course by clicking a <b>Grades</b> link in the <b>Settings</b> block. Note that if you select <b>No</b>, students can still see their grade for each assignment by viewing their assignment submission page. To completely hide a student's grade from them, you must, in the Gradebook, hide the individual assessment item, or its category.</li>
+            </ul>
+            <h4>I need to see how a student will view a course I'm creating. Why can't I log in as one of my course's participants?</h4>
+            <ul>
+                <li>You cannot log in as a specific student user to a course that you have not yet released to students. The "log in as" feature can only be used in available courses. The closest you can come to the student experience is <b>to Switch role to Student</b> in the <b>Settings</b> block.</li>
+            </ul>
+            <h3><b>(MOBILE FAQs)</b>:</h3>
+            <h4>How can I enable videos in my course to be downloaded?</h4>
+            <ul>
+                <li>See the section 'Media download for offline usage' in Creating Moodle-app-friendly courses.</li>
+            </ul>
+            <h4>Video subtitles are not working</h4>
+            <ul>
+                <li>This may happen in old Android versions (Android < 4.4), in modern Android and iOS versions they should work fine.</li>
+            </ul>
+            <h4>Which course format is best to use?</h4>
+            <ul>
+                <li>Topics or weekly course format is best suited to mobile devices.</li>
+            </ul>
+            <h4>How do I make YouTube links open automatically in the app?</h4>
+            <ul>
+                <li>Add YouTube links as a URL resource.</li>
+            </ul>
+            <h4>Why can't my students see their courses?</h4>
+            <ul>
+                <li>If you or an administrator have correctly enrolled them in a course, they can see it in their mobile app. If they are correctly enrolled but can still not see their course, ask them to check with your LMS site administrator.</li>
+            </ul>
+            <h4>I can't mark assignments in the app</h4>
+            <ul>
+                <li>If you are experiencing problems when grading, please review that you are using the correct decimal separators (if the app interface is in English, you must use a period).</li>
+            </ul>
+            <h4>What communications tools can I use in the app to engage with my learners?</h4>
+            <ul>
+                <li>See Mobile app notifications. Chat, forums, and messaging are all supported by the app.</li>
+            </ul>
+            <h4>My quizzes or lessons are not working offline</h4>
+            <ul>
+                <li>You need to edit the quiz or lesson activity settings and enable the "Allow lesson/quiz to be attempted offline using the mobile app" configuration option.</li>
+            </ul>
+        </div>
+
+        <!-- Unifast FAQs -->
+        <div class="tab-pane fade border shadow p-5" id="pills-unifast" role="tabpanel" aria-labelledby="pills-unifast-tab">
+            <h4>How to open your HCCCI Email Account?</h4>
+            <ul>
+                <li>Open <b>Google Chrome</b> <i class="fab fa-chrome"></i></li>
+                <li>Go to <a href="https://outlook.office.com/" target="_blank">Outlook</a></li>
+                <li>Login using your HCCCI Email account</li>
+                <li>If your UNIFAST application is approved, an email should be in your inbox coming from scholarship@hccci.edu.ph. If no email in your inbox, please check your junk mails. If still no email, you might want to wait for the completion of the process or it's also possible that your UNIFAST application has been declined.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/faq.js' %}"></script>
+{% endblock content %}
+

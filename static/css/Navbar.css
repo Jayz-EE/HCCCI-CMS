@@ -1,0 +1,292 @@
+/* General Navbar Styling */
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link {
+    color: #062969 !important;
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.navbar .nav-item:hover {
+    font-weight: bold;
+}
+
+.brand-title {
+    width: auto; /* Adjust for smaller screens */
+    justify-content: left !important;
+}
+
+.hcccititle {
+    font-size: 0.8rem; /* Slightly bigger for better readability */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* Navbar sticky behavior */
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* Ensure navbar stays above all content */
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.bg_white {
+    background-color: rgba(250, 250, 250, 1);
+}
+
+.bg-white-low-transparency {
+    background-color: rgba(250, 250, 250, 0.7);
+}
+
+@media (max-width: 768px) {
+
+    .bg-white-low-transparency {
+        background-color: rgba(250, 250, 250, 0.9);
+    }
+}
+
+/* Mobile Toggle */
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1000;
+    border: none;
+}
+
+/* Align nav-container properly for responsiveness */
+.nav-container {
+    margin-left: auto;
+    flex-grow: 1;
+}
+
+/* Styling for the "Login" button */
+.loginbtn {
+    text-decoration: none;
+    background-color: #447996;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #FFFFFF;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.loginbtn:hover {
+    background: #FFFFFF;
+    color: #447996;
+    border: 1px solid #447996;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 995px) and (min-width: 768px) { /* Tablet and smaller */
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .car-card-1 {
+        width: 100% !important;
+    }
+
+    .brand-head {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .brand-title h5 {
+        font-size: 1rem;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .hcccititle {
+        font-size: 0.7rem;
+    }
+
+    .loginbtn {
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+    .navbar-nav {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+
+    .brand-head {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+    }
+
+    .hccci-logo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        margin-left: 30px;
+        align-items: left;
+    }
+
+    .navbar-toggler {
+        width: fit-content;
+        top: 15px;
+        right: 15px;
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+    }
+
+    .brand-title h5 {
+        font-size: 0.9rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        margin-right: 10px;
+    }
+
+    .loginbtn {
+        padding: 6px 20px;
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+
+    .hcccititle {
+        font-size: 0.6rem;
+    }
+    .navbar-nav {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) { /* Small mobile devices */
+    .hccci-logo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .brand-title h5 {
+        font-size: 0.8rem;
+    }
+
+    .loginbtn {
+        padding: 5px 15px;
+        font-size: 0.7rem;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        margin-right: 5px;
+    }
+
+    .brand-head {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .navbar-nav {
+        margin-left: 0;
+    }
+}
+
+.college-link {
+    background: #447996 !important;
+    color: #f3f3f3;
+    font-family: 'Roboto Slab', serif;
+}
+
+.college-link:hover {
+    color: #f3f3f3;
+}
+
+.collapse-body {
+    color: #655642;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navactive {
+    font-weight: bolder;
+}
+
+.hccci-logo {
+    height: 3rem;
+    width: 3rem;
+}
+
+.navbar-nav {
+    margin-left: 0;
+    height: 100%;
+    transition: 1s ease-in-out !important;
+}
+
+@media (min-width: 990px) {
+    .navbar .navbar-expand-sm .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+    .navbar .navbar-collapse {
+        display: flex !important;
+    }
+    .navbar-nav {
+        margin-left: auto !important;
+        height: 100%;
+    }
+  }
+  @media (max-width: 940px) {
+    .navbar .navbar-toggler {
+      display: flex;
+    }
+    .navbar.show {
+      display: flex !important;
+    }
+    .collapse:not(.show) {
+        display: none !important;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column !important;
+        height: 100%;
+        width: 100%;
+    }
+    #mynavbar {
+        display: flex;
+        justify-content: left;
+    }
+  }
+  @media (max-width: 995px) and (min-width: 768px) {
+    .navbar .navbar-collapse {
+      width: 100%;
+      margin-left: 30px;
+    }
+  }

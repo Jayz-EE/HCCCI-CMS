@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>HCCCI - Programs Offered</title>
+    <link rel="stylesheet" href="{% static 'css/programsofferred.css' %}">
+{% endblock title %}
+
+{% block content %}
+    <script>
+        function preloadImages(imageUrls) {
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+        
+        preloadImages([
+            "{% static 'img/grade1.jpg' %}",
+            "{% static 'img/grade2.jpg' %}",
+            "{% static 'img/grade3.jpg' %}",
+            "{% static 'img/grade4.jpg' %}",
+            "{% static 'img/grade5.jpg' %}",
+            "{% static 'img/grade6.jpg' %}"
+        ]);
+    </script>
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel1" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner carousel2">
+            <div class="carousel-item active">
+                <img src="{% static 'img/po1.jpg' %}" class="d-block w-100" alt="..." loading="lazy">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/po3.jpg' %}" class="d-block w-100" alt="..." loading="lazy">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/po4.jpg' %}" class="d-block w-100" alt="..." loading="lazy">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <!--------------------------------------------- Content----------------------------------->
+    <div class="container mt-5">
+        <h1 class="program_offered text-center"><b>PROGRAM OFFERED</b></h1>
+
+        <!-- Buttons -->
+        <div class="align-items-start main-button" style="width:100%">
+            <div class="nav flex-column nav-pills me-3 buttons1" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a href="#grade-school" class="active buttons" id="grade-school-tab" data-bs-toggle="pill" role="tab" aria-controls="grade-school" aria-selected="true">Grade School</a>
+                <a class="buttons" id="junior-school-profile-tab" data-bs-toggle="pill" href="#junior-school" role="tab" aria-controls="junior-school" aria-selected="false">Junior High School</a>
+                <a class="btn1" id="senior-school-message-tab" data-bs-toggle="pill" href="#senior-school" role="tab" aria-controls="senior-school" aria-selected="false">Senior High School</a>
+                <a class="buttons" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">College</a>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content animate__animated animate__fadeInUp" id="pills-tabContent">
+                <!-- Grade School Content -->
+                <div class="tab-pane fade show active animate__animated animate__fadeInUp" id="grade-school" role="tabpanel" aria-labelledby="grade-school-tab">
+                    <div class="text-h2">
+                        <h2><b>Grade School</b></h2>
+                    </div>    
+                    <div class="text-h6">
+                        <h6><b>Government Recognition (GR) No. 025, Series 2006</b></h6>
+                    </div>  
+                    <div class="paragraph">
+                        <p>The HCCCI is compliant with the standards set by the Department of Education for our Elementary Education Program. From Grades 1 to 6, students are taught to exemplify the attributes of lifelong learners. The curriculum is carefully designed to nurture the students in all dimensions of their lives—spiritual, moral, cognitive, emotional, social, and physical.</p>
+                        <p>The core curriculum consists of: SCIENCES, MATHEMATICS, LANGUAGES such as ENGLISH and FILIPINO. Minor subjects such as MAKABAYAN (social studies), PHYSICAL EDUCATION, MUSIC, and ARTS are also included in the program.</p>
+                        <p>Aside from learning in the four corners of the classroom, we also encourage our students to join the Extra-curricular Programs such as clubs, school competitions, religious activities, exhibition of talents, and many more to develop their interpersonal skills, camaraderie, personality, and to nurture moral values.</p>
+                        <p>Here at HCCCI, we make sure that as early as the elementary level, learners are already trained to become responsible and competitive citizens of society.</p>
+                    </div>
+                    <div class="text-h2">
+                        <h2><b>BASIC EDUCATION PROGRAMS OFFERED:</b></h2>
+                    </div>
+                    <div class="grade-list">
+                        <div class="row text-center">                            
+                            <div class="col-sm-2 row1">
+                                <div class="card grade1">
+                                    <div class="back"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">1</p>   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 row1">
+                                <div class="card grade2">
+                                    <div class="back"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 row1">
+                                <div class="card grade3">
+                                    <div class="back"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 row1">
+                                <div class="card grade4">
+                                    <div class="back"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 row1">
+                                <div class="card grade5">
+                                    <div class="back"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 row1">
+                                <div class="card grade6">
+                                    <div class="back"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+
+                <!-- Junior High School Content -->
+                <div class="tab-pane animate__animated animate__fadeInUp" id="junior-school" role="tabpanel" aria-labelledby="junior-school-tab">
+                    <div class="text-h2">
+                        <h2><b>Junior High School</b></h2>
+                    </div>    
+                    <div class="text-h6">
+                        <h6><b>Our curriculum is carefully aligned to the standards set by the Department of Education Government Recognition (GR) No. 01, Series 2008</b></h6>
+                    </div>  
+                    <div class="paragraph">
+                        <p>The Junior High School Program of HCCCI ensures that students learn necessary 21st century life-skills. They are taught to become independent learners in order to practice their sense of responsibility for their learning outcomes.</p>
+                        <p>The school campus allows students to learn in a positive and conducive environment while sharpening their critical thinking and learning abilities. They are also exposed and trained to advance technological facilities in order to cope with the demands of modern society.</p>
+                        <p>HCCCI is also composed of diverse students from different cultural backgrounds. With that, we ensure that students experience a harmonious multicultural learning environment with no discrimination and inferiority.</p>
+                    </div>
+                    <div class="text-h2">
+                        <h2><b>OUR JUNIOR HIGH SCHOOL PROGRAM OFFERS:</b></h2>
+                    </div>
+                    <div class="junior-list">
+                        <div class="row">
+                            <div class="col-sm-3 row1">
+                                <div class="card grade7">
+                                    <div class="back1"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">7</p>   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 row1">
+                                <div class="card grade8">
+                                    <div class="back1"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">8</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 row1">
+                                <div class="card grade9">
+                                    <div class="back1"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">9</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 row1">
+                                <div class="card grade10">
+                                    <div class="back1"></div>
+                                    <div class="card-body">
+                                        <p class="grade-text">Grade</p>
+                                        <p class="grade-number">10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- Senior High School Content -->
+                <div class="tab-pane animate__animated animate__fadeInUp" id="senior-school" role="tabpanel" aria-labelledby="senior-school-tab">
+                    <div class="text-h2">
+                        <h2><b>Senior High School</b></h2>
+                    </div>    
+                    <div class="paragraph">
+                        <p class="new-par">Under the Enhanced Basic Education Act of 2013, senior high school (SHS) students must pick among four tracks. Upon enrollment in SHS, they may have the privilege of selecting a track that suits their interest and skills. Holy Child Central Colleges Inc. has laid a variety of options for upcoming Senior High School Students to enroll with.</p>
+                        <div class="text3">
+                            <h3><b>Academic Track</b></h3>
+                        </div>
+                        <p>This track appeals to those who have set their minds towards college education. Divided into degree-specific courses, the Academic track of HCCCI in senior high school aims to prepare students for more advanced college courses. Under this umbrella are four strands.</p>
+                        <div class="senior-list">
+                            <ul>
+                                <li>(GA) General Academics</li>
+                                <li>(HUMMS) Humanities and Social Sciences</li>
+                                <li>(STEM) Science Technology, Engineering, and Mathematics</li>
+                                <li>(ABM) Accountancy, Business, and Management</li>                         
+                            </ul>
+                        </div>
+                        <div class="text-hh">
+                            <h3><b>Technical-Vocational-Livelihood (TVL) Track:</b></h3>
+                            <p>Holy Child Central Colleges Inc. prepares eligible students with subjects focused on job-ready skills. Besides, it offers practical knowledge with matching certificates to help students land their desired job after they graduate from SHS. HCCCI, in the same way, has provided partner industries ready to train and hire graduates of this track. Under the senior high school Technical-Vocational-Livelihood track are the following strands.</p>
+                        </div>
+                        <div class="senior-list2">
+                            <ul>
+                                <li>Computer System Servicing (NCII)</li>
+                                <li>Computer Programming</li>
+                                <li>Industrial Arts</li>
+                                <li>Animation</li>
+                                <li>Cookery</li>
+                                <li>House Keeping</li>
+                                <li>Wellness Massage</li>
+                                <li>Food and Beverage Services</li>
+                            </ul>
+                        </div>                          
+                    </div>
+                </div>
+
+                <!-- College Content -->
+                <div class="tab-pane animate__animated animate__fadeInUp" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="text-h2">
+                        <h2><b>College of Computer Studies</b></h2>
+                    </div>
+                    <div class="college-list">
+                        <ul>
+                            <li>(BSIT) Bachelor of Science in Information Technology</li>
+                            <li>(BSCS) Bachelor of Science in Computer Science</li>
+                            <li>(ACT) Associate in Computer Technology</li>
+                        </ul>
+                    </div>
+
+                    <!-- College of Business -->
+                    <div class="text-h2">
+                        <h2><b>College of Business</b></h2>
+                    </div>
+                    <div class="college-list2">
+                        <ul>
+                            <li>(BSBA) Bachelor of Science in Business Administration</li>
+                            <li>(BSE) Bachelor of Science in Entrepreneurship</li>
+                            <li>(BSOA) Bachelor of Science in Office Administration</li>
+                            <li>(BSA) Bachelor of Science in Accountancy</li>
+                            <li>(BSAIS) Bachelor of Science in Accounting Information System</li>
+                        </ul>
+                    </div>
+
+                    <!-- College of Education -->
+                    <div class="text-h2">
+                        <h2><b>College of Education</b></h2>
+                    </div>
+                    <div class="college-list3">
+                        <ul>
+                            <li>(BECEd) Bachelor of Early Childhood Education</li>
+                            <li>(BTVTEd) Bachelor of Technical-Vocational Teacher Education</li>
+                        </ul>
+                    </div>
+
+                    <!-- College of Criminal Justice -->
+                    <div class="text-h2">
+                        <h2><b>College of Criminal Justice</b></h2>
+                    </div>
+                    <div class="college-list4">
+                        <ul>
+                            <li>(BSC) Bachelor of Science in Criminology</li>
+                            <li>(BSISM) Bachelor of Science in Industrial Security Management</li>
+                        </ul>
+                    </div>
+
+                    <!-- College of Allied Health Sciences -->
+                    <div class="text-h2">
+                        <h2><b>College of Allied Health Sciences</b></h2>
+                    </div>
+                    <div class="college-list5">
+                        <ul>
+                            <li>Bachelor of Science in Pharmacy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+{% endblock content %}

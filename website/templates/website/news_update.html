@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>HCCCI - News Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/news-update.css' %}">
+{% endblock title %}
+
+{% block content %}
+
+<!-- News Grid Section -->
+<div class="container">
+    <h2 class="text-center my-5 pop-3d">News Updates</h2>
+    <div class="row">
+        {% for page in pages_with_images %}
+            <div class="col-md-6 col-sm-12 col-lg-4 mb-4">
+                <div class="card news-card h-100">
+                    <a href="{% url 'page_detail' page.slug %}">
+                        <div id="card" class="card-body p-0">
+                            {% if page.featured_image %}
+                                <img class="card-img" src="{{ page.featured_image }}" alt="News Image">
+                            {% else %}
+                                <img class="card-img" src="{% static 'img/default.jpg' %}" alt="Default Image">
+                            {% endif %}
+                            <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                                <p class="mt-2 text-center page-title">{{ page.title }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

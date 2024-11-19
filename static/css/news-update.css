@@ -1,0 +1,48 @@
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+#card img {
+    width: 100%;
+    min-height: 400px;
+    max-height: 400px; 
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    color: #333;
+    margin: 0;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pop-3d {
+    font-size: 50px;
+    color: #655642;
+    text-shadow: #1b1b1a 2px 1px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.page-title {
+    font-weight: bold;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #655642;
+}

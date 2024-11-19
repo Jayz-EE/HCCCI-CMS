@@ -1,0 +1,62 @@
+{% load static %}
+{% block navbar %}
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light p-0 sticky d-flex flex-wrap bg_white">
+        <div class="ms-3 d-flex pt-2 brand-head">
+            <img class="hccci-logo me-2" src="{% static 'img/HCCCI-Logo.png' %}" alt="HCCCI-LOGO">
+            <div class="d-flex flex-column brand-title mt-2">
+                <h5 class="p-0 m-0">HOLY CHILD CENTRAL COLLEGES</h5>
+                <p class="hcccititle">"Be a Leader Tomorrow, Grow with Us Today"</p>
+            </div>
+        </div>
+        <button class="navbar-toggler ms-auto" type="button" id="navbarToggler" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-container" id="mynavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/' %}navactive{% endif %}" href="/">Home</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/cms/' %}navactive{% endif %}" href="/cms/">CMS</a>
+                </li>
+                {% endif %}
+                <li class="nav-item dropdown">
+                    <!-- Add data-bs-toggle="dropdown" and aria-expanded="false" -->
+                    <a class="nav-link dropdown-toggle {% if 'about' in request.path %}navactive{% endif %}" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu nav-dm" aria-labelledby="aboutDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'aboutHCCCI' %}">About HCCCI</a>
+                        </li>
+                        <hr class="dropdown-divider">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'aboutHCCCI' %}#mvDiv">Vision and Mission</a>
+                        </li>
+                        <hr class="dropdown-divider">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'aboutHCCCI' %}#ssDiv">School Seal</a>
+                        </li>
+                    </ul>                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/enrollment/' %}navactive{% endif %}" href="/enrollment/">Admission Process</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/programsofferred/' %}navactive{% endif %}" href="/programsofferred/">Programs Offered</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/faq/' %}navactive{% endif %}" href="/faq/">LMS FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/news-updates/' %}navactive{% endif %}" href="/news-updates/">News Update</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/Elibrary/' %}navactive{% endif %}" href="/Elibrary/">E-Library</a>
+                </li>
+                <a class="loginbtn btn" type="button" target="_blank" href="https://lms.hccci.edu.ph/login/index.php">LOG IN</a>
+            </ul>
+        </div>
+    </nav>
+{% endblock navbar %}

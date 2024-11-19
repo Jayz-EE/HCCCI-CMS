@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <link rel="stylesheet" href="{% static 'css/About-HCCCI.css'%}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/9ee13d6138.js" crossorigin="anonymous"></script>
+    <title>HCCCI-About</title>
+{% endblock title %}
+
+{% block content %}
+    <!---about Carousel---------------------------->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade " data-bs-ride="carousel">
+        <div class="carousel-inner caro ">
+        <div class="carousel-item d-flex align-items-center justify-content-center active">
+            <img src="{% static 'img/HCCCI-Logo.png'%}" class="img1" alt="pexel">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/bldg.jpg' %}" class="img2" alt="pexel">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/pic3.jpg' %}" class="img3" alt="pexel">
+        </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <!--About===========================================-->
+    <div class="container animate__animated animate__fadeInUp abt">
+        <h1>ABOUT HCCCI</h1>
+        <div class="ndt">
+            
+            <p> <b>Holy Child Central Colleges Inc.</b> is a special place, filled with diverse, energetic, and talented
+                people who are driven to grow and succeed. By studying here, you join an active community that 
+                advances the mission of the school in meaningful ways, inspires innovation and collaboration, and builds
+                skills and expertise.
+            </p>
+            
+            <p>
+                <b>We offer a wide range of Strands</b> (Senior High School) and variety of courses in college 
+                department with the support of our world-class academic facilities. We invite you to explore the many
+                reasons to study for HCCCI:
+            </p>
+            <p>
+                <b>Our insparing mission</b> Here, we are committed to nurture and train students to be technologically-advanced 
+                individuals to help improve people’s lives in the community and the world, to contribute in 
+                the advancing research that makes a difference in the world, in fields as varied as Criminology, 
+                Education, Pharmacy, Information Technology and Business.
+            </p>
+            <p>
+                <b>Meet amazing people.</b> You have the opportunity to study with incredible talented educators and young 
+                people among them, top class athletes, gifted dancers, high achiever, innovators, and problem solvers.
+            </p>
+            <p>
+                <b>Experience multicul-cultural opportunities.</b> Get to experience diversified culture of HCCCI. We are rich in 
+                cultural heritage and the beauty of nature in surrounding localities. Here, students of different culture 
+                study and build relationship harmoniously.
+            </p>
+            <p>
+                <b>Advance your education.</b> Here, lifelong learning is encouraged. Take classes and have your basic 
+                education and higher education invested in HCCCI as we give you up-to-date lessons and meaningful 
+                learning experiences that you can use to become globally competitive individuals.
+            </p>
+            <p>
+                <b>Explore our modern campus.</b> Our campuses are equipped with audio visual materials, educational 
+                laboratories, updated libraries and CCTV cameras to secure the safety of all the students. Campus1 
+                building is designed by leading architect to provide conducive teaching and learning space. Our 
+                campuses are also conveniently located near transportation along the national highway, restaurants, 
+                commercial stores, and school canteen that makes it accessible and feasible for all the needs of 
+                students.
+            </p>
+        </div>
+    </div>
+
+    <!---HCCIT Video -------------------------------->
+    <div class="container">
+        <div class="col-md-12 mx-auto">
+            <div id="hccciVideo"></div>
+        </div>
+    </div>
+
+    <div id="mvDiv">
+        <!-- Mission and Vision Responsive===========================-->
+        <div class="container cores hide-mobile" id="mvDivRes">
+            <div class="corevalues fades">
+            <h1>CORE VALUES</h1>
+            <p>S-piritual growth T-eamwork and Creativity A-ccountability and Discipline I-ntegrity and 
+                Trust R-eliability S-erviceability and Social Responsibility</p>
+            </div>
+
+            <div class="vision divMobile fades">
+            <h1>VISION</h1>
+            <p>
+                A leading provider of highly-skilled professionals who are globally competitive.
+            </p>
+            </div>
+
+            <div class="mission divMobile fades">
+            <h1>MISSION</h1>
+            <p>
+                Nurturing and training technologically-advanced individuals to improve people’s 
+                ives in the community and the world.
+            </p>
+            </div>
+            
+        </div>
+
+        <!---For DESKTOP MISSION & VISION-->
+        <div class="container-fluid Desktop hide-desktop" id="mvDivDesk">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 values">
+                        <p class="coreBack">CORE VALUES</p>
+                        <h4>CORE VALUES</h4>
+                        <ul>
+                            <li>S-piritual growth</li>
+                            <li>T-eamwork and Creativity</li>
+                            <li>A-ccountability and Discipline</li>
+                            <li>I-ntegrity and Trust</li>
+                            <li>R-eliability</li>
+                            <li>S-erviceability and Social Responsibility</li>
+                        </ul>
+                        <div class="borderLineVal">
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <div class="imageCore0 imageCore">
+
+                        </div>
+                        <div class="imageCore1 imageCore">
+
+                        </div>
+                        <div class="borderLine imageCore">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="imageCore2 imageCoreRight">
+
+                        </div>
+                        <div class="imageCore3 imageCoreRight">
+
+                        </div>
+                        <div class="borderLine imageCoreRight">
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 mission">
+                        
+                        <p class="coreBack">MISSION</p>
+                        <h4>MISSION</h4>
+                        <p>Nurturing and training technologically-advanced individuals to improve people’s lives in the community and the world.</p>
+                        <div class="borderLineVal1">
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 vision">
+                        <p class="coreBack">Vision</p>
+                        <h4>VISION</h4>
+                        <p>A leading provider of highly-skilled professionals who are globally competitive.</p>
+                        <div class="borderLineVal1">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="imageCore4 imageCore">
+
+                        </div>
+                        <div class="imageCore5 imageCore">
+
+                        </div>
+                        <div class="borderLine1 imageCore">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="values text-center">
+                    <h4>CORE VALUES</h4>
+                    <p>S-piritual growth T-eamwork and Creativity A-ccountability and Discipline I-ntegrity and Trust R-eliability S-erviceability and Social Responsibility</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 text-center mission">
+                        <h4>MISSION</h4>
+                        <p>Nurturing and training technologically-advanced individuals to improve people’s lives in the community and the world.</p>
+                    </div>
+                    <div class="col-md-6 text-center vision">
+                        <h4>VISION</h4>
+                        <p>A leading provider of highly-skilled professionals who are globally competitive.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="ssDiv">
+        <!---School Seal Responsive===========================================-->
+        <div class="container seal  hide-mobile" id="ssDivRes">
+            <h1 data-aos="flip-left"><b>School Seal</b></h1>
+            <div class="text-center first">
+                <img class="logo" src="{% static 'img/HCCCI-Logo.png' %}" data-aos="flip-left" alt="">
+                <h3>The Official Holy Child Central Colleges Inc. Seal</h3>
+            </div>
+            
+            <div class="text-center second">
+                <img class="shield" src="{% static 'img/Sheild.png' %}" data-aos="fade-right"  alt="">
+                <h3><b>THE SHIELD</b></h3>
+                <p>The shield encapsulates all the other elements of the logo to highlight the protection and security that HCCCI provides. As an educational institution, HCCCI aims to prepare its students for their future careers with marketable professional skills.</p>
+            </div>
+            
+            <div class="text-center third">
+                <img class="laurel" src="{% static 'img/laruel.png' %}" data-aos="fade-left" alt="">
+                <h3><b>THE LAUREL WREATH</b></h3>
+                <p>The laurel wreath is one of the highest symbols of honor dating back to ancient times. The wreath in the logo symbolizes HCCCI’s call for its students and alumni to be honorable, well disciplined, and responsible.</p>
+            </div>
+            
+            <div class="text-center fourth">
+                <img class="torch" src="{% static 'img/light.png' %}" data-aos="fade-down-right" alt="">
+                <h3><b>THE LIGHTED TORCH</b></h3>
+                <p>The lighted torch represents the undying fire that fuels the love for knowledge intrinsic in HCCCI as an educational institution. It is behind the book as it provides the light and warmth in learning.</p>
+            </div>
+
+            <div class="text-center fifth">
+                <img class="hand" src="{% static 'img/worldchild.png' %}" data-aos="fade-down-left" alt="">
+                <h3><b>THE WORLD IN THE CHILDS HAND</b></h3>
+                <p>The world held by the child represents that the children are the future. The child holding the world is a representation of a child changing the world. We help in making, shaping and achieving that change through education as we exist in this world.</p>
+            </div>
+
+            <div class="text-center sixth">
+                <img class="color" src="{% static 'img/color.png' %}" data-aos="zoom-in" alt="">
+                <h3><b>THE COLOR</b></h3>
+                <p>Khaki as the color symbolizes our culture as a Filipino; the logo used two dominant shades, namely, the light and dark shades. These two represent how both coexist despite their diversity. HCCCI underscores the need for harmony, integration and non-discrimination.</p>
+            </div>
+
+            <div class="text-center seven">
+                <img class="book" src="{% static 'img/openbook.png' %}" data-aos="zoom-out" alt="">
+                <h3><b>THE OPEN BOOK</b></h3>
+                <p>The open book underscores HCCCI’s goal to provide high quality education for those that enters its portals. Every student and alumni are enjoined to become open vessels of learning; and radiate what they learn to their community.</p>
+            </div>
+
+            <div class="text-center eight">
+                <img class="child" src="{% static 'img/childshand.png' %}" data-aos="zoom-out-down" alt="">
+                <h3><b>THE CHILDS HAND</b></h3>
+                <p>The hand represents the guiding and firm grasp of the Holy Child; the innocence of the Holy Child embodies the importance of spiritual growth in honing the future of HCCCI students.</p>
+            </div>
+
+            <div class="text-center nine">
+                <img class="cap" src="{% static 'img/cap.png' %}" data-aos="zoom-out-up" alt="">
+                <h3><b>THE ACADEMIC CAP OVER THE WORLD</b></h3>
+                <p>The academic hat over the world represents the HCCCI’s world class standardized education. We provide nothing less than the above mentioned quality that makes our school give education with world class standard and capability of world competence. The HCCCI values, standards, and education can and will meet the competitive world with pride and honor. The HCCCI is globally competent.</p>
+            </div>
+        </div>
+
+        <!--For DESKTOP --------------------------------------------------------->
+        <div class="container hide-desktop des border shadow p-5 mt-5 mb-5" id="ssDivDesk">
+            <h1 data-aos="flip-right">School Seal</h1>
+            <div class="row first">
+                <div class="col-md-6 mx-auto">
+                    <img class="logo" src="{% static 'img/HCCCI-Logo.png' %}" data-aos="flip-left" alt="">
+                    <p>The Official Holy Child Central Colleges Inc. Seal</p>
+                </div>
+            </div>
+
+            <div class="row second">
+                <div class="col-md-6 max-auto">
+                <img src="{% static 'img/Sheild.png' %}" data-aos="fade-right" alt="">
+                <h4 data-aos="fade-right">THE SHIELD</h4>
+                <p data-aos="fade-right">The shield encapsulates all the other elements of the logo to highlight the protection and security that HCCCI provides. As an educational institution, HCCCI aims to prepare its students for their future careers with marketable professional skills.</p>
+                </div>
+                <div class="col-md-6 max-auto">
+                    <img src="{% static 'img/laruel.png' %}" data-aos="fade-left" alt="">
+                    <h4 data-aos="fade-left">THE LAUREL WREATH</h4>
+                    <p data-aos="fade-left">The laurel wreath is one of the highest symbols of honor dating back to ancient times. The wreath in the logo symbolizes HCCCI’s call for its students and alumni to be honorable, well disciplined, and responsible.</p>
+                </div>
+            </div>
+
+            <div class="row third">
+                <div class="col-md-6 max-auto">
+                    <img src="{% static 'img/light.png' %}" data-aos="fade-down-right" alt="">
+                    <h4 data-aos="fade-down-right">THE LIGHTED TORCH</h4>
+                    <p data-aos="fade-down-right">The lighted torch represents the undying fire that fuels the love for knowledge intrinsic in HCCCI as an educational institution. It is behind the book as it provides the light and warmth in learning.</p>
+                </div>
+                <div class="col-md-6 max-auto">
+                    <img src="{% static 'img/worldchild.png' %}" data-aos="fade-down-left" alt="">
+                    <h4 data-aos="fade-down-left">THE WORLD IN THE CHILDS HAND</h4>
+                    <p data-aos="fade-down-left">The world held by the child represents that the children are the future. The child holding the world is a representation of a child changing the world. We help in making, shaping and achieving that change through education as we exist in this world.</p>
+                </div>
+            </div>
+
+            <div class="row fourth">
+                <div class="col-md-6 max-auto">
+                    <img src="{% static 'img/color.png' %}" data-aos="flip-left" alt="">
+                    <h4 data-aos="flip-left">THE COLOR</h4>
+                    <p data-aos="flip-left">Khaki as the color symbolizes our culture as a Filipino; the logo used two dominant shades, namely, the light and dark shades. These two represent how both coexist despite their diversity. HCCCI underscores the need for harmony, integration and non-discrimination.</p>
+                </div>
+                <div class="col-md-6 max-auto">
+                    <img src="{% static 'img/openbook.png' %}" data-aos="flip-right" alt="">
+                    <h4 data-aos="flip-right">THE OPEN BOOK</h4>
+                    <p data-aos="flip-right">The open book underscores HCCCI’s goal to provide high quality education for those that enters its portals. Every student and alumni are enjoined to become open vessels of learning; and radiate what they learn to their community.</p>
+                </div>
+            </div>
+
+            <div class="row fifth">
+                <div class="col-md-6 max-auto">  
+                    <img src="{% static 'img/childshand.png' %}"  data-aos="zoom-in" alt="">
+                    <h4  data-aos="zoom-in">THE CHILDS HAND</h4>
+                    <p  data-aos="zoom-in">The hand represents the guiding and firm grasp of the Holy Child; the innocence of the Holy Child embodies the importance of spiritual growth in honing the future of HCCCI students.</p>
+                </div>
+                <div class="col-md-6 max-auto">
+                    <img src="{% static 'img/cap.png' %}" data-aos="zoom-in-up" alt="">
+                    <h4 data-aos="zoom-in-up">THE ACADEMIC CAP OVER THE WORLD</h4>
+                    <p data-aos="zoom-in-up">The academic hat over the world represents the HCCCI’s world class standardized education. We provide nothing less than the above mentioned quality that makes our school give education with world class standard and capability of world competence. The HCCCI values, standards, and education can and will meet the competitive world with pride and honor. The HCCCI is globally competent.</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <!---Js Connection------------------------------------------------->
+    <script src="{% static 'js/About-HCCCI.js' %}"></script>
+{% endblock content %}

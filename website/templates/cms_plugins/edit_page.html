@@ -1,0 +1,441 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>CMS-Edit Page</title>
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+<style>
+    #body-content {
+        display: flex;
+        height: 100%;
+    }
+    .tools {
+        margin-top: 20px;
+    }
+    .content-area {
+        flex-grow: 1;
+        min-height: 100vh;
+        padding: 15px;
+    }
+    .content-section {
+        border: 1px dashed #007bff;
+        padding: 15px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .remove-section {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        color: red;
+    }
+    .nav-item button {
+        width: 100%;
+    }
+    .featured {
+        border: 2px solid green; /* Highlight featured image */
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Glow effect */
+    }
+    .star-icon {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: gold;
+        font-size: 1.5rem; /* Adjust size as needed */
+        display: none; /* Hidden by default */
+    }
+    .card-img {
+        height: 330px; /* Ensure the image takes the full height of the container */
+        object-fit: fill; /* Scale the image to cover the container */
+    }
+    .border-solid-black {
+        border: solid black 1px;
+    }
+    .remove-section:hover {
+        background-color: rgba(220, 53, 69, 0.8) !important;
+    }
+    .trash-icon {
+        width: 70px; /* Width of the icon */
+        height: 70px; /* Height of the icon */
+        background-image: url("{% static 'img/trash-icon.png' %}");
+        background-size: cover; /* Make sure the image covers the div */
+        background-position: center; /* Center the image */
+        transition: background-image 0.3s ease; /* Smooth transition for hover */
+    }
+    
+    #trash-button:hover .trash-icon {
+        background-image: url("{% static 'img/trash-icon.gif' %}");
+    }
+    .trash {
+        background-color: rgba(220, 53, 69, 0.3);
+    }
+    .trash:hover {
+        background-color: rgba(220, 53, 69, 0.7);
+    }   
+    .recover {
+        background-color: rgba(32, 222, 7, 0.3);
+    }
+    .recover:hover {
+        background-color: rgba(32, 222, 7, 0.8);
+    }
+    .quill-editor {
+        height: fit-content;
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+    /* .delete-iframe-btn {
+        position: relative;
+        top: 5px;
+        left: 26%;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
+        background-color: rgba(220, 53, 69, 0.3); 
+        color: black; 
+        z-index: 1; 
+        font-weight: bold; 
+        padding: 2px 8px; 
+        border-radius: 50%;
+        width: fit-content;
+    } */
+</style>
+{% endblock title %}
+
+{% block content %}
+<div id="body-content">
+    <div class="content-area container mt-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary text-white text-center">
+                <h2>Modify Page</h2>
+            </div>
+            <div class="card-body">
+                <form id="update_form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="page_title" class="form-label">Title</label>
+                        <input type="text" class="form-control rounded" id="page_title" name="title" value="{{ page.title }}" required>
+                    </div>
+
+                    <!-- Interactive Content Management Area -->
+                    <div id="content-sections">
+                        <label for="page_content" class="form-label">Content</label>
+                        {% for section in page.contentsection_set.all %}
+                        <div class="content-section">
+                            <span class="btn btn-light btn-sm position-absolute remove-section" style="background-color: rgba(220, 53, 69, 0.3); color: black; z-index: 1; font-weight: bold; padding: 2px 8px; border-radius: 50%;" onclick="removeSection(this)">×</span>
+                            <div class="quill-editor" id="quill-editor-{{ forloop.counter }}"></div>
+                            <input type="hidden" name="content[]" class="content-input" value="{{ section.content }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="container">
+                        <div class="row d-flex flex-row justify-content-center">
+                            <div class="col-3 d-flex justify-content-center">
+                                <button style="width: 100%;" type="button" class="btn btn-secondary" id="add-section">Add Section</button>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <button style="width: 100%;"  type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Images to Gallery</button>
+                            </div>
+                            <div class="col-3 d-flex justify-content-center">
+                                <button style="width: 100%;" type="submit" class="btn btn-success btn-lg">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Hidden input to store the selected featured image index -->
+                    <input type="hidden" name="featured_image" id="featured-image-id" value="">
+
+                    <!-- Create Gallery Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add Images to Gallery</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group mb-3">
+                                        <label for="gallery_images" class="form-label">Select Images or Drop Images</label>
+                                        <div style="height: 200px;" id="drop-area" class="border p-3 mb-3 text-center" style="border: 2px dashed #007bff;">
+                                            <p>Drag & drop images here or click to upload</p>
+                                            <input type="file" class="form-control" id="gallery_images" name="gallery_images" multiple accept="image/*" style="display: none;">
+                                            <label for="gallery_images" class="btn btn-secondary">Select Images</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Preview Container for Selected Images -->
+                                    <div class="form-group mb-3">
+                                        <label>Selected Images Preview</label>
+                                        <div class="row" id="image-preview-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                {% include './manage_gallery.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div class="position-fixed toast-container top-20 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true">
+            <div class="toast-header">
+                <strong class="me-auto">Image Deleted</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p class="toast-paragraph"></p>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- Quill JS -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<script>
+    var toastEl = document.getElementById('liveToast');
+    var toast = new bootstrap.Toast(toastEl);
+
+    let quillEditors = [];
+    
+    const toolbarOptions = [
+        [{ 'font': [] }],
+        [{ 'size': ['small', false, 'large', 'huge'] }], 
+        [{ 'color': [] }, { 'background': [] }],   
+        [{ 'align': [] }],
+        ['bold', 'italic', 'underline', 'strike'],       
+        ['link', 'video', 'formula'],         
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      
+        [{ 'indent': '-1'}, { 'indent': '+1' }],         
+        [{ 'direction': 'rtl' }],                         
+       
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+        ['clean']                                        
+      ];
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.quill-editor').forEach((editor, index) => {
+            var quill = new Quill(editor, {
+                placeholder: 'Enter section content here...',
+                modules: {
+                    toolbar: toolbarOptions
+                },
+                theme: 'snow'
+            });
+            quillEditors.push(quill);
+    
+            // Load existing content from input
+            const contentInput = editor.nextElementSibling;
+            if (contentInput.value) {
+                quill.clipboard.dangerouslyPasteHTML(contentInput.value);
+            }
+    
+            // Find and add delete button to iframe embeds
+            quill.root.querySelectorAll('iframe').forEach((iframe) => {
+                addDeleteButtonToIframe(iframe);
+            });
+    
+            // Observe changes in the Quill editor and add delete button for dynamically added iframes
+            quill.root.addEventListener('DOMNodeInserted', function(event) {
+                if (event.target.tagName === 'IFRAME') {
+                    addDeleteButtonToIframe(event.target);
+                }
+            });
+        });
+    
+        // Add section functionality
+        document.getElementById('add-section').onclick = function() {
+            const newSection = document.createElement('div');
+            newSection.className = 'content-section';
+            newSection.innerHTML = `
+                <span class="btn btn-light btn-sm position-absolute remove-section" style="background-color: rgba(220, 53, 69, 0.3); color: black; z-index: 1; font-weight: bold; padding: 2px 8px; border-radius: 50%;" onclick="removeSection(this)">×</span>
+                <div class="quill-editor"></div>
+                <input type="hidden" name="content[]" class="content-input" value="">
+            `;
+            document.getElementById('content-sections').appendChild(newSection);
+    
+            // Initialize Quill editor for the new section
+            var quill = new Quill(newSection.querySelector('.quill-editor'), {
+                theme: 'snow',
+                placeholder: 'Enter section content here...',
+                modules: {
+                    toolbar: toolbarOptions
+                }
+            });
+            quillEditors.push(quill);
+    
+        };
+    
+        // Sync Quill content before submitting
+        document.getElementById('update_form').addEventListener('submit', function(event) {
+            syncQuillContent(); // Sync all Quill editors content before submitting
+        });
+    });
+    
+    // Function to add a delete button to iframes
+    function addDeleteButtonToIframe(iframe) {
+        const deleteButton = document.createElement('span');
+
+        deleteButton.classList.add('delete-iframe-btn');
+        deleteButton.style.position = 'absolute';
+        deleteButton.style.top = '5px';
+        deleteButton.style.right = '5px';
+        deleteButton.style.fontSize = '20px';
+        deleteButton.style.color = 'red';
+        deleteButton.style.cursor = 'pointer';
+        deleteButton.style.zIndex = '10';
+    
+        // Add the delete button inside the iframe's container
+        iframe.style.position = 'relative';
+        iframe.parentElement.style.position = 'relative'; // Ensure the container has a relative position for the absolute button
+        iframe.parentElement.appendChild(deleteButton);
+    
+        // Attach event listener to remove iframe on button click
+        deleteButton.addEventListener('click', function() {
+            iframe.remove(); // Remove the iframe element
+            deleteButton.remove(); // Remove the "X" button as well
+        });
+    }
+    
+    // Sync Quill content with the hidden input
+    function syncQuillContent() {
+        document.querySelectorAll('.quill-editor').forEach((editor, index) => {
+            const contentInput = editor.nextElementSibling;
+            contentInput.value = quillEditors[index].root.innerHTML; // Get Quill editor content
+        });
+    }
+    
+    // Function to remove a section
+    function removeSection(element) {
+        const section = element.parentElement;
+        section.parentElement.removeChild(section);
+    }
+
+    // Image preview handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageInput = document.getElementById('gallery_images');
+        const previewContainer = document.getElementById('image-preview-container');
+        let fileArray = [];
+        let featuredIndex = -1; // Track the index of the featured image
+
+        // Handle drag-and-drop functionality
+        const dropArea = document.getElementById('drop-area');
+
+        dropArea.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            dropArea.classList.add('bg-light');
+        });
+
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.classList.remove('bg-light');
+        });
+
+        dropArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+            dropArea.classList.remove('bg-light');
+            const files = event.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        // Handle image selection and preview display
+        imageInput.addEventListener('change', function(event) {
+            const files = event.target.files;
+            handleFiles(files);
+        });
+
+        function handleFiles(files) {
+            fileArray = [...fileArray, ...Array.from(files)];
+            renderPreviews(fileArray);
+        }
+
+        // Function to render image previews
+        function renderPreviews(fileArray) {
+            previewContainer.innerHTML = ''; // Clear previews
+            fileArray.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const previewDiv = document.createElement('div');
+                    previewDiv.classList.add('col-md-3', 'mb-3');
+                    previewDiv.id = 'image-preview-' + index;
+
+                    previewDiv.innerHTML = `
+                        <div class="card h-100 shadow-sm border-0" onclick="setFeaturedImage(${index})">
+                            <div class="position-relative">
+                                <img src="${e.target.result}" class="card-img-top rounded-top img-fluid" alt="Image Preview" style="height: 150px; object-fit: cover;">
+                                <button type="button" class="btn btn-light btn-sm position-absolute top-0 end-0 remove-preview" data-index="${index}" style="margin: 5px; background-color: rgba(220, 53, 69, 0.3); color: black; z-index: 1; font-weight: bold; padding: 2px 8px; border-radius: 50%;">&times;</button>
+                                <span class="star-icon position-absolute top-0 start-0" style="display: ${featuredIndex === index ? 'block' : 'none'};">⭐</span>
+                            </div>
+                        </div>
+                    `;
+
+                    previewContainer.appendChild(previewDiv);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Handle removing previewed images
+        previewContainer.addEventListener('click', function(event) {
+            if (event.target.classList.contains('remove-preview')) {
+                const index = parseInt(event.target.getAttribute('data-index'));
+                document.getElementById('image-preview-' + index).remove();
+                fileArray.splice(index, 1);
+                updateFileInput();
+                renderPreviews(fileArray);
+                if (featuredIndex === index) {
+                    featuredIndex = -1; // Reset featured index if the featured image is removed
+                }
+            }
+        });
+
+        // Set featured image function
+        window.setFeaturedImage = function(index) {
+            // Remove feature from the previously featured image
+            if (featuredIndex !== -1) {
+                const previousFeatured = document.querySelector(`#image-preview-${featuredIndex} .star-icon`);
+                const previousCard = document.querySelector(`#image-preview-${featuredIndex} .card`);
+                if (previousFeatured) {
+                    previousFeatured.style.display = 'none'; // Hide star icon
+                }
+                if (previousCard) {
+                    previousCard.classList.remove('featured'); // Remove glow effect
+                }
+            }
+            // Set the new featured image
+            featuredIndex = index;
+            const currentFeatured = document.querySelector(`#image-preview-${featuredIndex} .star-icon`);
+            const currentCard = document.querySelector(`#image-preview-${featuredIndex} .card`);
+            if (currentFeatured) {
+                currentFeatured.style.display = 'block'; // Show star icon
+            }
+            if (currentCard) {
+                currentCard.classList.add('featured'); // Add glow effect
+            }
+            // Update the hidden input with the featured image index
+            document.getElementById('featured-image-id').value = featuredIndex;
+        };
+
+        // Function to update the file input based on the current fileArray
+        function updateFileInput() {
+            const dataTransfer = new DataTransfer();
+            fileArray.forEach((file) => {
+                dataTransfer.items.add(file);
+            });
+            imageInput.files = dataTransfer.files;  // Update the input file list
+        }
+    });
+    
+</script>
+{% endblock content %}

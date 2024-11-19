@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <!---Css Style===============-->
+    <link rel="stylesheet" href="{% static 'css/enrollment.css' %} ">
+    <title>HCCCI - Enrollment</title>
+
+{% endblock title %}
+
+{% block content %}
+    <!---Content=========================-->
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-body">
+                <h3>Enrollment</h3>
+                <div class="enrollmentContent">
+                    <p class="enrollTitle">Thank you for your interest in enrolling, before you proceed to the enrollment process, please see instructions below:</p>
+                    <p class="mt-5"><b>A</b>-New Students/ Transferees start from step # 1</p>
+                    <p><b>B</b>-Continuing/old Students proceed to step # 2</p>
+
+                    <p class="enrollNumTitle">1. Prepare a scanned copy of the following documents.</p>
+                    <ul>
+                        <li>SCANNED / PHOTO OF BIRTH CERTIFICATE (NSO/PSA)</li>
+                        <li>SCANNED / PHOTO OF MARRIAGE CERTIFICATE (IF MARRIED)</li>
+                        <li>2X2 ID PICTURES COLORED WHITE BACKGROUND (STUDIO TAKEN)</li>
+                        <li>SCANNED/ PHOTO OF CERTIFICATE OF GOOD MORAL</li>
+                        <li>SCANNED/PHOTO OF TRANSCRIPT OF RECORDS</li>
+                        <li>SCANNED/PHOTO OF TRANSFER CREDENTIAL/HONORABLE DISMISSAL COLLEGE LEVEL</li>
+                        <li>SCANNED/PHOTO OF CLASS CARD/FORM 138 (FOR SENIOR HIGH SCHOOL GRADUATE ONLY)</li>
+                    </ul>
+
+                    <p class="enrollNumTitle">2. Fill up the enrollment form with the required information and click submit.</p>
+                    <p><i>Note: Old/Continuing Students should use their HCCCI email address that ends in hccci.edu.ph which was provided to you last year (LMS Account)</i></p>
+                    <ul>
+                        <li>New Students can use any other email address for the enrollment. You’re HCCCI email will be created for you once officially enrolled.</li>
+                        <li>If you are an old student that does not have your HCCCI email anymore please contact Classify Inc. by sending them a message on their Facebook Page. To go to Classify’s Facebook page <a href="https://web.facebook.com/classifyinc?_rdc=1&_rdr" target="_blank">click here</a></li>
+                    </ul>
+
+                    <p class="enrollNumTitle">3. You will get an email confirmation for your subjects allowed (Old Student) Subjects available (New Students). Please reply to the email you will receive from enrollment@hccci.edu.ph to confirm your enrollment.</p>
+                    <ul>
+                        <li>Sample Reply: Full Name, Course, Year Level, Confirmed</li>
+                    </ul>
+                    
+                    <p class="enrollNumTitle">4. If you have any question regarding the list of subjects given for you to be enrolled, you can contact your program heads through the mobile number provided in the email you will receive or your can reply to the email sent to you directly.</p>
+                    
+                    <p class="enrollNumTitle">5. After confirming your subjects, you will then get another confirmation email from the cashier letting you know of the amount to be paid for your enrollment.</p>
+
+                    <p class="enrollNumTitle">6. To pay for your enrollment, you can visit the school to go to the cashier and process your payment. If below 18 yrs. old please let your parents process your payment or a relative/friend who is not below 18 years old. If you are unable to visit the school for payment, please <a href="/paymentprocess/" rel="noreferrer" target="_blank">click here</a> for other payment options.</p>
+
+                    <div class="enrollmentBtnAction">
+                        <a href="https://forms.zohopublic.com/classifycloud/form/HCCCITransfereeEnrollmentForm/formperma/MsGc3_RRFBtNcSfTeSVsBC-gIfr_NBqfp_c1pJzffmw?fbclid=IwAR0nyzrOC_opc32oA-eG7sB_8EW6eTSSJ7HhGhVawvNWCKKrDrlrFZpgvlk" target="_blank" class="btn enrollBtn">Proceed to Enrollment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

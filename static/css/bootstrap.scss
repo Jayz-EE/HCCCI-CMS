@@ -1,0 +1,40 @@
+@import "bootstrap";
+
+// Custom styles for the navbar
+.navbar {
+    // Ensure that the navbar is flex on small screens and above
+    @media (min-width: 576px) {
+        .navbar-expand-sm .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto;
+        }
+    }
+
+    // Override to handle the toggler for screens below 940px
+    @media (max-width: 940px) {
+        .navbar-collapse {
+            display: none !important; // Hide navbar items by default
+        }
+
+        .navbar-toggler {
+            display: block; // Show the toggler button
+        }
+
+        &.show {
+            display: block !important; // Show navbar items when toggled
+        }
+    }
+
+    // Modify behavior for specific ranges (e.g., 768px to 995px)
+    @media (max-width: 995px) and (min-width: 768px) {
+        .navbar-collapse {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+// This rule will ensure that collapsed navbar does not take space when not shown
+.collapse:not(.show) {
+    display: none;
+}

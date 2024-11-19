@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Login</title>
+<style>
+    #cms-login {
+        width: 28vw;
+    }
+    @media (max-width: 900px) {
+        #cms-login {
+            width: 50vw;
+        }
+    }    
+
+    @media (min-width: 900px) and (min-height: 800px) and (max-width: 1200px) {
+        #cms-login {
+            width: 50vw;
+        }
+    }
+
+    @media (max-width: 500px) and (min-height: 800px) {
+        #cms-login {
+            width: 90vw;
+        }
+    }
+
+    input.is-invalid, select.is-invalid, textarea.is-invalid {
+        border-color: #dc3545 !important; 
+    }
+
+    input.is-invalid + label, select.is-invalid + label, textarea.is-invalid + label {
+        color: #dc3545; 
+    }
+
+    .errorlist li {
+        color: #FF5349;
+    }
+
+</style>
+{% endblock title %}
+
+{% block content %}
+<div id="cms-login" class="container mt-5">
+    <h2 class="text-center mb-4">CMS Login</h2>
+    <form method="POST" class="border p-4 rounded shadow">
+        {% csrf_token %}
+        <div class="form-group mt-3">
+            <label for="id_username">Username</label>
+            <input type="text" name="username" id="id_username" class="form-control" value="{{ form.username.value|default_if_none:'' }}">
+            {% if form.username.errors %}
+                <div class="text-danger">{{ form.username.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="id_password">Password</label>
+            <input type="password" name="password" id="id_password" class="form-control" value="{{ form.password.value|default_if_none:'' }}">
+            {% if form.password.errors %}
+                <div class="text-danger">{{ form.password.errors }}</div>
+            {% endif %}
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-block mt-3 w-25">Login</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

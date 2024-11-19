@@ -1,0 +1,208 @@
+{% load static %}
+
+<!-- Glide.js CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/css/glide.core.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/css/glide.theme.min.css" />
+
+<style>
+    /* Glide Slide Styling */
+    .glide__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px; /* Add padding around the slides */
+        border: solid rgba(68, 121, 150, 0.7) 10px;
+        border-radius: 12px;
+        max-height: 550px;
+    }
+
+    /* Card styling */
+    .card {
+        width: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        background-color: white; 
+        display: flex;
+        flex-direction: column; 
+    }
+
+    /* Image container */
+    .card-img-container {
+        overflow: hidden;
+    }
+
+    /* Image within the card */
+    .card-img-top {
+        width: 100%;
+        min-height: 400px;
+        max-height: 400px;
+        object-fit: cover; 
+    }
+
+    /* Card body and text */
+    .card-body-news {
+        padding: 15px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6); 
+        color: white; 
+        min-height: 120px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1; 
+    }
+
+    .news-card-text {
+        font-size: 1rem;
+        font-weight: bold;
+        color: azure;
+        margin: 0; 
+    }
+
+    /* Responsive Text Sizes */
+    @media (max-width: 768px) {
+        .news-card-text {
+            font-size: 1rem; 
+        }
+    }
+    
+    @media (max-width: 640px) {
+        .news-card-text {
+            font-size: 0.9rem; 
+        }
+        .card-img-top {
+            width: 100%;
+            min-height: 40vh;
+            max-height: 40vh; 
+            object-fit: fill;
+            border-radius: 12px 12px 0 0; 
+        }
+    }
+
+    /* Carousel item styling */
+    #news-carousel li {
+        background-color: transparent; 
+        padding: 0; 
+        height: fit-content;
+    }
+
+    /* Links within the cards */
+    #news-carousel li a {
+        text-decoration: none; 
+        display: block;
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        flex-direction: column; 
+    }
+
+    /* Arrow button styling */
+    .glide__arrow {
+        background-color: rgba(0, 0, 0, 0.5); 
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        display: none;
+    }
+
+    .glide__arrow:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<div id="news_section">
+    <div class="opacity-bg p-5">
+        <div class="container-fluid">
+            <h2 class="text-center fw-bolder mb-4 text-azure">News Updates</h2>
+            <div class="glide myGlide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides" id="news-carousel">
+                        <!-- Slides will be populated here by JavaScript -->
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Glide.js JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/glide.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/news/')  // Adjust the URL to your endpoint
+        .then(response => response.json())
+        .then(data => {
+            const carouselContainer = document.getElementById('news-carousel');
+    
+            // Check if we have data
+            if (data.pages_with_images.length === 0) {
+                carouselContainer.innerHTML = '<p>No news updates available.</p>';
+                return;
+            }
+    
+            // Loop through pages and append to the carousel
+            data.pages_with_images.forEach(page => {
+                const itemDiv = document.createElement('li');
+                itemDiv.classList.add('glide__slide');
+    
+                // Create link
+                const link = document.createElement('a');
+                link.href = '/page/' + page.slug; // Directly construct the URL
+    
+                // Create image container
+                const imgContainer = document.createElement('div');
+                imgContainer.classList.add('card-img-container');
+
+                // Create image element
+                const img = document.createElement('img');
+                img.classList.add('card-img-top');
+                img.alt = page.title;
+                img.src = page.featured_image ? page.featured_image : '{% static "img/HCCCI-Logo.png" %}';
+    
+                // Create card body
+                const cardBody = document.createElement('div');
+                cardBody.classList.add('card-body-news');
+    
+                // Create title paragraph
+                const titleParagraph = document.createElement('h5');
+                titleParagraph.classList.add('news-card-text');
+                titleParagraph.textContent = page.title;
+    
+                // Append elements together
+                imgContainer.appendChild(img);
+                link.appendChild(imgContainer);
+                cardBody.appendChild(titleParagraph);
+                link.appendChild(cardBody);
+                itemDiv.appendChild(link);
+                carouselContainer.appendChild(itemDiv);
+            });
+    
+            // Initialize Glide.js after slides are populated
+            const glide = new Glide('.myGlide', {
+                type: 'carousel',  
+                startAt: 0,  
+                perView: 4, 
+                gap: 30,  
+                autoplay: 3000,  
+                hoverpause: true, 
+                breakpoints: {
+                    640: { perView: 1, gap: 10 },
+                    900: { perView: 2, gap: 20 },
+                    1400: { perView: 3, gap: 30 },
+                    1700: { perView: 4, gap: 30 }
+                }
+            });
+
+            glide.mount(); 
+        })
+        .catch(error => console.error('Error fetching news:', error));
+    });
+</script>

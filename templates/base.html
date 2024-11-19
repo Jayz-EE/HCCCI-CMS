@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Image/HCCCI-Logo.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/Base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Navbar.css' %}">
+    {% block title %}
+
+    {% endblock title %}
+</head>
+
+<body>
+    <!-- Upper Info Section -->
+    <div class="upper d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex flex-row">
+        <div class="contactInfoHeader p-1">
+            <span class="fa-solid fa-phone ms-4"><i></i></span><small> +63 938 491 0643</small>
+            <span class="l-5 far fa-envelope ms-2 headicon3" aria-hidden="true"><i></i></span><small> info@hccci.edu.ph</small>
+        </div>
+        <div class="socialiconIpad ms-auto me-3 p-1 d-flex flex-row justify-content-between align-items-center">
+            <span><i>Follow us:</i></span>
+            <a href="https://www.facebook.com/holychildcentralcolleges" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCaq9ucC5lYoLRccbbtswD5Q" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock navbar %}
+
+    {% block sidebar %}
+        {% if user.is_authenticated %}
+            {% include 'sidebar.html' %}
+        {% endif %}
+    {% endblock sidebar %}
+
+    <!-- Dynamic CMS Content -->
+    <div id="main-content">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="d-flex justify-content-center flex-column container-fluid" style="width: 100%;">
+            <div class="footer-row d-flex justify-content-evenly">
+                <div id="footer-cont" class="row">
+                    <!-- Footer content goes here (you can also use placeholders if needed) -->
+                    <div class="col-sm">
+                        <div class="ipadfh">
+                            <h2 class="text-center footer-title">HCCCI</h2>
+                        </div>
+                        <img src="{% static 'img/HCCCI-Logo.png' %}" alt="HCCCI Logo" class="rounded mx-auto d-block footer-logo">
+                        <h5 class="footer-text mt-3">Experience Flexible Education Through Blended Learning - Modular Instruction and Virtual Learning at HCCCI.</h5>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="col-sm desk-contact">
+                        <div class="ipadfc">
+                            <h2 class="text-center footer-title">CONTACT US</h2>
+                        </div>
+                        <div class="container ipadinfo-text deskcontact">
+                            <div class="footer-text">
+                                <i class="far fa-envelope fa-icon" aria-hidden="true">&nbsp;</i><span> info@hccci.edu.ph</span>
+                            </div>
+                            <div class="footer-text">
+                                <i class="fas fa-phone-alt fa-icon" aria-hidden="true">&nbsp;</i><span> +63 083 878 1082</span>
+                            </div>
+                            <div class="footer-text">
+                                <i class="fas fa-phone-alt fa-icon" aria-hidden="true">&nbsp;</i><span> +63 938 491 0643</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Links -->
+                    <div class="col-sm otherLinks">
+                        <h2 class="text-center footer-title">OTHER LINKS</h2>
+                        <a href="faq.html" class="text-decoration-none footer-text"><p>FAQ's</p></a>
+                        <a href="aboutHCCCI.html#mvDiv" class="text-decoration-none footer-text"><p>Mission and Vision</p></a>
+                        <a href="enrollment.html" class="text-decoration-none footer-text"><p>Admission Process</p></a>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="col-sm contactForm">
+                        <form action="">
+                            <div class="contact-form pb-5">
+                                <div class="ipadfh">
+                                    <h2 class="text-center footer-title">EMAIL US</h2>
+                                </div>
+                                <div class="mb-2 form-group contact-grid d-flex flex-row">
+                                    <div class="form-group input-name me-2">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" style="height: 50%;" name="name" required="">
+                                    </div>
+                                    <div class="form-group input-phone">
+                                        <label>Phone</label>
+                                        <input type="text" style="height: 50%;" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="mb-2 comment d-flex flex-column justify-content-center">
+                                    <label for="comment" class="form-label">Comment</label>
+                                    <textarea class="form-control cfc" id="commentArea3" rows="2"></textarea>
+                                </div>
+                                <div style="position: relative;">
+                                    <button type="submit" class="btn w-100 fw-bold contact-btn">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p class="all-rights">Copyright © 2021 Holy Child Central Colleges Inc.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/6d2077159a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="{% static 'js/Script.js' %}"></script>
+
+    <script>
+        AOS.init();
+
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggleBtn');
+        const mainContent = document.getElementById('mainContent');
+    </script>
+</body>
+</html>

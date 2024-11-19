@@ -1,0 +1,1181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.upper {
+    background: #655642;
+    width: 100%;
+}
+
+.contactInfoHeader, .socialiconIpad, .socialiconIpad a {
+    color: rgba(255, 255, 255, 0.898) !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.socialiconIpad {
+    width: 115px;
+}
+
+.socialiconIpad span {
+    font-size: 0.8rem;
+}
+
+.brand-title {
+    width: 20vw;
+}
+
+.hcccititle {
+    font-size: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.hccci-logo {
+    height: 3rem;
+    width: 3rem;
+}
+
+.sticky {
+    position: sticky;
+    top: 0; /* Position the sticky element relative to the top */
+    margin-top: 0 !important;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background-color: #EDEDED !important;
+    z-index: 200;
+}
+
+.loginbtn {
+    text-decoration: none;
+    background-color: #447996;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50px;
+    border: #447996 solid 1px;
+    font-size: small;
+    text-align: center;
+    padding-top: 8px;
+    height: 90%;
+    margin-right: 20px;
+    font-family: 'Roboto Slab', serif !important;
+    color: #FFFFFF;
+}
+
+.loginbtn:hover {
+    border: #447996 solid 1px;
+    background: #FFFFFF;
+    color: #447996;
+    font-weight: bold;
+}
+
+.carousel-card {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    border-radius: 15px;
+}
+
+.carousel-indicators {
+    top: 93%;
+    position: absolute;
+    z-index: 15;
+}
+
+.car-card-1 {
+    bottom: 40%;
+    left: 6%;
+    width: 40%;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    z-index: 11;
+}   
+
+.car-card-1 p {
+    padding-bottom: 20px;
+}
+
+.car-card-2 {
+    bottom: 55%;
+    left: 1.5%;
+    width: 45%;
+    height: fit-content;
+    z-index: 10;
+}
+
+.btn-cont {
+    max-height: 30px;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 25px !important;
+    font-weight: bold !important;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #f3f3f3;
+}
+
+.carousel-button {
+    border-radius: 50px;
+    background: #447996;
+    color: #f3f3f3;
+    font-weight: bold;
+    padding: 10px 25px 10px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.carousel-button-2 {
+    border-radius: 50px;
+    background: #447996;
+    color: #f3f3f3;
+    font-weight: bold;
+    padding: 8px 28px 8px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.carousel-button-2:hover {
+    background: #f3f3f3;
+    color: #447996;
+    text-shadow: #447996 1px 1px;
+    font-weight: bold;
+    padding: 9px 29px 9px;
+    border: #447996 solid 1px;
+}
+
+.carousel-button:hover {
+    background: #f3f3f3;
+    color: #447996;
+    text-shadow: #447996 1px 1px;
+    font-weight: bold;
+    padding: 11px 27px 11px;
+}
+
+.carousel-control {
+    z-index: 12;
+}
+
+.carousel-control span {
+    color: #FFFFFF !important;
+}
+
+.carousel-image {
+    position: relative;
+    z-index: 9;
+}
+
+.low-opacity {
+    background: rgba(0, 0, 0, 0.1);
+    height: 69.5vh;
+    width: 100%;
+    z-index: 11;
+    position: absolute;
+}
+
+.tt2 {
+    font-size: 1.15rem;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.news-card-text {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    align-content: center;
+}
+
+.item {
+    width: 412px;
+    height: 520px;
+    margin: 10px;
+    box-shadow: 4px 2px 10px rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Adjusting the card body */
+.item .card-body p {
+    height: 100%;
+    padding: 1rem;
+}
+
+/* Media queries for responsiveness */
+
+/* Large devices (desktops) */
+@media (max-width: 1200px) {
+    .item {
+        width: 350px;
+        height: 520px;
+    }
+
+    .news-card-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+    .item {
+        width: 300px;
+        height: 500px;
+    }
+
+    .item img {
+        height: 350px;
+    }
+
+    .news-card-text {
+        font-size: 0.9rem;
+    }
+
+    .card-body {
+        display: flex;
+        align-items: center;
+        height: 25%;
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 768px) {
+    .item {
+        width: 350px !important;
+        height: 400px !important;
+        margin-left: 12%;
+    }
+
+    .item img {
+        height: 300px;
+    }
+
+    .news-card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (phones, smaller than 576px) */
+@media (max-width: 576px) {
+    .item {
+        width: 100%; /* Full width for extra small devices */
+    }
+
+    .news-card-text {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+}
+
+.hccciVideodiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+/* Responsive video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for large screens */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+#hccciVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    border: none;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .hccciVideodiv {
+        padding: 0.5rem;
+    }
+}
+
+
+/* Default card styling for larger screens */
+.card-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 23%;
+    width: 55%;
+}
+
+.p-offered-card {
+    background-color: #f3f3f3;
+    width: 30rem; /* Default width */
+    margin-right: 10%;
+}
+
+.p-offered-card:hover {
+    background: #ECBE8C;
+}
+
+.card-footer h5 {
+    color: #655642;
+}
+
+/* Media Queries for responsive design */
+
+/* Tablets */
+@media (max-width: 992px) and (min-width: 768px) {
+    .p-offered-card {
+        width: 20rem; /* Reduce card width */
+    }
+    .card-cont {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .p-offered-card { 
+        width: 20rem; /* Default width */
+        margin-bottom: 1.5rem; /* Add spacing between stacked cards */
+    }
+
+    .card-cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Base styles for the footer */
+footer {
+    background-color: #655642; /* Using your specified background color */
+    padding-top: 1rem;
+    margin-top: 3em;
+    color: #f3f3f3;
+    font-family: 'Roboto Slab', serif; /* Font for footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 114px;
+    width: 122px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 14px !important;
+    text-align: center;
+    color: #f3f3f3;
+    font-family: 'Montserrat', sans-serif; /* Different font for footer text */
+}
+
+.footer-row {
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+    border-top: rgba(0, 0, 0, 0.2) solid 1px;
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.socialicon i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.all-rights {
+    text-align: center;
+    margin-top: 20px;
+    color: #f3f3f3;
+    font-size: 12px;
+    padding: 4px;
+}
+
+/* Contact form styles */
+.contact-form .input-name,
+.contact-form .input-phone {
+    width: 48%;
+}
+
+.contact-form .input-phone {
+    margin-left: auto;
+}
+
+.contact-btn {
+    background-color: #467c9d;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-btn:hover {
+    background-color: #365c75;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 575.98px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-sm {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .contact-form .input-name,
+    .contact-form .input-phone {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* For tablet and medium screens */
+@media (min-width: 768px) {
+    footer {
+        justify-content: space-around;
+    }
+
+    .col-sm {
+        flex: 1 1 40%;
+    }
+
+    .contact-form .input-name,
+    .contact-form .input-phone {
+        width: 48%;
+    }
+
+    .contact-form .input-phone {
+        margin-left: 10px;
+    }
+}
+
+/* For large screens and desktops */
+@media (min-width: 992px) {
+    .footer-row {
+        justify-content: space-between;
+    }
+
+    .col-sm {
+        flex: 1 1 20%;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+
+    .contact-form .input-name,
+    .contact-form .input-phone {
+        width: 48%;
+    }
+}
+
+.form-group label {
+    font-size: 13px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.all-rights {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+}
+
+.contact-btn {
+    background: #447996; 
+    color: #f3f3f3; 
+    font-family: 'Oxygen', sans-serif;
+    border-radius: 10px;
+    position: relative;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #447996; 
+    color: #f3f3f3; 
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 1), 
+    0 0px 0px rgba(0, 0, 0, 0.3),
+    0 2px 20px rgba(0, 0, 0, 0.3);
+    border: #f3f3f3 solid 1px;
+    height: 36px;
+}
+
+.contactForm {
+    min-height: 321.39px;
+}
+
+.footer-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px !important;
+    margin-bottom: 20px;
+}
+
+/* General Navbar Styling */
+.navbar {
+    background: #FFFFFF;
+    padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link {
+    color: #062969 !important;
+    font-family: 'Roboto Slab', serif !important;
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.navbar .nav-item:hover {
+    font-weight: bold;
+}
+
+.brand-title {
+    width: auto; /* Adjust for smaller screens */
+    justify-content: left !important;
+}
+
+.hcccititle {
+    font-size: 0.8rem; /* Slightly bigger for better readability */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* Navbar sticky behavior */
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: #EDEDED !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+/* Mobile Toggle */
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1000;
+    border: none;
+}
+
+/* Align nav-container properly for responsiveness */
+.nav-container {
+    margin-left: auto;
+    flex-grow: 1;
+}
+
+/* Styling for the "Login" button */
+.loginbtn {
+    text-decoration: none;
+    background-color: #447996;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.loginbtn:hover {
+    background: #FFFFFF;
+    color: #447996;
+    border: 1px solid #447996;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 995px) and (min-width: 768px) { /* Tablet and smaller */
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .car-card-1 {
+        width: 100% !important;
+    }
+
+    .brand-head {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .brand-title h5 {
+        font-size: 1rem;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .hcccititle {
+        font-size: 0.7rem;
+    }
+
+    .loginbtn {
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+
+    .brand-head {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+    }
+
+    .hccci-logo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        margin-left: 30px;
+        align-items: left;
+    }
+
+    .navbar-toggler {
+        width: fit-content;
+        top: 15px;
+        right: 15px;
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+    }
+
+    .brand-title h5 {
+        font-size: 0.9rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        margin-right: 10px;
+    }
+
+    .loginbtn {
+        padding: 6px 20px;
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+
+    .hcccititle {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 576px) { /* Small mobile devices */
+    .hccci-logo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .brand-title h5 {
+        font-size: 0.8rem;
+    }
+
+    .loginbtn {
+        padding: 5px 15px;
+        font-size: 0.7rem;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        margin-right: 5px;
+    }
+
+    .brand-head {
+        flex-basis: 100%; /* Full width for smaller screens */
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+}
+
+.college-link {
+    background: #447996 !important;
+    color: #f3f3f3;
+    font-family: 'Roboto Slab', serif;
+}
+
+.college-link:hover {
+    color: #f3f3f3;
+}
+
+.collapse-body {
+    color: #655642;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navactive {
+    font-weight: bolder;
+}
+
+.about-title {
+    font-size: 50px;
+    color: #655642;
+    text-shadow: #1b1b1a 2px 1px;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.ndt {
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 40px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.ndt p {
+    margin-top: 1.5em;
+}
+
+.hccciVideo2 {
+    height: 450px;
+}
+
+.borderLine {
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    height: 225px;
+    width: 350px;
+    border: 4px solid #e6a149;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.Desktop {
+    margin-top: 50px !important;
+    background-color: rgba(101, 86, 66, 1);
+    color: white;
+    text-shadow: black 1px 1px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.imageCore {
+    position: absolute;
+    margin-top: 4em;
+    width: 20%;
+    height: 20%;
+    background-image: url(../images/po4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.imageCore1 {
+    position: relative;
+    top: 12em;
+    left: 12em;
+    width: 50%;
+    height: 50%;
+    background-image: url(../images/College.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.borderLineVal {
+    position: relative;
+    bottom: 220px;
+    left: 100px;
+    height: 225px;
+    width: 350px;
+    background-color: rgba(230, 161, 73, .2);
+}
+
+.imageCore2 {
+    position: absolute;
+    margin-top: 4em;
+    width: 20%;
+    height: 20%;
+    background-image: url(../images/pctlab.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    filter: brightness(150%);
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.imageCore3 {
+    position: relative;
+    top: 12em;
+    left: 12em;
+    width: 50%;
+    height: 50%;
+    background-image: url(../images/cosci1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    filter: brightness(120%);
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.imageCore4 {
+    position: absolute;
+    margin-top: 4em;
+    margin-left: 4em;
+    width: 20%;
+    height: 20%;
+    background-image: url(../images/prog2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    filter: brightness(150%);
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.imageCore5 {
+    position: relative;
+    margin-left: 4em;
+    top: 12em;
+    left: 12em;
+    width: 50%;
+    height: 50%;
+    background-image: url(../images/grade10.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    filter: brightness(120%);
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.values .coreBack {
+    position: absolute;
+    font-size: 56px;
+    margin-top: 1em;
+    margin-left: 2.5em;
+    opacity: .08;
+}
+
+.values h4 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 1.2em;
+    font-size: 28;
+}
+
+.mission .coreBack {
+    position: absolute;
+    font-size: 56px;
+    margin-top: 1em;
+    margin-left: 3.5em;
+    opacity: .08;
+}
+
+.mission p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.mission {
+    margin-top: 3em;
+    padding-top: 40px;
+    margin-bottom: 3em;
+}
+
+.mission h4 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 1.2em;
+    font-size: 28;
+}
+
+.vision {
+    margin-top: 3em;
+    padding-top: 40px;
+}
+
+.vision .coreBack {
+    position: absolute;
+    font-size: 56px;
+    margin-top: 1em;
+    margin-left: 4em;
+    opacity: .08;
+}
+
+.vision h4 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 1.2em;
+    font-size: 1.5rem;
+}
+
+.vision p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.borderLine1 {
+    position: relative;
+    bottom: 100px;
+    left: 150px;
+    height: 225px;
+    width: 350px;
+    border: 4px solid #e6a149;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.borderLineVal1 {
+    position: relative;
+    top: -110px;
+    left: 140px;
+    height: 115px;
+    width: 350px;
+    background-color: rgba(230, 161, 73, .2);
+}
+
+#hccciVideo {
+    width: 100%;
+    height: 400px ;
+    padding-top: 20px;
+}
+
+.carousel-image2 {
+    height: 400px !important;
+}
+
+@media only screen and (min-width: 414px) {
+    .carousel-image2 {
+        height: 400px !important;
+        /* margin-left: 110px !important; */
+    }
+
+    #hccciVideo {
+        width: 100%;
+        height: 250px !important;
+        padding-top: 20px;
+    }
+}
+
+.cores {
+    text-align: justify;
+    font-size: 17px;
+    margin-top: -70px;
+    max-width: 540px;
+    padding-top: 110px;
+}
+
+.cores h1 {
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    color: #655642;
+}
+
+.cores p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#mvDivRes {
+    display: none;
+}
+
+#mvDivDesk {
+    display: block;
+}
+
+@media (max-width: 575.98px) {
+    /* Hide on extra small screens (xs) */
+    #mvDivRes {
+        display: block;
+    }
+    #mvDivDesk {
+        display: none;
+    }
+    .carousel-image2 {
+        height: 200px !important;
+    }
+    
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Show on small screens (sm) */
+    #mvDivRes {
+        display: block;
+    }
+    #mvDivDesk {
+        display: none;
+    }
+    .carousel-image2 {
+        height: 250px !important;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Show on medium screens (md) */
+    #mvDivRes {
+        display: none;
+    }
+    #mvDivDesk {
+        display: block;
+    }
+    .carousel-image2 {
+        height: 400px !important;
+    }
+    
+}
+
+/* School Seal Section */
+#ssDiv {
+    padding: 40px 0;
+}
+
+#ssDiv h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#ssDiv h3, #ssDiv h4 {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+#ssDiv p {
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.text-center img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container.seal {
+    margin-top: 50px;
+}
+
+/* Mobile View Styling */
+@media (max-width: 767px) {
+    #ssDiv .container {
+        padding: 0 15px;
+    }
+    
+    .hide-mobile {
+        display: block;
+    }
+    
+    .hide-desktop {
+        display: none;
+    }
+}
+
+/* Desktop View Styling */
+@media (min-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+    
+    .hide-desktop {
+        display: block;
+    }
+    
+    .des {
+        background-color: #f9f9f9;
+    }
+    
+    .des .row {
+        margin-bottom: 30px;
+    }
+    
+    .des img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    
+    .des h4 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .des p {
+        text-align: center;
+        padding: 0 15px;
+        color: #444;
+    }
+    
+    .des .max-auto {
+        margin: auto;
+        text-align: center;
+    }
+}
+  
+  @media only screen and (min-width: 1025px) {
+    .des h1 {
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        padding-top: 80px;
+        font-size: 50px;
+        color: #655642;
+    }
+}
+ 

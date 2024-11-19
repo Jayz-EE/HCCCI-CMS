@@ -1,0 +1,885 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+   
+}
+/* Header */
+.iPadHeader {
+    display: none;
+}
+
+header {
+    background-color: #655642;
+    margin-top: 0 !important;
+}
+.headerinfo  {
+    text-align: center;
+    color:rgba(255, 255, 255, 0.898) !important;
+}
+.headicon1, .headicon2 {
+    margin-top: .5rem;
+}
+.headicon2 {
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+}
+.headicon3 {
+    margin-bottom: .5rem;
+    background-color: #655642;
+}
+.socialicon {
+    margin-bottom: .5rem;
+}
+.fa-facebook-f {
+    color: #ffffff;
+    margin: 2px;
+}
+.fa-youtube {
+    color: #ffffff;
+    margin: 2px;
+}
+/* navbar-------------------------------------------------- */
+.navpro {
+    display: none;
+}
+.ipadproenrollbtn, .ipadprologinbtn {
+    display: none;
+}
+.nvb {
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+.hccci-logo {
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+}
+
+.navactive {
+    font-weight: bold;
+    color: #011842 !important;
+}
+.ht {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #011842 !important;
+    position: absolute;
+    margin-top: .4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hcccititle {
+    font-size: 0.6rem;
+    position: relative;
+}
+.nt1, .nti1 {
+    display: inline-block;
+    width:  2rem;
+    height: 2rem;
+}
+.navbar-toggler .nti1{
+    color: rgb(24, 24, 24) !important;
+}
+.nti1 {
+    margin-top: -6px;
+    margin-left: -13px;
+}
+.linecolor {
+    color: #c3b091;
+}
+.navul li{
+    font-size: 16px;
+    text-align: justify !important;
+    margin-right: 16px;
+    font-family: 'Roboto Slab', serif !important;
+}
+.navul .nhome {
+    margin-top: -1px !important;
+}
+.nav-link{
+    color: #062969 !important;
+}
+.nav-link:hover {
+    font-weight: bold;
+}
+
+.nav-dm  li{
+    font-size: 12px;
+    text-align: center !important;
+    width: 100%;
+}
+.dropdown ul a:hover{
+    font-weight: bold !important;
+    background-color: #94c7e3;
+}
+nav .loginbtn {
+    font-weight: normal !important;
+    padding: 0 15px;
+    background-color:#447996;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: .3rem;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.4);
+    margin: 20px 30px 5px 0 !important;
+    color: #f3f3f3;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: transparent;
+}
+.sticky {
+    position: fixed;
+    margin-top: 0 !important;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    background-color: #EDEDED !important;
+  }
+/* Carousel -------------------------------------------- */
+.carousel img {
+    height: 15.625rem;
+    margin-bottom: 20px;
+}
+/* button level */
+.lvlbtnn ul{
+  padding-bottom: 3px;
+  justify-content: space-around !important;
+}
+.lvlbtn1{
+    font-family: 'Roboto Slab', serif;
+    background-color: #447996;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin: 0 2px;
+}
+.lvlbtn1:hover {
+    color: #f3f3f3;
+}
+.lvlbtn2{
+    font-family: 'Roboto Slab', serif;
+    background-color: #447996;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin: 0 2px;
+}
+.lvlbtn2:hover {
+    color: #f3f3f3;
+}
+
+.lvlbtn3{
+    font-family: 'Roboto Slab', serif;
+    background-color: #447996;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 0 2px;
+}
+.lvlbtn3:hover {
+    color: #f3f3f3;
+}
+
+.btnactive1 {
+    background-color: #e3c194 !important;
+    color: #000000!important;
+}
+
+.btnactive {
+    padding: 5px 0;
+    margin: 0 5px;
+    background-color: #e3c194 !important;
+    color: #000000 !important;
+}
+
+/* College Admission Process  start -------------------------------------- */
+ 
+.apcollege h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bolder;
+    color: #655642;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 1em;
+     
+}
+
+.apcollege h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3em;
+    margin-top: 3.5em;
+    margin-bottom: 1.2em;
+}
+.apcollege p {
+    text-indent: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* College Admission Process  end -------------------------------------- */
+
+/* Shs Admission Process  start -------------------------------------- */
+  .aptitleshs {
+    font-family: 'Roboto Slab', serif;
+    color: #655642;
+    text-align: center;
+  }
+  
+  .datapolicy {
+      display: none;
+  }
+  
+  .apshsbtn{
+      display: flex;
+      justify-content: center;
+  }
+  .btnreqshs{
+      font-weight: bold;
+      background-color: #447996;
+      color: #f3f3f3;
+      padding: 10px 30px;
+      border-radius: 10px;
+      border: transparent;  
+      margin: 5px 7.5px;
+      width: 100px;
+  }
+  .btnpolicyshs {
+      font-weight: bold;
+      background-color: #447996;
+      color: #f3f3f3;
+      padding: 10px 55px;
+      border-radius: 10px;
+      border: transparent;
+      margin: 5px 8px;  
+      width: 100px;
+  }
+  
+  .btnreqshs:focus, .btnpolicyshs:focus {
+      outline: transparent;
+  }
+  .btnreqshs:hover {
+      transform: scale(1);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+      color: #fff;
+  }
+  .btnpolicyshs:hover {
+      transform: scale(1);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+      color: #fff;
+  }
+  .h3shs {
+      margin-top: 7.5px;
+      margin-bottom: 1em;
+      font-family: 'Roboto Slab', serif;
+      text-align: start !important;
+  }
+  .datareqshs p {
+      margin: 3.2px 0;
+      font-family: 'Montserrat', sans-serif;
+  }
+  
+  .datapolicy {
+      margin-top: 10px;
+  }
+  .datapolicy h3 {
+    font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 2em;
+      margin-bottom: 1.2em;
+  }
+  .datapolicy p {
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+  }
+  /* Shs Admission Process  end -------------------------------------- */
+
+
+  /* ElemJhs Admission Process  start -------------------------------------- */
+  
+  .datapolicy1 {
+      display: none;
+  }
+  /* elem and JHS ----------------------------------- */
+  .apelemjhs{
+      margin-top: 7.5px;
+  }
+  .apelemjhs h2 {
+    font-family: 'Roboto Slab', serif;
+      font-weight: bolder;
+      font-size: 22px;
+      color: #655642;
+      text-align: center;
+  }
+  .apelemjhs img {
+      width: 30px;
+      height: 30px;
+      margin-top: 25px;
+      cursor: pointer;
+      border-radius: 50%;
+  }
+  .apelemjhs img:hover{
+      transform: scale(1.06);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+      border-radius: 50%;
+      background-color: #94c7e3;
+  }
+  
+  .apelemjhs .apelembtn{
+      display: flex;
+      justify-content: center;
+  }
+  .btnreqelem{
+      font-weight: bold;
+      background-color: #447996;
+      color: #f3f3f3;
+      padding: 10px 30px;
+      border-radius: 10px;
+      border: transparent;  
+      margin: 5px 7.5px;  
+  }
+  .btnpolicyelem {
+      font-weight: bold;
+      background-color: #447996;
+      color: #f3f3f3;
+      padding: 10px 55px;
+      border-radius: 10px;
+      border: transparent;
+      margin: 5px 8px;  
+  }
+  .btnreqelem:focus, .btnpolicyelem:focus {
+      outline: transparent;
+  }
+  .btnreqelem:hover {
+      transform: scale(1);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+      color: #fff;
+  }
+  .btnpolicyelem:hover {
+      transform: scale(1);
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+      color: #fff;
+  }
+  .apelemjhs .apshs{
+      display: flex;
+      justify-content: center;
+  }
+  .btnreqshs{
+      font-weight: bold;
+      padding: 10px 30px;
+      border-radius: 10px;
+      border: transparent;  
+      margin: 5px 7.5px;
+      width: 200px;
+  }
+  .btnpolicyshs {
+      font-weight: bold;
+      padding: 10px 55px;
+      border-radius: 10px;
+      border: transparent;
+      margin: 5px 8px;  
+      width: 180px;
+  }
+  
+  .datareqelemjhs, .datareqshs{
+      margin-top: 7.5px;
+  }
+  .datareqelemjhs h3, .datareqshs h3 {
+    font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 17px;
+      margin-top: 2em;
+  }
+  .h3jhs {
+      margin-top: 7.5px;
+  }
+  .datareqelemjhs p, .datareqshs p {
+      margin: 3.2px 0;
+      font-family: 'Montserrat', sans-serif;
+  }
+  
+  .datapolicy1 {
+      margin-top: 10px;
+  }
+  .datapolicy1 h3 {
+    font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 17px;
+      margin-top: 1.8em;
+  }
+  .datapolicy1 p {
+    font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      text-indent: 25px;
+      text-align: justify;
+  }
+  /* ElemJhs Admission Process  end -------------------------------------- */
+
+/* >>>>>>>Footer-------------------------------------<<<<<<< */
+.ipadfooter {
+   
+    display: none;
+}
+.dskfooter {
+    display: none;
+}
+footer {
+    background-color: #655642;
+    padding-top: 1em;
+    padding-bottom: 2rem;
+    margin-top: 3em;
+}
+
+
+.fh, .fc, .cft {
+    background-color:#655642;
+    padding: .3rem;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+.footer-text {
+    margin-top: 20px;
+    color: #f3f3f3;
+}
+
+.fc{
+    margin-top: 20px;
+}
+.info-text {
+    padding-top: 18px;
+    font-weight: normal !important;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.cfc{
+    color: #f3f3f3;
+}
+.cfcname {
+    margin-top: 1rem;
+}
+
+.contact-form h3, .contact-form h5{
+    font-weight: bold;
+}
+.btnf {
+    width: 100%;
+    background-color: #447996;
+    border-color: rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.btnf:hover {
+   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #447996;
+    outline: none;
+    border: none;
+}
+
+.all-rights {
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    margin: 0;
+    color: #f3f3f3;
+    background-color: #655642;
+    text-align: center;
+    padding: 20px;
+}
+
+/* iPad */
+@media only screen and (min-width: 768px){
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    /* Header */
+    .iphoneHeader {
+        display: none;
+    }
+    .iPadHeader {
+        display: flex;
+        justify-content:space-between;
+        padding-bottom: 15px;
+    }
+    .iPadHeader .contactInfoHeader , .socialiconIpad {
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 1rem;
+    }
+    .headicon1, .headicon2, .headicon3 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .contactInfoHeader i {
+        font-style: normal !important;
+        font-weight: normal;
+    } 
+    .socialiconIpad span > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad h6 > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad a {
+        font-weight:normal;
+        font-size: 15px !important;
+    }
+    /* navbar */
+    .navpro {
+        display: none;
+    }
+    .nvb {
+        padding: 3px;
+    }
+    .ht {
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #011842 !important;
+        position: absolute;
+        margin-top: .5rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .hcccititle {
+        font-size: 0.6rem;
+        position: relative;
+        margin-top: -.3rem;
+    }
+
+    /* Carousel -------------------------------------- */      
+    .caroimg {
+        height: 24rem !important;
+      }
+
+      /* button */
+
+      .lvlbtnn ul {
+          justify-content: center !important;
+      }
+      .lvlbtnn ul li {
+          padding: 10px;
+      }
+
+      .lvlbtnn ul li a{
+          padding: 10px 40px;
+      }
+    /* Admission Process start --------------------------- */
+    /* SHS ----------- */
+    .apelemjhs {
+        margin-top: 10px;
+    }
+    .apshs {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .btnreqshs {
+        font-weight: bold;
+        background-color: #447996;
+        
+        border-radius: 10px;
+        border: transparent;  
+        margin: 5px 2px;  
+        width: 180px;
+    }
+    .btnpolicyshs {
+        font-weight: bold;
+        background-color: #447996;
+         
+        border-radius: 10px;
+        border: transparent;
+        /* margin: 5px 18px;   */
+        width: 180px;
+    }
+    .datareqshs {
+        margin-top: 20px;
+    }
+    /* Shs Admission process end ------------------------------ */
+
+    /* Admission Process start --------------------------- */
+    /* Elem and JHS ----------- */
+    .apelemjhs {
+        margin-top: 10px;
+    }
+    .apelemjhs .apelembtn{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .btnreqelem {
+        font-weight: bold;
+        background-color: #447996;
+       
+        border-radius: 10px;
+        border: transparent;  
+        margin: 5px 2px;  
+    }
+    .btnpolicyelem {
+        font-weight: bold;
+        background-color: #447996;
+      
+        border-radius: 10px;
+        border: transparent;
+        margin: 5px 18px;  
+    }
+    .datareqelemjhs {
+        margin-top: 20px;
+    }
+    /* Admission process end ------------------------------ */
+ 
+    /* Footer ------------------------------------------------ */
+    .ipfooter {
+        display: none;
+    }
+    .ipadfooter {
+        display: block;
+    }
+
+    .ipadfooter-text {
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-between;
+        padding-top: 18px;
+        color: #f3f3f3;
+    }
+    .ipadinfo-text {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 18px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        color: #f3f3f3;
+    }
+    .ipadfh, .ipadfc {
+        font-family: 'Roboto Slab', serif;
+        background-color: #655642;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: #f3f3f3;
+        font-weight: bold;
+    }
+    .ipadinfo-text i {
+        color: #f3f3f3;
+    }
+
+    .cfcnameIpad {
+        margin-top: 1rem;
+        color: #f3f3f3;
+    }
+
+    .btnf {
+        padding: 1rem;
+    }
+}
+
+/* iPadPro */
+@media only screen and (min-width: 1024px){
+    /* Header */
+    .iPadHeader {
+        padding-bottom: 2px;
+    }
+    .contactInfoHeader, .socialiconIpad {
+        margin-top: 0.2rem !important;
+    }
+    /* Navbar ------------------------------- */
+    .navres {
+        display: none;
+    }
+    .navpro {
+        display: block;
+    }
+    .loginbtn {
+        display: none !important;
+    }
+
+    .linecolor {
+        display: none;
+    }
+
+    nav {
+        font-family: 'Roboto Slab', serif;
+    }
+    .navul li a {
+        margin: 0 !important;
+    }
+
+    .ipadprologinbtn {
+        font-family: 'Roboto Slab', serif !important;
+        display: flex;
+        align-items: center;
+        background-color: #447996;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 8px 20px;
+        border-radius: 40px;
+        border: transparent;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+    }
+    .ipadprologinbtn:focus {
+        outline: transparent;
+    }
+    .ipadprologinbtn:hover {
+        font-weight: bolder;
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        background-color: #EDEDED;
+        color: #447996;
+        border: solid 1px #447996;
+    }
+    .ipadproenrollbtn, .ipadprologinbtn {
+        margin-left: 5px;
+    }
+
+ 
+    /* Footer ------- */
+    .dskfooter {
+        display: none;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1025px){
+    /* Navbar ----------------------------- */
+    .hccci-logo {
+        height: 50px;
+        width: 50px;
+    }
+    .navul {
+        font-size: 15px;
+    }
+    
+        /* Carousel------------------------ */
+    .carousel img{
+        height: 70vh;
+    }
+ 
+    /* Footer ------------------ */
+    .ipadfooter {
+        display: none;
+    }
+    .dskfooter {
+        display: block;
+        bottom: 0 !important;
+        margin-top: -17px !important;
+    }
+    .dsktextlogo h5 {
+        font-size: 14px !important;
+        text-align: center;
+        color: #f3f3f3;
+    }
+    .dskfooter img {
+        width: 40%;
+        height: 40%;
+        position: auto;
+        margin-top: 10px;   
+    }
+
+    .ipadfc h2 {
+        font-size: 25px !important;
+    }
+    .deskcontact i {
+        font-size: 13px !important;
+        color: #f3f3f3;
+    }
+    .deskcontact span {
+        font-size: 13px;
+        font-weight: normal;
+    }
+    
+    .deskcontact .fa-icon {
+        font-size: 15px !important;
+    }
+    .socialicon {
+        margin-top: 15px !important;
+    }
+    .socialicon i {
+        font-size: 20px !important;
+        margin: 5px;
+    }
+    .socialicon h6 > i {
+        font-size: 15px !important;
+    }
+
+    .otherLinks {
+        text-align: center;
+    }
+    .otherLinks h2 {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 25px !important;
+        color: #f3f3f3;
+    }
+    .otherLinks a {
+        font-family: 'Montserrat', sans-serif;
+        color: #f3f3f3;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+    .contactForm .contact-form {
+        margin-top: 0px;
+        width: 100%;
+        justify-content: center !important;
+    }
+    .contact-form h2 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    .contact-form .contact-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+    }
+    .input-name{
+        margin-right: 2px;
+    }
+    .input-phone{
+        margin-top: -4px;
+        margin-left: 2px;
+    }
+    .comment textarea{
+        margin-top: -10px !important;
+    }
+    .cfc {
+        font-size: 13px !important;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .btnf {
+        padding: 5px 5px;
+        margin-top: 5px;
+    }
+    .btnf:hover {
+        transform: none;
+    }
+    .all-rights {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        color: #f3f3f3;
+        background-color: #655642;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+    }
+}

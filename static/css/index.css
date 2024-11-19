@@ -1,0 +1,1253 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    
+}
+
+ /* news update */
+.imagesSign{
+    width: 100%;
+    height: 100%;
+}
+ .newsUpdate{ 
+    margin:0 auto;
+    margin-bottom: 1em;
+    width: 100%;
+ }
+
+ .newsUpdateTitle{
+     margin-top: 2em;
+     margin-bottom: 1em !important; 
+ }
+
+ .carousel-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .cardNews{
+        text-decoration: none;
+    }
+  
+ @media only screen and (min-width: 320px) {
+    .cardNews .card {
+       height: 100%;
+       width: 100%;
+    }
+    
+    .cardNews .card .card-header {
+        padding: 8px;
+        height: 112.66px;
+        width: 111.66px;
+    }
+    
+    /* .cardNews .card .card-header img {
+        
+    } */
+
+    .cardNews .card-body {
+       width: 111.66px;
+       height: 75px;
+    }
+
+    .cardNews .card-body h5{
+        font-size: .6rem;
+    }
+    .cardNews .card-body h6  {
+        font-size: .5rem;
+    }
+    /* .cardNews img {
+       max-height: 214.66px;
+       height: 100vh;
+       width: 100%;
+    } */
+ }
+
+ @media only screen and (min-width: 425px) {
+    .cardNews .card {
+       height: 100%;
+       width: 100%;
+    }
+    
+    .cardNews .card .card-header {
+        padding: 8px;
+        height: 112.66px;
+        width: 111.66px;
+    }
+    
+    /* .cardNews .card .card-header img {
+        
+    } */
+
+    .cardNews .card-body {
+       width: 111.66px;
+       height: 94px;
+    }
+
+    .cardNews .card-body h5{
+        font-size: .6rem;
+    }
+    .cardNews .card-body h6  {
+        font-size: .5rem;
+    }
+    /* .cardNews img {
+       max-height: 214.66px;
+       height: 100vh;
+       width: 100%;
+    } */
+ }
+
+ @media only screen and (min-width: 768px) { 
+    .cardNews .card {
+       height: 100%;
+       width: 100%;
+    }
+    
+    .cardNews .card .card-header {
+       height: 211px;
+       width: 210px;
+    }
+
+    .cardNews .card .card-body {
+        width: 100%;
+        /* height: 91.19px; */
+        
+     }
+
+     .cardNews .card-body h5, .cardNews .card-body h6 {
+        font-size: .8rem;
+    }
+ 
+ }
+
+ @media only screen and (min-width: 1024px) {
+    .cardNews .card {
+       height: 100%;
+       width: 100%;
+    }
+    
+    .cardNews .card .card-header {
+        height: 291px;
+        width: 290px;
+     }
+ 
+     .cardNews .card .card-body {
+         width: 100%;
+         /* height: 91.19px; */
+         
+      }
+ 
+      .cardNews .card-body h5, .cardNews .card-body h6 {
+         font-size: 1.1rem;
+     }
+
+
+ }
+ @media only screen and (min-width: 1440px) {
+    .cardNews .card {
+       height: 100%;
+       width: 100%;
+    }
+    
+    .cardNews .card .card-header {
+        width: 410px;
+        height: 411px;
+     }
+ 
+     .cardNews .card .card-body {
+         width: 100%;
+      }
+ 
+      .cardNews .card-body h5, .cardNews .card-body h6 {
+         font-size: 1rem;
+     }
+
+
+ }
+
+
+ /* news update */
+ 
+/* Header */
+.iPadHeader {
+    display: none;
+}
+
+header {
+    background-color: #655642;
+    margin-top: 0 !important;
+}
+.headerinfo  {
+    text-align: center;
+    color:rgba(255, 255, 255, 0.898) !important;
+}
+.headicon1, .headicon2 {
+    margin-top: .5rem;
+}
+.headicon2 {
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+}
+.headicon3 {
+    margin-bottom: .5rem;
+    background-color: #655642;
+}
+.socialicon {
+    margin-bottom: .5rem;
+}
+.fa-facebook-f {
+    color: #ffffff;
+     
+    margin: 2px;
+}
+.fa-youtube {
+    color: #ffffff;
+    margin: 2px;
+}
+/* navbar-------------------------------------------------- */
+.navpro {
+    display: none;
+}
+.ipadproenrollbtn, .ipadprologinbtn {
+    display: none;
+}
+.nvb {
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+.hccci-logo {
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+}
+
+.navactive {
+    font-weight: bold;
+    color: #011842 !important;
+}
+.ht {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #011842 !important;
+    position: absolute;
+    margin-top: .4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hcccititle {
+    font-size: 0.6rem;
+    position: relative;
+}
+.nt1, .nti1 {
+    display: inline-block;
+    width:  2rem;
+    height: 2rem;
+}
+.navbar-toggler .nti1{
+    color: rgb(24, 24, 24) !important;
+}
+.nti1 {
+    margin-top: -6px;
+    margin-left: -13px;
+    
+}
+.linecolor {
+    color: #c3b091;
+}
+.navul li{
+    font-size: 14px;
+    text-align: justify !important;
+    margin-right: 12px;
+    font-family: 'Roboto Slab', serif !important;
+    
+}
+.navul .nhome {
+    margin-top: -1px !important;
+}
+.nav-link{
+    color: #062969 !important;
+}
+.nav-link:hover {
+    font-weight: bold;
+}
+
+.nav-dm  li{
+    font-size: 12px;
+    text-align: center !important;
+    width: 100%;
+   
+}
+.dropdown ul a:hover{
+    font-weight: bold !important;
+    background-color: #94c7e3;
+}
+nav .loginbtn {
+    font-weight: normal !important;
+    padding: 0 15px;
+    background-color:#447996;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: .3rem;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.4);
+    margin: 20px 30px 5px 0 !important;
+    color: #f3f3f3;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: transparent;
+}
+.sticky {
+    position: fixed;
+    margin-top: 0 !important;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    background-color: #EDEDED !important;
+  }
+  
+/* Carousel ----------------------------------- */
+.caroimg1  {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 15.625rem;
+  background-image: url('../img/bldg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.caroimg2  {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 15.625rem;
+    background-image: url('../img/hccci2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+.carouseltext1 {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0,.6) !important;
+}
+
+.carousel .caropara1 {
+  /* margin-top:70px; */
+  font-weight: bold;
+  font-size: 18px;
+  color: #f3f3f3;
+}
+.carousel .caropara2 {
+  margin-top:40px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #f3f3f3;
+}
+.carousel .enrollbtn {
+    font-weight: bold !important;
+    justify-content: center;
+    background-color:#447996;
+    text-decoration: none;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: .7rem;
+    color: #f3f3f3;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: none;
+}
+ 
+
+.enrollbtn:focus {
+    outline: none;
+}
+
+/* Title w/ video--------------------------------------*/
+ 
+.tt1 {
+    font-family: 'Roboto Slab', serif;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #655642;
+    font-weight: bold;
+}
+
+.tt2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-indent: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-enr {
+    background-color: #447996;
+    border: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.btn-enr:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #447996;
+    outline: none;
+    border: none;
+}
+
+#hccciVideo {    
+    height: 250px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* Programs Offered --------------------------------------------*/
+.ipad1 {
+    display: none;
+}
+.po {    
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.poh {    
+    text-align: center;
+    font-weight: bold;
+    color: #655642;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Card start */
+.pocardsipad {
+    display: none;
+}
+.pocardsipadpro {
+    display: none;
+}
+.pocards a {
+    text-decoration: none;
+}
+.pocardsdesktop {
+    display: none;
+}
+
+
+.pocards {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: #655642;
+    margin-bottom: 20px;
+    
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0,0,0,.4);
+    cursor: pointer;
+    color: #655642;
+}
+
+.pocards img {
+    width: 100%;
+}
+
+.card-text {
+    text-align: center;
+}
+
+#poname {
+    width: 100%;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    background-color: #447996;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.wrapper1 div {
+    margin-top: -13px;
+}
+
+.collegeList{
+    margin-bottom: 1em;
+}
+.btnCS, .btnBusi, .btnEdu, .btnCriminal, .btnSci{
+    background-color: #447996 !important;
+    border: none !important;
+    outline: none !important;
+    font-family: 'Roboto Slab', serif;
+}
+.btnCS:focus, .btnBusi:focus, .btnEdu:focus, .btnCriminal:focus, .btnSci:focus {
+    box-shadow: none !important;
+}
+
+/* Responsive styles for tablets */
+@media screen and (max-width: 768px) {
+    .pocardsdesktop {
+        display: none;
+    }
+
+    .pocardsipad {
+        display: block;
+    }
+}
+
+/* Responsive styles for large tablets and small desktops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .pocardsdesktop {
+        display: none;
+    }
+
+    .pocardsipadpro {
+        display: block;
+    }
+}
+
+/* Responsive styles for desktops */
+@media screen and (min-width: 1025px) {
+    .pocardsipad,
+    .pocardsipadpro {
+        display: none;
+    }
+
+    .pocardsdesktop {
+        display: block;
+    }
+}
+
+/* >>>>>>>Footer-------------------------------------<<<<<<< */
+.ipadfooter {
+    display: none;
+}
+.dskfooter {
+    display: none;
+}
+footer {
+    padding-top: 1em;
+    background-color: #655642;
+    padding-bottom: 2rem;
+    margin-top: 5em;
+}
+
+
+.fh, .fc, .cft {
+    font-family: 'Roboto Slab', serif;
+    background-color:#655642;
+    padding: .3rem;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+     
+}
+.footer-text {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    color: #f3f3f3;
+}
+
+.fc{
+    margin-top: 20px;
+}
+.info-text {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 18px;
+    font-weight: normal !important;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.cfc{
+    color: #f3f3f3;
+    font-family: 'Montserrat', sans-serif;
+}
+.cfcname {
+    margin-top: 1rem;
+}
+
+.contact-form h3, .contact-form h5{
+    font-weight: bold;
+}
+.btnf {
+    width: 100%;
+    background-color: #447996;
+    border-color: rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.btnf:hover {
+   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #447996;
+    outline: none;
+    border: none;
+}
+
+.all-rights {
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    margin: 0;
+    color: #f3f3f3;
+    background-color: #655642;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ipad---------------------------------------------- */
+@media only screen and (min-width: 768px){
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    /* Header */
+    .iphoneHeader {
+        display: none;
+    }
+    .iPadHeader {
+        display: flex;
+        justify-content:space-between;
+        padding-bottom: 15px;
+    }
+    .iPadHeader .contactInfoHeader , .socialiconIpad {
+        font-family: 'Montserrat', sans-serif;
+         margin-top: 1rem;
+    }
+    .headicon1, .headicon2, .headicon3 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .contactInfoHeader i {
+        font-style: normal !important;
+        font-weight: normal;
+    } 
+    .socialiconIpad span > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad h6 > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad a {
+        font-weight:normal;
+        font-size: 15px !important;
+    }
+    /* navbar */
+    .navpro {
+        display: none;
+    }
+    .nvb {
+        padding: 3px;
+    }
+    .ht {
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #011842 !important;
+        position: absolute;
+        margin-top: .5rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .hcccititle {
+        font-size: 0.6rem;
+        position: relative;
+        margin-top: -.3rem;
+    }
+    /* Carousel -------------------------------------- */      
+      .caroimg1 {
+        height: 23rem;
+      }
+      .caroimg2 {
+        height: 23rem;
+      }
+    
+      .carouseltext1 {
+        
+        position: absolute;
+        text-align: center;
+        background-color: rgba(0, 0, 0,.4) !important;
+        height: 40vh;
+    }
+      
+      .carousel .caropara1 {
+        
+        /* margin-top:130px; */
+        font-weight: bold;
+        font-size: 25px;
+        color: #f3f3f3;
+      }
+      .carousel .caropara2 {
+        margin-top:80px;
+        font-weight: bold;
+        font-size: 25px;
+        color: #f3f3f3;
+      }
+      .carousel .enrollbtn {
+          font-weight: bold !important;
+          justify-content: center;
+          background-color:#447996;
+          text-decoration: none;
+          align-items: center;
+          margin-bottom: 100px;
+          padding: .7rem;
+          color: #f3f3f3;
+          position: relative;
+          border-radius: 10px;
+      }
+      .enrollbtn:focus {
+          outline: none;
+      }
+    /* Title w/ video---------------------------------------*/
+    .tt1 {
+        font-family: 'Roboto Slab', serif;
+        color: #655642 !important;
+        margin-top: 20px;
+        font-size: 32px;
+    }
+    
+    .tt2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
+
+    .btn-enr {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 20px;
+    }
+
+    #hccciVideo {
+        height: 400px;
+    }
+
+    /* Programs Offered ------------------------------------*/
+    .pocards {
+        display: none;
+    }
+
+    .pocardsipad {
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        color: #655642;
+        margin-bottom: 20px;
+        display: block;
+        position: relative;
+        margin-left: -1.9rem;
+    }
+    .pocardsipad a {
+        text-decoration: none;
+    }
+    .pocardsipad .card {
+        margin: 0 auto;
+        float: none;
+        margin: 30px 30px;
+        width: 100%;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+        cursor: pointer;
+        color: #655642;
+    }
+    .pocardsipad .card:hover{
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        background: #ffe3bf;
+        color: #447996;
+    }
+    
+    /* Footer ------------------------------------------------ */
+    .ipfooter {
+        display: none;
+    }
+    .ipadfooter {
+        display: block;
+    }
+
+    .ipadfooter-text {
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-between;
+        padding-top: 18px;
+        color: #f3f3f3;
+    }
+    .ipadinfo-text {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 18px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .ipadinfo-text {
+        
+        color: #f3f3f3;
+    }
+
+    .ipadfh, .ipadfc {
+        font-family: 'Roboto Slab', serif;
+        background-color: #655642;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: #f3f3f3;
+        font-weight: bold;
+    }
+    .ipadinfo-text i {
+        color: #f3f3f3;
+    }
+
+    .cfcnameIpad {
+        margin-top: 1rem;
+        color: #f3f3f3;
+    }
+
+    .btnf {
+        padding: 1rem;
+    }
+}
+
+/* IpadPro */
+@media only screen and (min-width: 1024px) {
+    /* Header */
+    .iPadHeader {
+        padding-bottom: 2px;
+    }
+    .contactInfoHeader, .socialiconIpad {
+        margin-top: 0.2rem !important;
+    }
+    /* Navbar ------------------------------- */
+    .navres {
+        display: none;
+    }
+    .navpro {
+        display: block;
+    }
+    .loginbtn {
+        display: none !important;
+    }
+
+    .linecolor {
+        display: none;
+    }
+
+    nav {
+        font-family: 'Roboto Slab', serif;
+    }
+    .navul li a {
+        margin: 0 !important;
+       
+    }
+
+    .ipadprologinbtn {
+        font-family: 'Roboto Slab', serif !important;
+        display: flex;
+        align-items: center;
+        background-color: #447996;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 8px 20px;
+        border-radius: 40px;
+        border: transparent;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+    }
+    .ipadprologinbtn:focus {
+        outline: transparent;
+    }
+    .ipadprologinbtn:hover {
+        font-weight: bolder;
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        background-color: #EDEDED;
+        color: #447996;
+        border: solid 1px #447996;
+    }
+    .ipadproenrollbtn, .ipadprologinbtn {
+        margin-left: 5px;
+    }
+
+    /* Carousel */
+    
+    /* Title w/ video -------------------------- */
+    #hccciVideo {
+        height: 550px;        
+    }
+
+
+    /* PROGRAMS OFFERED -------------- */
+    .pocards {
+        display: none;
+      
+    }
+    .pocardsipad{
+        display: none;
+    }
+    .pocardsipadpro {
+        display: block;
+    }
+
+    .pocardsipadpro a {
+        text-decoration: none;
+    }
+
+    .ccc2 {
+        margin-left: -1rem;
+    }
+
+    .ccc4 {
+        margin-left: -1rem;
+    }
+    .btnactive {
+        margin-right: 12px;
+        margin-left: 12px;
+        font-weight: bold;
+    }
+
+    /* Footer ------- */
+    .dskfooter {
+        display: none;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1025px){
+    
+
+    /* Carousel------------------------ */
+    .caroimg1, .caroimg2{
+        height: 70vh;
+    }
+    .carouseltext1 {
+        height: 100vh;
+        background-color: rgba(0, 0, 0,.1) !important;
+    }
+    .carouselinner1 {
+        background-color: rgba(0, 0, 0,.6) !important;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px !important;
+        height: 190px;
+        padding: 10px 0;
+        width: 40vw;
+        border-radius: 10px;
+        position: relative;
+        /* top: 300px; */
+        top: 13rem;
+        left: 100px;
+    }
+    .caropara1  {
+        padding: 1rem;
+    }
+    .enrollbtndesktop1 {
+        margin-bottom: 30px !important;
+        font-family: 'Roboto Slab', serif;
+        font-weight: normal !important;
+        font-size: 16px;
+        width: 140px;
+        padding: 8px 16px;
+        border-radius: 40px !important;
+    }
+    .enrollbtn:hover{
+        transform: scale(1.09);
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        background-color: #EDEDED;
+        color: #447996;
+        border: solid 1px #447996;
+
+    }
+    .carouselinner2 {
+        margin-left: 15px;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0;
+        width: 45vw;
+        background-color: rgba(0, 0, 0,.6) !important;
+        border-radius: 10px;
+    }
+    .caropara2  {
+        padding: 1rem;
+    }
+    .enrollbtndesktop2 {
+        margin-bottom: 30px !important;
+        font-family: 'Roboto Slab', serif;
+        font-weight: normal !important;
+        font-size: 16px;
+        width: 140px;
+        padding: 8px 16px;
+        border-radius: 40px !important;
+    }
+    /* Title w/ video */
+    .title1 {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 5em;
+        
+    }
+    .tt1 {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #655642;
+        font-weight: bold;
+    }    
+    .tt2 {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }    
+    .btn-enr {
+        background-color: #447996;
+        border-color: #447996;
+        font-size: 16px;
+        width: 160px;
+        padding: 10px 18px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: normal;
+        border-radius: 30px;
+        margin-bottom: 15px;
+    }    
+    .btn-enr:hover {
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        background-color: #EDEDED;
+        color: #447996;
+        border: solid 1px #447996;
+    }
+    .hccciVideodiv {
+        margin-top: 10em;
+        display: flex;
+        justify-content: center !important;
+    }
+
+    #hccciVideo {    
+        height: 600px;
+        width: 85%;
+        margin-bottom: 10em;
+    }
+
+    /* Programs Offered */
+    .pocardsipadpro {
+        display: none;
+    }
+    .pocardsdesktop {
+        display: block;
+        margin-bottom: 5em;
+    }
+    .data1 img {
+        height: 280px;
+    }
+    .pocardsdesktop a{
+        text-decoration: none !important;
+        height: 50px !important;
+    }
+    .pocardsdesktop img {
+        height: 60vh;
+    }
+    .firstLine {
+        margin-top: 40px;
+        margin-left: 3px;
+    }
+    .firstLine .card {
+        width: 100% !important;
+    }    
+    .secondLine {
+        margin-left: 3px;
+    }
+    .secondLine .card {
+        width: 100% !important;
+    }
+    .pocardsdesktop .card:hover {
+        background-color: #e3c194;
+    }
+
+    /* Footer ------------------ */
+    .ipadfooter {
+        display: none;
+    }
+    .dskfooter {
+        display: block;
+        bottom: 0 !important;
+        margin-top: -17px !important;
+    }
+    .dsktextlogo h5 {
+        font-size: 14px !important;
+        text-align: center;
+        color: #f3f3f3;
+    }
+    .dskfooter img {
+        width: 40%;
+        height: 40%;
+        position: auto;
+        margin-top: 10px;   
+    }
+    .ipadfc h2 {
+        font-size: 25px !important;
+    }
+    .deskcontact i {
+        font-size: 13px !important;
+        color: #f3f3f3;
+    }
+    .deskcontact span {
+        font-size: 13px;
+        font-weight: normal;
+    }
+    
+    .deskcontact .fa-icon {
+        font-size: 15px !important;
+    }
+    .socialicon {
+        margin-top: 15px !important;
+    }
+    .socialicon i {
+        font-size: 20px !important;
+        margin: 5px;
+    }
+    .socialicon h6 > i {
+        font-size: 15px !important;
+    }
+
+    .otherLinks {
+        text-align: center;
+    }
+    .otherLinks h2 {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 25px !important;
+        color: #f3f3f3;
+    }
+    .otherLinks a {
+        font-family: 'Montserrat', sans-serif;
+        color: #f3f3f3;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+    .contactForm .contact-form {
+        margin-top: 0px;
+        width: 100%;
+        justify-content: center !important;
+    }
+    .contact-form h2 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    .contact-form .contact-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+    }
+    .input-name{
+        margin-right: 2px;
+    }
+    .input-phone{
+        margin-top: -4px;
+        margin-left: 2px;
+    }
+    .comment textarea{
+        margin-top: -10px !important;
+    }
+    .cfc {
+        font-size: 13px !important;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .btnf {
+        padding: 5px 5px;
+        margin-top: 5px;
+    }
+    .btnf:hover {
+        transform: none;
+    }
+    .all-rights {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        color: #f3f3f3;
+        background-color: #655642;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+    }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px; /* Set the desired width */
+  height: 40px; /* Set the desired height */
+  background-color: rgba(255, 255, 255, 0.395); /* Set the background color */
+  border-radius: 10%; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Set the text color */
+  cursor: pointer;
+ 
+}
+
+/* Optionally, you can add hover styles */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.233); /* Change color on hover */
+}

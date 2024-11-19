@@ -1,0 +1,910 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+.iPadHeader {
+    display: none;
+}
+
+header {
+    background-color: #655642;
+    margin-top: 0 !important;
+}
+.headerinfo  {
+    text-align: center;
+    color:rgba(255, 255, 255, 0.898) !important;
+}
+.headicon1, .headicon2 {
+    margin-top: .5rem;
+}
+.headicon2 {
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+}
+.headicon3 {
+    margin-bottom: .5rem;
+    background-color: #655642;
+}
+.socialicon {
+    margin-bottom: .5rem;
+}
+.fa-facebook-f {
+    color: #f3f3f3;
+    margin: 2px;
+}
+.fa-youtube {
+    color: #f3f3f3;
+    margin: 2px;
+}
+/* navbar-------------------------------------------------- */
+.navpro {
+    display: none;
+}
+.ipadproenrollbtn, .ipadprologinbtn {
+    display: none;
+}
+.nvb {
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+.hccci-logo {
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+}
+
+.navactive {
+    font-weight: bold;
+    color: #011842 !important;
+}
+.ht {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #011842 !important;
+    position: absolute;
+    margin-top: .4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hcccititle {
+    font-size: 0.6rem;
+    position: relative;
+}
+.nt1, .nti1 {
+    display: inline-block;
+    width:  2rem;
+    height: 2rem;
+}
+.navbar-toggler .nti1{
+    color: rgb(24, 24, 24) !important;
+}
+.nti1 {
+    margin-top: -6px;
+    margin-left: -13px;
+}
+.linecolor {
+    color: #c3b091;
+}
+.navul li{
+    font-size: 14px;
+    text-align: justify !important;
+    margin-right: 12px;
+    font-family: 'Roboto Slab', serif !important;
+    
+}
+.navul .nhome {
+    margin-top: -1px !important;
+}
+.nav-link{
+    color: #062969 !important;
+}
+.nav-link:hover {
+    font-weight: bold;
+}
+
+.nav-dm  li{
+    font-size: 12px;
+    text-align: center !important;
+    width: 100%;
+}
+.dropdown ul a:hover{
+    font-weight: bold !important;
+    background-color: #94c7e3;
+}
+nav .loginbtn {
+    font-weight: normal !important;
+    padding: 0 15px;
+    background-color:#447996;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: .3rem;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.4);
+    margin: 20px 30px 5px 0 !important;
+    color: #f3f3f3;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: transparent;
+}
+.sticky {
+    position: fixed;
+    margin-top: 0 !important;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    background-color: #EDEDED !important;
+  }
+/* Carousel */
+
+.carousel-item img {
+    object-fit: fill;
+    height: 80vh;
+}
+
+/* ----------------------------------------------------Contents----------------------------------------------------- */
+
+body h1, .text-h2{
+    color: #655642;
+    font-family: 'Roboto Slab', serif;
+    
+}
+
+.program_offered{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+body div{
+    font-family: 'Montserrat', sans-serif;
+}
+body h1{
+    margin-top:20px;
+    text-align: center;
+    
+}
+div a{
+    
+    color:black !important;
+    
+}
+
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    
+}
+
+.grade-list .row1 {
+    height: 25vh;
+}
+.back{
+    width: 100% ;
+    height: 25vh;
+    background: linear-gradient(to bottom left, #996633 0%, #663300 100%) ;
+    clip-path:  circle(40% at 0 100%);
+    position: absolute;
+    margin: 0 ;
+}
+
+.card .card-body{
+    margin:0;
+}
+.card .card-body .grade-text{
+    font-weight: bold;
+    font-size: 20px;
+}
+.card .card-body .grade-number{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 12px;
+}
+    
+.card-body{
+    z-index: 20 !important;
+}
+
+
+.grade-list .card-body{
+    position: absolute;
+    display: flex;
+    padding: 0;
+    bottom: 10px;
+    left: 5px;
+}
+.grade1 { 
+    height: 100%;
+    background-image: url('../img/grade1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade2 {
+    height: 100%;
+    background-image: url('../img/grade2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade3 {
+    height: 100%;
+    background-image: url('../img/grade3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade4 {
+    height: 100%;
+    background-image: url('../img/grade4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade5 {
+    height: 100%;
+    background-image: url('../img/grade5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade6 {
+    height: 100%;
+    background-image: url('../img/grade6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grade-list .grade-text, .grade-list .grade-number {
+    color: #f3f3f3;
+}
+
+/* junior school cards */
+.junior-list .grade-text, .junior-list .grade-number {
+    color: #f3f3f3;
+}
+.junior-list .row1 {
+    height: 25vh;
+}
+.back1{
+    width: 100% ;
+    height: 25vh;
+    background: linear-gradient(to bottom left, #996633 0%, #663300 100%) ;
+    clip-path:  circle(43% at 0 100%);
+    position: absolute;
+    margin: 0 ;
+}
+.junior-list .card-body {
+    position: absolute;
+    display: flex;
+    padding: 0;
+    bottom: 10px;
+    left: 5px;
+}
+.grade7 {
+    height: 100%;
+    background-image: url('../img/grade7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade8 {
+    height: 100%;
+    background-image: url('../img/grade8.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade9 {
+    height: 100%;
+    background-image: url('../img/grade9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grade10 {
+    height: 100%;
+    background-image: url('../img/grade10.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* ---buttons---- */
+
+.main-button .buttons1 a{
+    border-radius: 10px 10px 10px 10px;
+    color: #f3f3f3 !important;
+
+}
+.main-button .buttons1 .active{
+    background-color :#e3c194 !important ;
+    color: #000 !important;
+}
+
+div .buttons1{
+    text-align: center;
+    
+}
+div .buttons1 a {
+    background-color: #447996;
+    margin-top: 10px;
+    text-decoration: none !important;
+}
+
+.me-3{
+    margin-right: 0 !important;
+}
+
+
+.text-h2 h2{
+    margin-top: 2em;
+    text-align: center;
+}
+.text-h6 h6{
+    margin-top: 20px;
+    text-align: center;
+}
+.text3 h3{
+    color: #655642;
+    text-align: center;
+}
+body div .text-hh h3{
+    text-align: center;
+    color: #655642;
+    margin-top: 20px;
+}
+
+.paragraph{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paragraph p{
+    text-indent: 30px;
+}
+.paragraph{
+    margin-top: 20px;
+}
+div .new-par{
+    margin-top: 20px;
+}
+
+
+
+/* >>>>>>>Footer-------------------------------------<<<<<<< */
+.ipadfooter {
+    display: none;
+}
+.dskfooter {
+    display: none;
+}
+footer {
+    background-color: #655642;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    margin-top: 3em;
+}
+
+
+.fh, .fc, .cft {
+    background-color:#655642;
+    padding: .3rem;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+.footer-text {
+    margin-top: 20px;
+    color: #f3f3f3;
+}
+
+.fc{
+    margin-top: 20px;
+}
+.info-text {
+    padding-top: 18px;
+    font-weight: normal !important;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.cfc{
+    color: #f3f3f3;
+}
+.cfcname {
+    margin-top: 1rem;
+}
+
+.contact-form h3, .contact-form h5{
+    font-weight: bold;
+}
+.btnf {
+    width: 100%;
+    background-color: #447996;
+    border-color: rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.btnf:hover {
+   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #447996;
+    outline: none;
+    border: none;
+}
+
+.all-rights {
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    margin: 0;
+    color: #f3f3f3;
+    background-color: #655642;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---for ipad----- */
+
+@media only screen and (min-width: 768px){
+
+    /* Header */
+    .iphoneHeader {
+        display: none;
+    }
+    .iPadHeader {
+        display: flex;
+        justify-content:space-between;
+        padding-bottom: 15px;
+    }
+    .iPadHeader .contactInfoHeader , .socialiconIpad {
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 1rem;
+    }
+    .headicon1, .headicon2, .headicon3 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    /* .headicon3 {
+        margin-left: 7px;
+    } */
+    .contactInfoHeader i {
+        font-style: normal !important;
+        font-weight: normal;
+    } 
+    .socialiconIpad span > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad h6 > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad a {
+        font-weight:normal;
+        font-size: 15px !important;
+    }
+    /* navbar */
+    .navpro {
+        display: none;
+    }
+    .nvb {
+        padding: 3px;
+    }
+    .ht {
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #011842 !important;
+        position: absolute;
+        margin-top: .5rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .hcccititle {
+        font-size: 0.6rem;
+        position: relative;
+        margin-top: -.3rem;
+    }
+    /* ----Carousel------ */
+
+    .carousel1 .carousel2 img{
+        height: 23rem;   
+    }
+
+    /* buttons */
+
+    .main-button .buttons1 a{
+        border-radius: 10px 10px 10px 10px;
+        width: 22vw;  
+        height: 60px;
+        padding-top: 10px;
+           
+    }
+    .main-button .buttons1{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+    .main-button .buttons1 .buttons{
+        padding-top: 16px; 
+    }
+    .act,.bsais{
+        background-color: #447996 !important;
+    }
+
+
+    /* Grade 1 to 6 */
+    .grade-list .row1 {
+        height: 15vh;
+    }
+    .grade-list .card{
+        height: 15vh;
+        width: 15vw;
+    }
+    .back{
+        position: absolute;
+        bottom: 0 !important;
+        left: 0 !important;
+        clip-path:  circle(45% at 0 100%);
+    }
+    .grade-list .grade-text, .grade-list .grade-number {
+        font-size: 15px !important;
+    }
+
+/* junior school CSS */
+    .back1{
+        position: absolute;
+        bottom: 0 !important;
+        left: 0 !important;
+        clip-path:  circle(49% at 0 100%);
+    }
+ 
+
+    /* Footer ------------------------------------------------ */
+    .ipfooter {
+        display: none;
+    }
+    .ipadfooter {
+        display: block;
+    }
+
+    .ipadfooter-text {
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-between;
+        padding-top: 18px;
+        color: #f3f3f3;
+    }
+    .ipadinfo-text {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 18px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        color: #f3f3f3;
+    }
+    .ipadfh, .ipadfc {
+        font-family: 'Roboto Slab', serif;
+        background-color: #655642;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: #f3f3f3;
+        font-weight: bold;
+    }
+    .ipadinfo-text i {
+        color: #f3f3f3;
+    }
+
+    .cfcnameIpad {
+        margin-top: 1rem;
+        color: #f3f3f3;
+    }
+
+    .btnf {
+        padding: 1rem;
+    }
+
+
+}
+
+
+/* for ipad pro */
+@media only screen and (min-width: 1024px){
+    /* Header */
+    .iPadHeader {
+        padding-bottom: 2px;
+    }
+    .contactInfoHeader, .socialiconIpad {
+        margin-top: 0.2rem !important;
+    }
+    /* Navbar ------------------------------- */
+    .navres {
+        display: none;
+    }
+    .navpro {
+        display: block;
+    }
+    .loginbtn {
+        display: none !important;
+    }
+
+    .linecolor {
+        display: none;
+    }
+
+    nav {
+        font-family: 'Roboto Slab', serif;
+    }
+    .navul li a {
+        margin: 0 !important;
+    }
+
+    .ipadprologinbtn {
+        font-family: 'Roboto Slab', serif;
+        display: flex;
+        align-items: center;
+        background-color: #447996;
+        color: #fff !important;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 8px 20px;
+        border-radius: 40px;
+        border: transparent;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+    }
+    .ipadprologinbtn:focus {
+        outline: transparent;
+    }
+    .ipadprologinbtn:hover {
+        font-weight: bolder;
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+        background-color: #EDEDED;
+        color: #447996 !important;
+        border: solid 1px #447996;
+    }
+    .ipadproenrollbtn, .ipadprologinbtn {
+        margin-left: 5px;
+    }
+    /* nav end */
+
+
+
+
+    .main-button .buttons1 a{
+
+        padding-top: 20px;
+        width: 20vw;
+        margin: auto;
+        
+    }
+   
+
+    /* Footer ------- */
+    .dskfooter {
+        display: none;
+    }
+
+}
+
+/* Desktop */
+@media only screen and (min-width:1025px){
+    /* Navbar ----------------------------- */
+    .hccci-logo {
+        height: 50px;
+        width: 50px;
+    }
+    .navul {
+        font-size: 15px;
+    }
+
+
+    /* Nav end */
+
+    .carousel1 .carousel2 img{
+        height: 85vh;
+       
+    }
+    .images img{
+        height: 50vh;
+        
+    }
+    .main-button .buttons1 a{
+        
+        padding-top: 15px;
+        width: 18vw;
+        margin: auto;
+        font-size: 20px;
+    }
+    /* grade school card */
+    .grade-list {
+        height: 25vh;
+    }
+    .grade-list .card {
+        height: 25vh;
+        width: 13vw;
+    }
+    .back{
+        clip-path:  circle(49.0% at 0 100%); 
+    }
+    .grade-list .grade-text, .grade-list .grade-number {
+        font-size: 15px !important;
+        color: #f3f3f3;
+    }
+    .grade-list .card-body {
+        margin: 0 !important;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 50px;
+    }
+
+    /* junior scholl card */
+    .junior-list .card {
+        height: 25vh;
+        width: 13vw;
+    }
+    
+    .back1{
+        clip-path:  circle(49.0% at 0 100%);
+    }
+    .junior-list .grade-text, .junior-list .grade-number {
+        font-size: 15px !important;
+        color: #f3f3f3;
+    }
+    .junior-list .card-body {
+        margin:  0 !important;
+        position: absolute;
+        bottom: 0;
+    }
+    /* Footer ------------------ */
+    .ipadfooter {
+        display: none;
+    }
+    .dskfooter {
+        display: block;
+        bottom: 0 !important;
+        margin-top: -17px !important;
+    }
+    .dsktextlogo h5 {
+        font-size: 14px !important;
+        text-align: center;
+        color: #f3f3f3;
+    }
+    .dskfooter img {
+        width: 40%;
+        height: 40%;
+        position: auto;
+        margin-top: 10px;   
+    }
+
+    .ipadfc h2 {
+        font-size: 25px !important;
+    }
+    .deskcontact i {
+        font-size: 13px !important;
+        color: #f3f3f3;
+    }
+    .deskcontact span {
+        font-size: 13px;
+        font-weight: normal;
+    }
+    
+    .deskcontact .fa-icon {
+        font-size: 15px !important;
+    }
+    .socialicon {
+        margin-top: 15px !important;
+    }
+    .socialicon i {
+        font-size: 20px !important;
+        margin: 5px;
+    }
+    .socialicon h6 > i {
+        font-size: 15px !important;
+    }
+
+    .otherLinks {
+        text-align: center;
+    }
+    .otherLinks h2 {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 25px !important;
+        color: #f3f3f3;
+    }
+    .otherLinks a {
+        font-family: 'Montserrat', sans-serif;
+        color: #f3f3f3 !important;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+    .contactForm .contact-form {
+        margin-top: 0px;
+        width: 100%;
+        justify-content: center !important;
+    }
+    .contact-form h2 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    .contact-form .contact-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+    }
+    .input-name{
+        margin-right: 2px;
+    }
+    .input-phone{
+        margin-top: -4px;
+        margin-left: 2px;
+    }
+    .comment textarea{
+        margin-top: -10px !important;
+    }
+    .cfc {
+        font-size: 13px !important;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .btnf {
+        padding: 5px 5px;
+        margin-top: 5px;
+    }
+    .btnf:hover {
+        transform: none;
+    }
+    .all-rights {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        color: #f3f3f3;
+        background-color: #655642;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+    }
+    
+}           
+
+/* Default carousel image styling */
+.carousel-item img {
+    object-fit: fill; /* Ensures the image covers the area without distortion */
+    object-position: top;
+    width: 100%; /* Full width */
+    height: auto; /* Let height adjust automatically for aspect ratio */
+    max-height: 80vh; /* Prevents overly tall images */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 60vh; /* Adjust height for smaller screens */
+    }
+}
+
+/* For tablets and medium-sized screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .carousel-item img {
+        height: 70vh; /* Adjust for tablets and medium screens */
+    }
+}
+
+/* For large desktop screens */
+@media (min-width: 1025px) {
+    .carousel-item img {
+        height: 85vh; /* Taller images on large screens */
+    }
+}

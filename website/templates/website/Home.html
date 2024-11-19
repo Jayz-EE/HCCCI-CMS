@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<!-- Swiper CSS -->
+{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home-css.css' %}">
+
+<!-- d-none d-lg-block d-md-block d-sm-block d-xl-block -->
+<div class="d-block">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        </div>
+    
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="8000">
+                <div class="carousel-card car-card-1">
+                    <img src="{% static 'img/bldg.jpg' %}" alt="Building" class="carousel-image">
+                    <div class="low-opacity d-flex align-items-center justify-content-center flex-column">
+                        {% include "cms_plugins/news_ticker.html" %}
+                        <div class="card-body text-center">
+                            <h1 class="card-text carousel-text animate-in">Experience the Best Education, Create the Future with Us!</h1>
+                            <div class="btn-cont mt-2">
+                                <a href="/enrollment/" class="carousel-button carousel-text animate-in">Enroll Now <i class="fa-solid fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="8000">
+                <div class="carousel-card car-card-2">
+                    <img src="{% static 'img/hccci2.jpg' %}" alt="HCCCI" class="carousel-image">
+                    <div class="low-opacity-2 d-flex align-items-center justify-content-center flex-column">
+                        <div class="card-body text-center mb-5">
+                            <div class="text-container">
+                                <p class="card-text-2 carousel-text animate-in-down">Be a 21st century learner and experience globally-competitive education through blended and distance (online, modular and community-based) learning.</p>
+                                <div class="btn-cont p-3 carousel-text animate-in-down">
+                                    <a href="/enrollment/" class="carousel-button">Enroll Now <i class="fa-solid fa-graduation-cap"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next carousel-control" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Shape your future - Section -->
+<div id="future_section">
+    <div class="container d-flex justify-content-center text-center flex-column mt-5 mb-5">
+        <h1 class="mt-4 mb-5 fw-bolder">Shape your future at Holy Child Central Colleges</h1>
+        <div class="tt2 text-justify responsive-text-p">
+            <p>With the emergence of global crisis, education becomes a challenge. Holy Child pride ourselves with innovative technologies and resources as we uphold continuity of learning. We, at HOLY CHILD, aim to ensure that learners take full advantage of these innovations as they create the future that they aspire to.</p>
+    
+            <p>Be a 21st century learner and experience globally-competitive education through blended and distance (online, modular and community-based) learning.</p>
+            <p>Enroll now at <b>HOLY CHILD CENTRAL COLLEGES!</b></p>
+    
+            <p><strong>Experience the Best Education, Create the Future with Us!</</p>
+            <div class="btn-cont">
+                <a href="/enrollment/" class="btn future-button">Enroll Now <i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- HCCCI Video - Section -->
+    <div class="hccciVideodiv">
+        <div class="video-container">
+            <iframe id="hccciVideo" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Holy Child Central Colleges" src="https://www.youtube.com/embed/Hs4LRng3u9c?autoplay=1&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fhccci.edu.ph&amp;widgetid=1"></iframe>
+        </div>
+    </div>
+    <!-- HCCCI Video - End of Section -->
+</div>
+<!-- Shape your future - End of Section -->
+
+<!-- PROGRAMS OFFERED - Section -->
+<div class="opacity-bg d-flex justify-content-center">
+    <div class="d-flex flex-column" style="width: 90%;">
+        <h2 class="text-center mb-5 program-offered-title">PROGRAMS OFFERED</h2>
+        <div class="card-cont d-flex flex-wrap">
+            <a href="/programsofferred/" class="text-decoration-none">
+                <div class="card mb-3 p-offered-card">
+                    <img src="{% static 'img/elem.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-footer">
+                    <h5 class="text-center">GRADE SCHOOL</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="/programsofferred/" class="text-decoration-none">
+                <div class="card mb-3 p-offered-card">
+                    <img src="{% static 'img/JHS.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-footer">
+                    <h5 class="text-center">JUNIOR HIGH SCHOOL</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="/programsofferred/" class="text-decoration-none">
+                <div class="card mb-3 p-offered-card">
+                    <img src="{% static 'img/SHS.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-footer">
+                    <h5 class="text-center">SENIOR HIGH SCHOOL</h5>
+                    </div>
+                </div>
+            </a>
+            <a href="/programsofferred/" class="text-decoration-none">
+                <div class="card mb-3 p-offered-card">
+                    <img src="{% static 'img/college.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-footer">
+                    <h5 class="text-center">COLLEGE</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- PROGRAMS OFFERED - End of Section -->
+
+<!-- COLLEGES - Section -->
+<div class="opacity-bg pb-5 pt-5">
+    <div class="container wrapper">
+        <h2 class="fw-bold text-center mt-5 mb-4" style="color: azure;">COLLEGES</h2>
+        <div class="d-flex flex-column justify-content-center colleges-cont">
+            <!-- College of Computer Studies -->
+            <div class="row mb-1">
+                <a class="btn college-link" data-bs-toggle="collapse" href="#collapseCS" role="button" aria-expanded="true" aria-controls="collapseCS">
+                    College of Computer Studies
+                </a>
+                <div class="collapse" id="collapseCS">
+                    <div class="card card-body collapse-body">
+                        <li>Bachelor of Science in Information Technology</li>
+                        <li>Bachelor of Science in Computer Science</li>
+                        <li>Associate in Computer Technology</li>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- College of Business -->
+            <div class="row mb-1">
+                <a class="btn college-link" data-bs-toggle="collapse" href="#collapseBusi" role="button" aria-expanded="false" aria-controls="collapseBusi">
+                    College of Business
+                </a>
+                <div class="collapse" id="collapseBusi">
+                    <div class="card card-body collapse-body">
+                        <li>Bachelor of Science in Business Administration – Major in Marketing</li>
+                        <li>Bachelor of Science in Entrepreneurship</li>
+                        <li>Bachelor of Science in Office Administration</li>
+                        <li>Bachelor of Science in Accountancy</li>
+                        <li>Bachelor of Science in Accounting Information System</li>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- College of Education -->
+            <div class="row mb-1">
+                <a class="btn college-link" data-bs-toggle="collapse" href="#collapseEdu" role="button" aria-expanded="false" aria-controls="collapseEdu">
+                    College of Education
+                </a>
+                <div class="collapse" id="collapseEdu">
+                    <div class="card card-body collapse-body">
+                        <li>Bachelor of Early Childhood Education</li>
+                        <li>Bachelor of Technical-Vocational Teacher Education</li>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- College of Criminal Justice -->
+            <div class="row mb-1">
+                <a class="btn college-link" data-bs-toggle="collapse" href="#collapseCriminal" role="button" aria-expanded="false" aria-controls="collapseCriminal">
+                    College of Criminal Justice
+                </a>
+                <div class="collapse" id="collapseCriminal">
+                    <div class="card card-body collapse-body">
+                        <li>Bachelor of Science in Criminology</li>
+                        <li>Bachelor of Science in Industrial Security Management</li>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- College of Allied Health Sciences -->
+            <div class="row mb-1">
+                <a class="btn college-link" data-bs-toggle="collapse" href="#collapseSci" role="button" aria-expanded="false" aria-controls="collapseSci">
+                    College of Allied Health Sciences
+                </a>
+                <div class="collapse" id="collapseSci">
+                    <div class="card card-body collapse-body">
+                        <li>Bachelor of Science in Pharmacy</li>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</div>
+<!-- COLLEGES - End of Section -->
+
+<!-- News Updates - Section -->
+{% include '../cms_plugins/news_card.html' %}
+
+<script>
+    // Function to handle both entrance and exit animations
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Trigger entrance animation when 60% of the element is visible
+                entry.target.classList.add('animate-in');
+                entry.target.classList.remove('animate-out');
+            } else {
+                // Trigger exit animation when less than 60% of the element is visible
+                entry.target.classList.add('animate-out');
+                entry.target.classList.remove('animate-in');
+            }
+        });
+    }
+
+    // Create an Intersection Observer with a 60% threshold
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.3  // Trigger at 60% visibility
+    });
+
+    // Observe each card container
+    document.querySelectorAll('.card-cont').forEach(card => {
+        observer.observe(card);
+    });
+</script>
+
+<!-- News Updates - End of Section -->
+{% endblock content %}
+    

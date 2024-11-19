@@ -1,0 +1,116 @@
+<style>
+    .news-ticker-wrapper {
+        width: 100%;
+        overflow: hidden;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+    }
+    
+    .news-ticker {
+        display: flex;
+        white-space: nowrap;
+        animation: scroll linear infinite;
+    }
+    
+    .ticker-content {
+        display: inline-block;
+        padding-right: 100px; /* Space between repeated content */
+        font-size: clamp(0.8rem, 1vw, 1.5rem);
+        font-weight: bold;
+    }
+    
+    /* Keyframes for continuous scrolling */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }    
+
+    .ticker-content a {s
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .news-ticker-wrapper .new-update-label {
+        background-color: #ffcc00; /* Highlight background color */
+        color: #333; /* Text color */
+        padding: 2px 6px; /* Padding around the text */
+        border-radius: 4px; /* Rounded corners */
+        font-weight: bold;
+        font-size: clamp(0.8rem, 1vw, 1.5rem);
+    }
+
+</style>
+
+<div class="news-ticker-wrapper">
+    <div class="news-ticker" id="news-ticker">
+        <!-- Title content will be dynamically injected here -->
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const ticker = document.getElementById("news-ticker");
+
+        // Fetch the page title and slug from the server
+        fetch('/news_ticker/')
+        .then(response => response.json())
+        .then(data => {
+            // If data contains a title and slug, create the ticker content as a link
+            if (data.page_title) {
+                const content = document.createElement("div");
+                content.classList.add("ticker-content");
+
+                if (data.page_slug) {
+                    // Create a clickable link if the slug exists
+                    const link = document.createElement("a");
+                    link.href = `page/${data.page_slug}/`; // Adjust URL format if needed
+                    link.textContent = data.page_title;
+                    link.style.color = "inherit"; // Keep link text color consistent
+                    link.target = "t";
+                
+                    // Add "New Update" label
+                    const newUpdateLabel = document.createElement("span");
+                    newUpdateLabel.textContent = "News Update:";
+                    newUpdateLabel.classList.add("new-update-label"); // Add CSS class for styling
+                    newUpdateLabel.style.marginRight = "8px"; // Spacing between label and icon
+                
+                    // Append "New Update" label, icon, and link to content div
+                    content.appendChild(newUpdateLabel);
+                    content.appendChild(link);
+                } else {
+                    // Fallback to plain text if no slug
+                    content.textContent = data.page_title;
+                }
+
+                // Append the initial content
+                ticker.appendChild(content);
+
+                // Clone content multiple times to create seamless scrolling
+                const contentWidth = content.offsetWidth;
+                const wrapperWidth = ticker.parentElement.offsetWidth;
+
+                // Number of clones needed to ensure continuous scroll
+                const numClones = Math.ceil(wrapperWidth / contentWidth) + 2;
+
+                // Append clones
+                for (let i = 0; i < numClones; i++) {
+                    const clone = content.cloneNode(true);
+                    ticker.appendChild(clone);
+                }
+
+                // Adjust animation duration based on content width
+                const duration = (contentWidth * numClones) / 100; // Adjust multiplier for speed
+                ticker.style.animationDuration = `${duration}s`;
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching page title:", error);
+        });
+    });
+</script>

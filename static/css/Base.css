@@ -1,0 +1,281 @@
+
+#main-content {
+    min-height: 50vh;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, button, a {
+    font-family: "Poppins", serif;
+}
+
+.upper {
+    background: rgba(105, 67, 36, 0.4);
+    position: relative;
+    z-index: 999;
+}
+
+.fa-facebook-f {
+    margin-left: 10px;
+    margin-right: 5px;
+    color: royalblue;
+}
+
+.fa-facebook-f:hover {
+    text-shadow: 0 0 3px rgba(75, 138, 255, 0.8), 0 0 10px rgba(86, 183, 248, 0.5);
+}
+
+.fa-youtube {
+    color: red;
+}
+
+.fa-youtube:hover {
+    text-shadow: 0 0 3px rgba(255, 85, 18, 0.8), 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #FFF2E1;
+    color: #333;
+}
+
+
+/* Base styles for the footer */
+footer {
+    background-color: #655642; /* Using your specified background color */
+    padding-top: 1rem;
+    color: #f3f3f3;
+    font-family: 'Roboto Slab', serif; /* Font for footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 13px !important;
+    text-align: center;
+    color: #f3f3f3;
+    font-family: 'Montserrat', sans-serif; /* Different font for footer text */
+}
+
+.footer-row {
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+    border-top: rgba(0, 0, 0, 0.2) solid 1px;
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.socialicon i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.all-rights {
+    text-align: center;
+    margin-top: 20px;
+    color: #f3f3f3;
+    font-size: 12px;
+    padding: 4px;
+}
+
+/* Contact form styles */
+
+.contact-form .input-phone {
+    margin-left: auto;
+}
+
+.contact-btn {
+    background-color: #467c9d;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-btn:hover {
+    background-color: #365c75;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 575.98px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-sm {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .contact-form .input-name,
+    .contact-form .input-phone {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* For tablet and medium screens */
+@media (min-width: 768px) {
+    footer {
+        justify-content: space-around;
+    }
+
+    .col-sm {
+        flex: 1 1 40%;
+    }
+
+    .contact-form .input-phone {
+        margin-left: 10px;
+    }
+}
+
+/* For large screens and desktops */
+@media (min-width: 992px) {
+    .footer-row {
+        justify-content: space-between;
+    }
+
+    .col-sm {
+        flex: 1 1 20%;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+}
+
+.form-group label {
+    font-size: 13px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.all-rights {
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+}
+
+.contact-btn {
+    background: #447996; 
+    color: #f3f3f3; 
+    font-family: 'Oxygen', sans-serif;
+    border-radius: 10px;
+    position: relative;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #447996; 
+    color: #f3f3f3; 
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 1), 
+    0 0px 0px rgba(0, 0, 0, 0.3),
+    0 2px 20px rgba(0, 0, 0, 0.3);
+    border: #f3f3f3 solid 1px;
+    height: 36px;
+}
+
+.contactForm {
+    min-height: 321.39px;
+}
+
+.footer-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px !important;
+    margin-bottom: 20px;
+}
+
+/* Sidebar container */
+.sidebar {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    transition: width 0.3s ease;
+    background-color: #343a40;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Sidebar links */
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #f8f9fa; /* Light color for text */
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+#sidenav {
+    position: fixed;
+    top: 16.5vh;
+    height: fit-content;
+    z-index: 9999;
+    width: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Sidebar toggle button */
+#toggleBtn {
+    position: relative;
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-shadow: 
+            0 0 0.5em black,
+            0 0 1em black;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is closed */
+.sidebar.closed {
+    width: 0px;
+}
+
+.main-content.closed {
+    margin-left: 60px;
+}
+
+/* Styling for open/close buttons */
+.open-btn, .close-btn {
+    color: #f8f9fa;
+}
+
+/* Adjust icon sizes */
+.sidebar-icon {
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+}
+
+
+@media (max-width: 900px) {
+    #sidenav {
+        width: 5vw;
+    }
+}

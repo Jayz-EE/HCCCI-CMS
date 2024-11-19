@@ -1,0 +1,26 @@
+
+<!-- Sidebar -->
+<div id="sidenav" class="d-flex flex-column">
+    <span class="toggle-btn" id="toggleBtn">&#9776;</span>
+    <div class="sidebar d-flex flex-column justify-content-center closed" id="sidebar">
+        <a style="width: 100%;" class="text-center" href="{% url 'cms_dashboard' %}"><i class="sidebar-icon bi bi-house-door"></i> </a>
+        <a style="width: 100%;" class="text-center" href="{% url 'manage_account' %}"><i class="sidebar-icon bi bi-person"></i></a>
+        {% comment %}<a href="#"><i class="sidebar-icon bi bi-gear"></i></a> {% endcomment %}
+        <a style="width: 100%;" class="text-center" href="{% url 'logout_user' %}"><i class="sidebar-icon bi bi-box-arrow-left"></i></a>
+    </div>    
+</div>
+
+<script> 
+    // Toggle sidebar open/close
+    toggleBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('closed');
+        mainContent.classList.toggle('closed');
+        
+        // Change the icon based on the sidebar state
+        if (sidebar.classList.contains('closed')) {
+            toggleBtn.innerHTML = '&#9776;';  // Hamburger icon for open
+        } else {
+            toggleBtn.innerHTML = '&times;';  // Close icon
+        }
+    });
+</script>

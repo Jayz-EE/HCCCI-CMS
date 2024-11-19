@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>HCCCI-CMS</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.5/dist/bootstrap-table.min.css">
+<style>
+    /* Add CSS for the loading spinner */
+    .spinner-border {
+        display: none;
+    }
+
+    body {
+        background-color: #f0f2f5;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .table-container {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+        background-color: #4a90e2;
+        border-color: #4a90e2;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary i {
+        margin-right: 8px;
+    }
+
+    .btn-primary:hover {
+        background-color: #357ABD;
+    }
+
+    .table {
+        margin-top: 25px;
+        border-radius: 8px;
+        overflow: hidden;
+        font-size: 16px;
+        border: none;
+    }
+
+    .table thead th {
+        background-color: #4a90e2;
+        color: #ffffff;
+        font-weight: 600;
+        text-align: center;
+        border: none;
+    }
+
+    .table td {
+        text-align: center;
+        padding: 12px;
+        vertical-align: middle;
+        color: #333;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .btn-sm {
+        font-size: 14px;
+        padding: 8px 14px;
+        border-radius: 5px;
+        min-width: 100px;
+    }
+
+    .btn-info {
+        background-color: #5bc0de;
+        border-color: #5bc0de;
+    }
+
+    .btn-danger {
+        background-color: #d9534f;
+        border-color: #d9534f;
+    }
+
+    .btn-success {
+        background-color: #5cb85c;
+        border-color: #5cb85c;
+    }
+
+    .btn:hover {
+        opacity: 0.85;
+        transition: opacity 0.2s ease;
+    }
+
+    .pagination .page-link {
+        color: #4a90e2;
+        font-size: 15px;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #4a90e2;
+        color: white;
+    }
+
+    .table td .btn {
+        margin: 0 5px;
+    }
+
+    .dt-length label {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        margin-bottom: 15px;
+    }
+
+    #dt-length-0 {
+        margin: 5px;
+    }
+
+    .fixed-table-toolbar {
+        display: flex;
+    }
+    .search {
+        order: -1;
+        width: 40%;
+        margin-right: auto;
+    }
+
+    .fixed-table-toolbar .columns-right {
+        margin-left: auto;
+    }
+
+</style>
+{% endblock title %}
+
+{% block content %}
+<div class="container table-container mt-5">
+    <h2 class="mb-4">Manage News Pages</h2>
+    <div class="d-flex justify-content-between">
+        <a href="{% url 'create_page' %}" class="btn btn-primary">
+            <i class="bi bi-plus"></i> Create News Page
+        </a>
+        {% if user.is_superuser %}
+        <div>
+            <button id="import-btn" class="btn btn-secondary ms-2" data-bs-toggle="modal" data-bs-target="#importModal">
+                Import Database<i class="fa fa-database ms-2" aria-hidden="true"></i>
+            </button>
+            <button id="backup-btn" class="btn btn-warning ms-2">Backup Database<i class="fa fa-database ms-2" aria-hidden="true"></i></button>
+        </div>
+        {% endif %}
+    </div>
+    <div class="table-responsive">
+        <table 
+            id="table" 
+            data-toggle="table" 
+            data-pagination="true" 
+            data-page-list="[5, 10, 20, 50, All]" 
+            data-page-size="5"
+            data-silent-sort="true"
+            data-show-pagination-switch="true"
+            data-search="true"
+            class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th data-field="id" data-sortable="true">Page ID</th>
+                    <th data-field="title" data-sortable="true">News Title</th>
+                    <th data-field="actions" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for page in pages %}
+                <tr>
+                    <td data-field="id">{{ page.id }}</td>
+                    <td data-field="title" style="word-wrap: break-word;">{{ page.title }}</td>
+                    <td class="text-center">
+                        <div class="d-flex justify-content-center" style="white-space: nowrap;">
+                            <a href="{% url 'edit_page' page.slug %}" class="btn btn-info btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <a href="{% url 'delete_page' page.slug %}" class="btn btn-danger btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                            <a href="{% url 'page_detail' page.slug %}" class="btn btn-success btn-sm" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Visit Page">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                        </div>  
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3" class="text-center">No pages available. <a href="{% url 'create_page' %}">Create a new page.</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="importModalLabel">Import JSON Database Backup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="import-form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="json_file">Upload Database JSON:</label>
+                        <input class="form-control" type="file" name="json_file" accept=".json" required />
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" id="upload-btn" class="btn btn-primary mt-3">
+                            Import Database
+                            <span id="loading-spinner" class="spinner-border spinner-border-sm text-light" role="status" aria-hidden="true" style="display: none;"></span>
+                        </button>
+                    </div>
+                </form>
+                <div id="response-message" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.5/dist/bootstrap-table.min.js"></script>
+<script>
+    document.getElementById('backup-btn').addEventListener('click', function() {
+        // Make a request to the backup endpoint
+        fetch("{% url 'backup_database' %}")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to create backup');
+                }
+                return response.blob();  // Receive the response as a Blob (ZIP file)
+            })
+            .then(blob => {
+                // Create a temporary download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'cms_backup.json';  // Set the default file name to db_backup.zip
+                a.click();  // Trigger the download
+                URL.revokeObjectURL(url);  // Clean up the object URL after download
+            })
+            .catch(error => {
+                console.error('Error creating backup:', error);
+                alert('Failed to create backup. Please try again later.');
+            });
+    }); 
+
+    document.getElementById('import-form').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the form from submitting the traditional way
+        
+        // Show loading spinner
+        document.getElementById('loading-spinner').style.display = 'inline-block';
+        document.getElementById('upload-btn').disabled = true;  // Disable button while loading
+        
+        // Create a new FormData object
+        var formData = new FormData(this);
+        
+        // Send the file via AJAX
+        fetch("{% url 'import_database' %}", {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())  // Parse the JSON response
+        .then(data => {
+            // Show success or error message inside modal
+            const responseMessage = document.getElementById('response-message');
+            if (data.status === 'success') {
+                responseMessage.innerHTML = '<span style="color:green;">' + data.message + '</span>';
+            } else {
+                responseMessage.innerHTML = '<span style="color:red;">' + data.message + '</span>';
+            }
+    
+            // Hide loading spinner and re-enable the button
+            document.getElementById('loading-spinner').style.display = 'none';
+            document.getElementById('upload-btn').disabled = false;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('response-message').innerHTML = '<span style="color:red;">Failed to import database.</span>';
+    
+            // Hide loading spinner and re-enable the button
+            document.getElementById('loading-spinner').style.display = 'none';
+            document.getElementById('upload-btn').disabled = false;
+        });
+    });
+</script>
+
+{% endblock content %}

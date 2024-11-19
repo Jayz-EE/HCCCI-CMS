@@ -1,0 +1,201 @@
+{% load static %}
+<div id="gallery-container">
+    <div class="container mt-4 bg-light p-3">
+        <div class="row">
+            <div class="row text-center">
+                <div class="col-8 d-flex justify-content-end align-items-center pe-5">
+                    <h2>Manage Gallery</h2>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <span class="btn fs-2" id="trash-button" data-bs-toggle="modal" data-bs-target="#trashModal">
+                        <div class="trash-icon"></div>
+                    </span>
+                </div>            
+            </div>        
+            {% for active_image in active_gallery_images %}
+                <div class="col-xl-4 col-lg-6 col-sm-12 col-md-12 position-relative" id="image-{{ active_image.id }}">
+                    <button type="button" class="btn btn-light btn-sm position-relative trash" style="top: 8%; left: 93%; color: black; z-index: 1; font-weight: bold; padding: 2px 8px; border-radius: 50%;" onclick="mark_as_delete({{ active_image.id }}, '{{ active_image.is_featured }}')">&times;</button>
+                    
+                    <!-- Use the thumbnail URL for displaying the image -->
+                    <img src="{{ active_image.thumbnail.url }}" class="card-img border-solid-black" alt="img" onclick="set_Featured_Image({{ active_image.id }})" style="cursor: pointer;">
+                    
+                    {% if active_image.is_featured %}
+                        <span class="star-icon" style="position: absolute; top: 7%; left: 3%; color: gold; font-size: 1.5rem; display: block;">⭐</span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Trash Modal -->
+    <div class="modal fade" id="trashModal" tabindex="-1" aria-labelledby="trashModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trashModalLabel">Manage Deleted Images</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        {% for deleted_image in marked_as_gallery_images %}
+                            <div class="col-md-4" id="image-{{ deleted_image.id }}">
+                                <input type="checkbox" class="form-check-input" id="check-{{ deleted_image.id }}" value="{{ deleted_image.id }}">
+                                <button type="button" class="btn btn-light btn-sm position-relative recover" style="top: 9%; left: 85%; color: black; z-index: 1; font-weight: bold; padding: 2px 8px; border-radius: 50%;" onclick="recover_image({{ deleted_image.id }})" data-bs-dismiss="modal">&#8634;</button>
+                                <label for="check-{{ deleted_image.id }}">
+                                    <!-- Use the thumbnail URL for deleted images as well -->
+                                    <img src="{{ deleted_image.thumbnail.url }}" class="card-img border-solid-black" alt="">
+                                </label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-danger" id="clear-trash-button" data-bs-dismiss="modal" onclick="clearTrash()">Permanently Delete Selected</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script>
+    const slug = "{{ page.slug }}"; // Ensure page.slug is correctly passed in your context
+    
+    function mark_as_delete(image_id, is_featured) {
+        if (is_featured == 'True') {
+            alert("This image is currently featured and cannot be deleted.");
+            return;
+        }
+    
+        fetch(`/cms/gallery/mark_as_delete_image/${image_id}/`, {
+            method: "POST",
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}', 
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.querySelector(".toast-paragraph").innerHTML = data.message;
+                toast.show();
+                updateContainers(slug);
+            } else {
+                console.error('Failed to mark image as deleted:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }    
+
+    function recover_image(deleted_id) {
+        fetch(`/cms/gallery/restore/${deleted_id}/`, {
+            method: "POST",
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const imageElement = document.getElementById(`image-${deleted_id}`);
+                if (imageElement) {
+                    imageElement.remove();
+                }
+                document.querySelector(".toast-paragraph").innerHTML = data.message;
+                toast.show();
+                updateContainers(slug);
+            } else {
+                console.error('Failed to restore image:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function set_Featured_Image(image_id) {
+        console.log(`Setting image ${image_id} as featured...`);
+        fetch(`/cms/gallery/feature/${image_id}/`, {
+            method: "POST",
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const stars = document.querySelectorAll('.star-icon');
+                stars.forEach(star => star.style.display = 'none');
+    
+                const featuredStar = document.querySelector(`#image-${image_id} .star-icon`);
+                if (featuredStar) {
+                    featuredStar.style.display = 'block';
+                }
+    
+                document.querySelector(".toast-paragraph").innerHTML = data.message;
+                toast.show();
+                updateContainers(slug);
+            } else {
+                console.error('Failed to set featured image:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function updateContainers(slug) {
+        fetch(`/cms/gallery/update/`, {
+            method: "POST",
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ slug: slug }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('gallery-container').innerHTML = data.gallery;
+            } else {
+                console.error(data.message);
+            }
+        })
+        .catch(error => console.error('Error fetching updated containers:', error));
+    }
+
+    function clearTrash() {
+        const checkedImages = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+    
+        if (checkedImages.length === 0) {
+            alert('No images selected for deletion.');
+            return;
+        }
+    
+        fetch('/cms/gallery/delete-selected/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ image_ids: checkedImages }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                checkedImages.forEach(id => {
+                    const imageElement = document.getElementById(`image-${id}`);
+                    if (imageElement) {
+                        imageElement.remove();
+                    }
+                });
+                alert('Selected images deleted successfully!');
+    
+                const modal = bootstrap.Modal.getInstance(document.getElementById('trashModal'));
+                modal.hide();
+            } else {
+                console.error('Failed to delete images:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }   
+</script>

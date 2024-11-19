@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Modal  */
+
+.close{
+    margin-top: 2em;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  border: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #89765C;
+}
+
+html{
+  font-family: 'Roboto slab', sans-serif;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+/* NAVIGATION */
+#headNavigation{
+    position: fixed;
+    background-color: rgb(253, 253, 253) !important;
+    width: 100%;
+    z-index: 999;
+    padding: 0px 100px;
+}
+#headNavigation .navbar a h1{
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220;
+    display: inline-block;
+    margin-left: 16px;
+}
+#headNavigation .navbar a h1:hover{
+    color: navy !important;
+}
+#headNavigation .navbar .collapse ul li a{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220;
+    transition-timing-function: ease-in-out;
+    transition: .4s;
+}
+#headNavigation .navbar .collapse ul li a:hover{
+    color: navy !important;
+}
+/* End ------------------------------------------------------------------------------------- */
+
+/* CAROUSEL */
+#landing .container-fluid .row .carousel{
+    position: absolute;
+}
+#landing .container-fluid .row .col-md-12 .col-md-6{
+    padding-top: 18rem;
+}
+#landing .container-fluid .row .col-md-12 .col-md-6 .text-column{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15rem;
+}
+#landing .container-fluid .row .col-md-12 .col-md-6 .text-column h1{
+    font-size: 4.8rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220;
+}
+#landing .container-fluid .row .col-md-12 .col-md-6 .text-column p{
+    font-size: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color:#5A4E3C;
+}
+#landing .container-fluid .row .col-md-12 .col-md-6 .img-column img{
+    width: 85%;
+}
+/* End ------------------------------------------------------------------------------------- */
+
+/* RESOURCE LINKS */
+#resources{
+    padding: 15rem 10rem;
+}
+#resources .container-fluid .row .col-md-12{
+    padding-bottom: 5rem;
+}
+#resources .container-fluid .row .col-md-12 h2{
+    font-size: 4rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220 !important;
+}
+#resources .container-fluid .row .col-md-12 ul li .ml-gap{
+    margin-left: 1.6rem;
+}
+#resources .container-fluid .row .col-md-12 ul li a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220 !important;
+    background-color: #E7D8C6;
+    border-radius: 10px;
+    padding: 18px 64px;
+    height: 100%;
+    text-decoration: none;
+    transition-timing-function: ease-in-out;
+    transition: .3s;
+}
+#resources .container-fluid .row .col-md-12 ul li a:hover{
+    color: white !important;
+    background-color: #89765C;
+    text-decoration: none;
+}
+#resources .container-fluid .row .col-md-12 ul li a.active{
+    color: white !important;
+    background-color: #89765C;
+}
+#resources .container-fluid .row .col-md-12 .tab-content{
+    padding-top: 2.4rem;
+}
+#resources .container-fluid .row .col-md-12 .tab-content .col-lg-6 p{
+    padding-bottom: .4rem !important;
+}
+#resources .container-fluid .row .col-md-12 .tab-content .col-lg-6 a{
+    font-size: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #3F3220 !important;
+    text-decoration: none;
+}
+#resources .container-fluid .row .col-md-12 .tab-content .col-lg-6 a:hover{
+    color: rgb(14, 14, 90) !important;
+    text-decoration: underline;
+}
+#resources .container-fluid .row .col-md-12 p{
+    padding-bottom: .4rem !important;
+}
+#resources .container-fluid .row .col-md-12 a{
+    font-size: 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #3F3220 !important;
+    text-decoration: none;
+}
+#resources .container-fluid .row .col-md-12 a:hover{
+    color: rgb(14, 14, 90) !important;
+    text-decoration: underline;
+}
+/* End ------------------------------------------------------------------------------------- */
+
+/* FOOTER */
+#footer{
+    background-color: #89765C;
+    width: 100%;
+    padding: 24px 100px 20px;
+}
+#footer .container-fluid .row .col-md-6 p{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220;
+}
+#footer .container-fluid .row .col-md-6 a{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220;
+    scroll-behavior: smooth;
+    margin-top: -2px;
+}
+
+
+/* #footer .navbar a{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #3F3220;
+    scroll-behavior: smooth;
+} */
+
+/* End ------------------------------------------------------------------------------------- */
+
+
+    @media (max-width: 1680px){
+        #resources .container-fluid .row .col-md-12 .tab-content .col-lg-6 a{
+            font-size: 1.8rem;
+        }
+        #footer{
+            background-color: #89765C;
+            width: 100%;
+            padding: 24px 100px 12px !important;
+        }
+        #footer .container-fluid .row .col-md-6 a{
+            font-size: 16px;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            color: #3F3220;
+            scroll-behavior: smooth;
+            margin-top: -4px !important;
+        }
+    }
+
+    @media (max-width: 1366px){
+        #landing .container-fluid .row .col-md-12 .col-md-6{
+            padding-top: 12.5rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column{
+            padding-left: 10rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column h1{
+            font-size: 4rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column p{
+            font-size: 2rem;
+        }
+
+        /* resourse */
+        #resources .container-fluid .row .col-md-12 .tab-content .col-lg-6 a{
+            font-size: 1.6rem;
+            line-height: 20px !important;
+        }
+    }
+    @media (max-width: 1024px){
+        #landing .container-fluid .row .carousel{
+            padding-top: 7rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column{
+            padding-left: 6rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column h1{
+            font-size: 3.2rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column p{
+            font-size: 1.6rem;
+        }
+
+        /* resourse */
+        #resources{
+            padding: 15rem 6rem 10rem;
+        }
+    }
+    @media (max-width: 768px){
+        /* navigation */
+        #headNavigation{
+            padding: 0px 40px;
+        }
+
+        /* carousel */
+        #landing .container-fluid .row .carousel{
+            padding-top: 7.4rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column{
+            padding-left: 2rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .img-column img{
+            width: 90%;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column h1{
+            font-size: 2.6rem !important;
+        }
+
+        /* resourse */
+        #resources{
+            padding: 10rem 2rem 5rem;
+        }
+        #resources .container-fluid .row .col-md-12 h2{
+            font-size: 3.2rem;
+        }
+        .nav{
+            justify-content: space-around;
+        }
+        #resources .container-fluid .row .col-md-12 {
+            padding-bottom: 2.4rem;
+        }
+        #resources .container-fluid .row .col-md-12 ul li a{
+            padding: 18px 40px;
+            justify-content: center;
+            align-items: center !important;
+        }
+
+        /* footer */
+        #footer{
+            padding: 24px 40px 20px !important;
+        }
+    }
+
+    @media (max-width: 414px){
+        #headNavigation{
+            padding: 0px 20px;
+        }
+        #headNavigation .navbar{
+            padding: 4px 0px;
+        }
+        #headNavigation .navbar a img{
+            width: 20%;
+        }
+
+        /* Carousel */
+        #landing .container-fluid .row .carousel{
+            padding-top: 6rem;
+        }
+        #headNavigation .navbar a h1{
+            font-size: 18px;
+            margin-left: 8px;
+        }
+        #landing .container-fluid .row .col-md-12{
+            margin-top: 24rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6{
+            padding-top: 4rem;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column{
+            padding-top: 0rem;
+            padding-left: 0rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .text-column p{
+            padding-top: 1rem;
+        }
+        #landing .container-fluid .row .col-md-12 .col-md-6 .img-column img{
+            margin-top: .8rem !important;
+            width: 100%;
+        }
+
+        /* resource */
+        #resources {
+            padding: 8rem 2rem 2rem;
+        }
+        #resources .container-fluid .row .col-md-12 h2 {
+            font-size: 2.4rem;
+        }
+        #resources .container-fluid .row .col-md-12 {
+            padding: 0 0 2.4rem;
+        }
+        #resources .container-fluid .row .col-md-12 ul li{
+            width: 100%;
+            height: 100%;
+            margin-top: 1.6rem !important;
+        }
+        #resources .container-fluid .row .col-md-12 ul li .ml-gap{
+            margin-left: 0rem;
+        }
+        #resources .container-fluid .row .col-md-12 .tab-content .row{
+            padding: 0px 18px ;
+        }
+        #resources .container-fluid .row .col-md-12 .tab-content .row .col-md-6{
+            padding: 0px ;
+        }
+
+        /* Footer */
+        #footer{
+            padding: 24px 4px 20px !important;
+        }
+        #footer .container-fluid .row .col-md-6 p{
+            font-size: 14px;
+            text-align: center;
+        }
+
+    }

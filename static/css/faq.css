@@ -1,0 +1,375 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*For iPhone 6/7/8================================*/
+.frequent{
+    font-family: 'Oxygen', sans-serif;   
+}
+.frequent .frequent2 .active{
+    background-color: #e3c194;
+    color: #000000;
+    font-weight: bold;
+}
+.frequent .frequent2 li a{
+    background-color: #447996;
+    color: #f3f3f3;
+}
+.frequent .frequent2 li{
+    margin: 5px;
+}
+
+.frequent h1{
+    padding-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    color:#655642;
+}
+.frequent h4{
+    font-weight: bold;
+    font-size: 16px;
+}
+.frequent li{
+    font-size: 16px;
+    text-align:justify;
+    
+}
+
+/*For iPhone 6/7/8 Plus================================*/
+
+.frequent{
+    font-family: 'Oxygen', sans-serif;
+    
+}
+.frequent h4{
+    font-weight: bold;
+    font-size: 17px;
+}
+.frequent h1{
+    padding-top: 15px;
+    text-align: center;
+    color:#655642;
+}
+.frequent li{
+    font-size: 17px;
+    
+}
+
+
+/*For iPad================================*/
+@media only screen and (min-width: 768px) {
+    /* Header */
+    .iphoneHeader {
+        display: none;
+    }
+    .iPadHeader {
+        display: flex;
+        justify-content:space-between;
+        padding-bottom: 15px;
+    }
+    .iPadHeader .contactInfoHeader , .socialiconIpad {
+        font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    }
+    .headicon1, .headicon2, .headicon3 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .contactInfoHeader i {
+        font-style: normal !important;
+        font-weight: normal;
+    } 
+    .socialiconIpad span > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad h6 > i {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+    .socialiconIpad a {
+        font-weight:normal;
+        font-size: 15px !important;
+    }
+
+    .ht {
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #011842 !important;
+        position: absolute;
+        margin-top: .5rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .hcccititle {
+        font-size: 0.6rem;
+        position: relative;
+        margin-top: -.3rem;
+    }
+
+    .frequent{
+        font-family: 'Roboto Slab', serif;
+        
+    }
+    
+    .frequent h1{
+        font-family: 'Roboto Slab', serif;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 35px;
+        color:#655642;
+    }
+    .frequent h4{
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        font-size: 19px;
+        margin-top: 1.5em;
+    }
+    .frequent li{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+        
+    }
+    .frequent h3{
+        font-family: 'Roboto Slab', serif;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+
+    /* Footer ------------------------------------------------ */
+    .ipfooter {
+        display: none;
+    }
+    .ipadfooter {
+        display: block;
+    }
+
+    .ipadfooter-text {
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-between;
+        padding-top: 18px;
+        color: #f3f3f3;
+    }
+    .ipadinfo-text {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 18px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        color: #f3f3f3;
+    }
+    .ipadfh, .ipadfc {
+        font-family: 'Roboto Slab', serif;
+        background-color: #655642;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: #f3f3f3;
+        font-weight: bold;
+    }
+    .ipadinfo-text i {
+        color: #f3f3f3;
+    }
+
+    .cfcnameIpad {
+        margin-top: 1rem;
+        color: #f3f3f3;
+    }
+
+    .btnf {
+        padding: 1rem;
+    }
+}
+
+/*For iPad Pro================================*/
+@media only screen and (min-width: 1024px) {
+    /* Header */
+    .iPadHeader {
+        padding-bottom: 2px;
+    }
+    .contactInfoHeader, .socialiconIpad {
+        margin-top: 0.2rem !important;
+    }
+
+    .frequent{
+        font-family: 'Oxygen', sans-serif;
+        
+    }
+    
+    .frequent h1{
+        padding-top: 20px;
+        text-align: center;
+        font-size: 45px;
+        color:#655642;
+    }
+    .frequent h4{
+        font-weight: bold;
+        font-size: 19px;
+    }
+    .frequent li{
+        font-size: 19px;
+        text-align: justify;
+        
+    }
+    .frequent h3{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+ 
+    /* Footer ------- */
+    .dskfooter {
+        display: none;
+    }
+}
+
+ /*For Disktop ============================================================*/
+ @media only screen and (min-width: 1025px){
+
+    .frequent{
+        font-family: 'Oxygen', sans-serif;
+        
+    }
+    
+    .frequent h1{
+        padding-top: 30px;
+        text-align: center;
+        font-size: 45px;
+        color:#655642;
+    }
+    .frequent h4{
+        font-weight: bold;
+        font-size: 18px;
+        
+    }
+    .frequent li{
+        font-size: 17px;
+        text-align: justify;
+        
+    }
+    .frequent h3{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+  
+    .frequent a:hover {
+        background-color:  #94c7e3;
+      }
+
+    /* Footer ------------------ */
+    .ipadfooter {
+        display: none;
+    }
+    .dskfooter {
+        display: block;
+        bottom: 0 !important;
+        margin-top: -17px !important;
+    }
+    .dsktextlogo h5 {
+        font-size: 14px !important;
+        text-align: center;
+        color: #f3f3f3;
+    }
+    .dskfooter img {
+        width: 40%;
+        height: 40%;
+        position: auto;
+        margin-top: 10px;   
+    }
+
+    .ipadfc h2 {
+        font-size: 25px !important;
+    }
+    .deskcontact i {
+        font-size: 13px !important;
+        color: #f3f3f3;
+    }
+    .deskcontact span {
+        font-size: 13px;
+        font-weight: normal;
+    }
+    
+    .deskcontact .fa-icon {
+        font-size: 15px !important;
+    }
+    .socialicon {
+        margin-top: 15px !important;
+    }
+    .socialicon i {
+        font-size: 20px !important;
+        margin: 5px;
+    }
+    .socialicon h6 > i {
+        font-size: 15px !important;
+    }
+
+    .otherLinks {
+        text-align: center;
+    }
+    .otherLinks h2 {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 25px !important;
+        color: #f3f3f3;
+    }
+    .otherLinks a {
+        font-family: 'Montserrat', sans-serif;
+        color: #f3f3f3;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+    .contactForm .contact-form {
+        margin-top: 0px;
+        width: 100%;
+        justify-content: center !important;
+    }
+    .contact-form h2 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    .contact-form .contact-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+    }
+    .input-name{
+        margin-right: 2px;
+    }
+    .input-phone{
+        margin-top: -4px;
+        margin-left: 2px;
+    }
+    .comment textarea{
+        margin-top: -10px !important;
+    }
+    .cfc {
+        font-size: 13px !important;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .btnf {
+        padding: 5px 5px;
+        margin-top: 5px;
+    }
+    .btnf:hover {
+        transform: none;
+    }
+    .all-rights {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        color: #f3f3f3;
+        background-color: #655642;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+    }
+      
+ }

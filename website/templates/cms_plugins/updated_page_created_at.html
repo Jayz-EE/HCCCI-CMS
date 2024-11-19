@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Update Pages</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Update Page Creation Dates</h2>
+    <p>Click the button below to update the creation dates of all pages with a 1-minute difference.</p>
+
+    <button id="updatePagesBtn" class="btn btn-primary">Update Pages</button>
+
+    <!-- Optionally, you can display a loading message or result -->
+    <div id="loadingMessage" style="display:none;">Updating pages...</div>
+    <div id="successMessage" style="display:none;" class="text-success">Pages updated successfully!</div>
+    <div id="errorMessage" style="display:none;" class="text-danger">An error occurred. Please try again.</div>
+</div>
+
+<script>
+    document.getElementById('updatePagesBtn').addEventListener('click', function() {
+        // Show loading message
+        document.getElementById('loadingMessage').style.display = 'block';
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('errorMessage').style.display = 'none';
+
+        // Make the fetch request to update pages
+        fetch('/update-pages/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCSRFToken() // Include CSRF token if necessary
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Show success message
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+            } else {
+                // Show error message
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('loadingMessage').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'block';
+        });
+    });
+
+    // Function to get CSRF token (needed if CSRF protection is enabled)
+    function getCSRFToken() {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, "csrftoken".length + 1) === "csrftoken=") {
+                    cookieValue = decodeURIComponent(cookie.substring("csrftoken".length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
+
+{% endblock %}

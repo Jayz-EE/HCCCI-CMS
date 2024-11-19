@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <link rel="stylesheet" href="{% static 'css/paymentprocess.css' %}">
+    <title>HCCCI - Payment</title>
+{% endblock title %}
+
+{% block content %}
+<!---Content=========================-->
+<div id="paymentprocess">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>PAYMENT OPTION</h1>
+            </div>
+
+            <div class="col-xl-7 col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Option 1</h2>
+                        <img src="{% static 'Image/option-logo-hccci.png' %}" class="img-fluid" alt="">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>School Cashier</h3>
+                            </div>
+                            <div class="card-body">
+                                Directly go to the school to make payment:
+                                <ul>
+                                    <li>Friday 8:00 am to 5:00 pm</li>
+                                    <li>Monday to Thursday 8:00 am to 5:00 pm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>Option 2</h2>
+                        <img src="{% static 'Image/option-logo-landbank.png'%}" class="img-fluid" alt="">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Landbank of the Phillipines (LBP)</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Go to the nearest LBP Branch</li>
+                                    <li>
+                                        Prepare 2 (Original and Duplicate) Deposite Slips (Green for Cash Depositand Blue for Check Deposit)
+                                    </li>
+                                    <li>Account details provided Below</li>
+                                    <li>
+                                        In the lower left portion of the validated Duplicate copy, write the name of the student, course and year/grade level.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Option 4</h2>
+                        <img src="{% static 'Image/option-logo-palawan.png'%}" class="img-fluid" alt="">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Palawan Express Padala</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Go to any Palawan Pawnshop branch</li>
+                                    <li>
+                                        Fill-out the Padala to Bank AccountForm (Green Form)
+                                    </li>
+                                    <li>Provide all necessary details.</li>
+                                    <li>
+                                        Note to counter check Account Details - Bank, Account Name, Type of Account, Account Number and Amount. Pay for the amount due: Principal Ammount + Service Fee.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>Option 3</h2>
+                        <img src="{% static 'Image/option-logo-gcash.png'%}" class="img-fluid" alt="">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>GCash</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>Using Gcash Appliction form click "Bank Transfer"</li>
+                                    <li>Click "LANDBANK"</li>
+                                    <li>Account details provided below</li>
+                                    <li>Account Name: 	"holy child college" will do</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-xl-5 col-lg-12">
+                <div>
+                    <h2>Account Details</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            Bank: LAND BANK OF THE PHILIPPINES
+                            <ul>
+                                <li>
+                                    Account Name:
+                                    Holy Child College of Info. Tech., Inc.
+                                </li>
+                                <li>
+                                    Account Number:
+                                    2192-1051-80 
+                                </li>
+                            </ul>
+                            Send proof of transaction to this email:
+                            <ul>
+                                <li>
+                                    financedept@hccci.edu.ph
+                                </li>
+                                <li>
+                                    with subject: <br>
+                                    Student name/ Grade level/ Course-year level
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

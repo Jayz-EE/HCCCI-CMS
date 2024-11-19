@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="gallery_images" class="form-label">Select Images</label>
+            <input type="file" class="form-control" id="gallery_images" name="image" multiple accept="image/*" required>
+        </div>
+        
+        <div class="form-group mb-3">
+            <input type="checkbox" id="is_featured" name="is_featured" value="true">
+            <label for="is_featured">Set as Featured Image</label>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add Image</button>
+    </form>
+
+    <a href="{% url 'edit_page' page.slug %}" class="btn btn-secondary mt-3">Back to Edit Page</a>
+</div>

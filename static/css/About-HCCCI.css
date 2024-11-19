@@ -1,0 +1,1573 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+     
+}
+.hide-desktop {
+    display: none;
+}
+
+/*For iPhone 6/7/8 =======================================*/
+.img1{
+    width: 200px;
+    height: 200px;
+    /* margin-left: 90px !important; */
+}
+
+.img2{
+    width: 100%;
+    height: 200px;
+}
+.img3{
+    width: 100%;
+    height: 200px;
+}
+.caro{
+    padding-top: 0px;
+}
+.abt{
+    padding-top: 25px;
+    text-align:justify;                      /*About====================== class="abt" as whole container of about hccci*/
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.abt h1{
+    text-align: center;
+    padding-top:10px;                       /*About====================== class="abt h1"*/
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    color:#655642;
+}
+.ndt{
+    text-indent: 15px;                       /*About====================== class="ndt" for paraghrap*/
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ndt p{
+    margin-top: 1.5em;
+}
+
+#hccciVideo{
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+}
+.corevalues{
+    padding-top: 30px;
+}
+.vision{
+    padding-top: 20px;
+}
+.mission{
+    
+    padding-top: 20px;
+}
+.cores h1{
+    text-align: center;                     /*About====================== class="cores h1" for title of core values, mission, & vision*/
+    font-family: 'Oxygen', sans-serif;
+    color:#655642;
+   
+}
+.cores p{
+    text-align: center;                     /*About====================== class="cores p" for parag of mission and vision*/
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+
+/*School Seal ============================================= for about content*/
+
+.seal{
+    font-family: 'Roboto Slab', serif;
+}
+.seal h1{
+    text-align: center;
+    padding-top: 25px;
+    color:#655642;
+}
+.seal h3{
+    padding-top: 20px;
+    color:#655642;
+}
+.first{
+    padding-top: 25px;
+}
+.first h3{
+    font-size: 16px;
+    
+}
+.logo{
+    width: 100px;
+    height: 100px;  
+}
+
+.shield{
+    width: 100px;
+    height: 100px;
+}
+.second{
+    padding-top: 25px;
+}
+.second h3{
+    font-size: 20px;
+}
+.second p{
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 20px;
+}
+.third{
+    padding-top: 25px;
+}
+.laurel{
+    width: 100px;
+    height: 100px;
+}
+.third h3{
+    font-size: 20px;
+}
+.third p{
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.fourth{
+    padding-top: 25px;
+}
+.torch{
+    width: 100px;
+    height: 100px;
+}
+.fourth h3{
+    font-size: 20px;
+}
+.fourth p{
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 20px;
+}
+.fifth{
+    padding-top: 25px;
+}
+.hand{
+    width: 100px;
+    height: 100px; 
+}
+.fifth h3{
+    font-size: 20px;
+}
+.fifth p{
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 20px;
+}
+.sixth{
+    padding-top: 25px;
+}
+.color{
+    width: 100px;
+    height: 100px;
+}
+.sixth h3{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.sixth p{
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 20px;
+}
+.seven{
+    padding-top: 25px;
+}
+.book{
+    width: 100px;
+    height: 100px;
+}
+.seven h3{
+    font-size: 20px;
+}
+.seven p{
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 20px;
+}
+.eight{
+    padding-top: 25px;
+}
+.child{
+    width: 100px;
+    height: 100px;
+}
+.eight h3{
+    font-size: 20px;
+}
+.eight p{
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 20px;
+}
+.nine{
+    padding-top: 25px;
+}
+.cap{
+    width: 100px;
+    height: 100px; 
+}
+.nine h3{
+    font-size: 20px;
+}
+.nine p{
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.fot{
+    padding-top: 20px;
+}
+
+
+/*For iPhone 6/7/8 plus =========================*/
+@media only screen and (min-width: 414px){
+    .img1{
+        width: 200px;
+        height: 200px;
+        /* margin-left: 110px !important; */
+    }
+
+    .abt{
+        font-size: 18px;                    /*About====================== class="abt" as whole container of about hccci*/
+        text-align: justify;
+        font-family: 'Oxygen', sans-serif;
+    }
+    .abt h1{
+        font-size: 30px;                     /*About====================== class="abt h1"*/
+    }
+    .ndt p{
+        font-size: 18px;
+    }
+    #hccciVideo{
+        width: 100%;
+        height: 250px;
+        padding-top: 20px;
+    }
+    .corevalues{
+        padding-top: 110px;
+        
+    }
+    .vision{
+        padding-top: 30px;
+        
+    }
+    .mission{
+        padding-top: 30px;
+        
+    }
+    .cores{
+        text-align: justify;                   /*About====================== class="cores" all mission and vision*/
+        font-size: 17px;
+        margin-top: -70px;
+    }
+    .cores p{
+        font-size: 18px;                    /*About====================== class="cores p" for parag of mission and vision*/
+    }
+    
+    /*School Seal ============================================= for about content*/
+
+ 
+.seal h1{
+    text-align: center;
+    padding-top: 25px;
+}
+.first{
+    padding-top: 25px;
+}
+.first h3{
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    padding-top: 20px;
+}
+.logo{
+    width: 100px;
+    height: 100px;  
+}
+
+.shield{
+    width: 100px;
+    height: 100px;
+}
+.second{
+    padding-top: 25px;
+}
+.second h3{
+    font-size: 20px;
+}
+.second p{
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 20px;
+}
+.third{
+    padding-top: 25px;
+}
+.laurel{
+    width: 100px;
+    height: 100px;
+}
+.third h3{
+    font-size: 20px;
+}
+.third p{
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 20px;
+}
+.fourth{
+    padding-top: 25px;
+}
+.torch{
+    width: 100px;
+    height: 100px;
+}
+.fourth h3{
+    font-size: 20px;
+}
+.fourth p{
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 20px;
+}
+.fifth{
+    padding-top: 25px;
+}
+.hand{
+    width: 100px;
+    height: 100px; 
+}
+.fifth h3{
+    font-size: 20px;
+}
+.fifth p{
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 20px;
+}
+.sixth{
+    padding-top: 25px;
+}
+.color{
+    width: 100px;
+    height: 100px;
+}
+.sixth h3{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.sixth p{
+    text-align: justify;
+    font-size: 18px;
+    text-indent: 20px;
+}
+.seven{
+    padding-top: 25px;
+}
+.book{
+    width: 100px;
+    height: 100px;
+}
+.seven h3{
+    font-size: 20px;
+}
+.seven p{
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 20px;
+}
+.eight{
+    padding-top: 25px;
+}
+.child{
+    width: 100px;
+    height: 100px;
+}
+.eight h3{
+    font-size: 20px;
+}
+.eight p{
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 20px;
+}
+.nine{
+    padding-top: 25px;
+}
+.cap{
+    width: 100px;
+    height: 100px; 
+}
+.nine h3{
+    font-size: 20px;
+}
+.nine p{
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.fot{
+    padding-top: 20px;
+}  
+
+.fc{
+    margin-top: 20px;
+}
+.info-text {
+    padding-top: 18px;
+    font-weight: normal !important;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.cfc{
+    color: #f3f3f3;
+}
+.cfcname {
+    margin-top: 1rem;
+}
+
+.contact-form h3, .contact-form h5{
+    font-weight: bold;
+}
+.btnf {
+    width: 100%;
+    background-color: #447996;
+    border-color: rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.btnf:hover {
+   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #447996;
+    outline: none;
+    border: none;
+}
+
+.all-rights {
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    margin: 0;
+    color: #f3f3f3;
+    background-color: #655642;
+    text-align: center;
+    padding: 20px;
+}
+}
+ 
+  /*For iPad ========================================*/
+@media only screen and (min-width: 768px){
+    .hcccititle {
+        font-size: 0.6rem;
+        position: relative;
+        margin-top: -.3rem;
+    }
+    /* nav end */
+
+    .img1{
+        width: 300px;
+        height: 300px;
+        /* margin-left: 240px !important; */
+    }
+    .img2{
+        width: 100%;
+        height: 300px;
+    }
+    .img3{
+        width: 100%;
+        height: 300px;
+    }
+    .caro{
+        padding-top: 0px;
+    }
+    .abt{
+        font-family: 'Oxygen', sans-serif;
+    }
+    
+    .abt h1{
+        font-size: 35px;                            /*About====================== class="abt h1"*/
+    }
+    .ndt{
+        text-indent: 40px;                          /*About====================== class="ndt" for paraghrap*/
+        font-size: 20px;
+    }
+    #hccciVideo{
+        width: 100%;
+        height: 350px;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+   
+    .corevalues{
+        padding-top: 40px;
+    }
+    .vision{
+        padding-top: 40px;
+    }
+    .mission{
+        padding-top: 40px;
+    }
+    .cores h1{
+        font-size: 25px; 
+        padding-top: 50px                           /*About====================== class="cores h1" for title of core values, mission, & vision*/
+    }
+    .cores p{
+        font-size: 20px;
+        text-align: center;                         /*About====================== class="cores p" for parag of mission and vision*/
+    }
+    .cores{
+        padding-top:30px;
+    }
+    
+
+    /*School Seal ============================================= for about content*/
+
+    .seal{
+        font-family: 'Roboto Slab', serif;
+    }
+    .seal h1{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .first{
+        padding-top: 40px;
+    }
+    .first h3{
+        font-family: 'Roboto Slab', serif;
+        font-size: 25px;
+        padding-top: 40px;
+    }
+    .logo{
+        width: 150px;
+        height: 150px;  
+    }
+
+    .shield{
+        width: 150px;
+        height: 150px;
+    }
+    .second{
+        padding-top: 30px;
+    }
+    .second h3{
+        font-size: 25px;
+    }
+    .second p{
+        text-align: justify;
+        font-size: 20px;
+        text-indent: 20px;
+    }
+    .third{
+        padding-top: 30px;
+    }
+    .laurel{
+        width: 150px;
+        height: 150px;
+    }
+    .third h3{
+        font-size: 25px;
+    }
+    .third p{
+        text-align: justify;
+        font-size: 20px;
+        text-indent: 20px;
+    }
+    .fourth{
+        padding-top: 30px;
+    }
+    .torch{
+        width: 150px;
+        height: 150px;
+    }
+    .fourth h3{
+        font-size: 25px;
+    }
+    .fourth p{
+        text-align: justify;
+        font-size: 20px;
+        text-indent: 20px;
+    }
+    .fifth{
+        padding-top: 30px;
+    }
+    .hand{
+        width: 150px;
+        height: 150px; 
+    }
+    .fifth h3{
+        font-size: 25px;
+    }
+    .fifth p{
+        text-align: justify;
+        font-size: 20px;
+        text-indent: 20px;
+    }
+    .sixth{
+        padding-top: 30px;
+    }
+    .color{
+        width: 150px;
+        height: 150px;
+    }
+    .sixth h3{
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .sixth p{
+        text-align: justify;
+        font-size: 20px;
+        text-indent: 20px;
+    }
+    .seven{
+        padding-top: 30px;
+    }
+    .book{
+        width: 150px;
+        height: 150px;
+    }
+    .seven h3{
+        font-size: 25px;
+    }
+    .seven p{
+        font-size: 20px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+    .eight{
+        padding-top: 30px;
+    }
+    .child{
+        width: 150px;
+        height: 150px;
+    }
+    .eight h3{
+        font-size: 25px;
+    }
+    .eight p{
+        font-size: 20px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+    .nine{
+        padding-top: 30px;
+    }
+    .cap{
+        width:150px;
+        height: 150px; 
+    }
+    .nine h3{
+        font-size: 25px;
+    }
+    .nine p{
+        font-size:20px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+     .fot{
+        padding-top: 40px;
+    }
+
+    /* Footer ------------------------------------------------ */
+    .ipfooter {
+        display: none;
+    }
+    .ipadfooter {
+        display: block;
+    }
+
+    .ipadfooter-text {
+        font-family: 'Montserrat', sans-serif;
+        justify-content: space-between;
+        padding-top: 18px;
+        color: #f3f3f3;
+    }
+    .ipadinfo-text {
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 18px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+        color: #f3f3f3;
+    }
+    .ipadfh, .ipadfc {
+        font-family: 'Roboto Slab', serif;
+        
+        background-color: #655642;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: #f3f3f3;
+        font-weight: bold;
+    }
+    .ipadinfo-text i {
+        color: #f3f3f3;
+    }
+
+    .cfcnameIpad {
+        margin-top: 1rem;
+        color: #f3f3f3;
+    }
+
+    .btnf {
+        padding: 1rem;
+    }
+}
+
+  /*For iPad Pro ========================================*/
+
+  @media only screen and (min-width: 1024px) { 
+        .imageCore0{
+            position: absolute;
+            margin-top: 4em;
+            width: 20%;
+            height: 20%;
+            background-image: url('../img/po4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            z-index: 3;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+        .imageCore1{
+           position: relative;
+           top: 12em; 
+           left: 12em; 
+           width: 50%;
+            height: 50%;
+            background-image: url('../img/college.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            z-index: 3;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+        .borderLine{
+            position: relative;
+            bottom: 100px;
+            left: 100px;
+            height: 225px;
+            width: 350px;
+            border: 4px solid #e6a149;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .borderLine1{
+            position: relative;
+            bottom: 100px;
+            left: 150px;
+            height: 225px;
+            width: 350px;
+            border: 4px solid #e6a149;
+             box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .borderLineVal{
+            position: relative;
+            bottom: 220px;
+            left: 100px;
+            height: 225px;
+            width: 350px;
+            background-color:rgba(230, 161, 73,.2);
+           
+        }
+        .borderLineVal1{
+            position: relative;
+            top: -110px;
+            left: 140px;
+            height: 115px;
+            width: 350px;
+            background-color:rgba(230, 161, 73,.2);
+           
+        }
+        .imageCore2{
+            position: absolute;
+            margin-top: 4em;
+            width: 20%;
+            height: 20%;
+            background-image: url('../img/pctlab.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            filter: brightness(150%);
+            z-index: 3;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+        .imageCore3{
+           position: relative;
+           top: 12em; 
+           left: 12em; 
+           width: 50%;
+            height: 50%;
+            background-image: url('../img/cosci1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            filter: brightness(120%);
+            z-index: 3;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .imageCore4{
+            position: absolute;
+            margin-top: 4em;
+            margin-left: 4em;
+            width: 20%;
+            height: 20%;
+            background-image: url('../img/prog2.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            filter: brightness(150%);
+            z-index: 3;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+        .imageCore5{
+           position: relative;
+           margin-left: 4em;
+           top: 12em; 
+           left: 12em; 
+           width: 50%;
+            height: 50%;
+            background-image: url('../img/grade10.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 10px;
+            filter: brightness(120%);
+            z-index: 3;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
+        }
+
+    .img1{
+        width: 350px;
+        height: 400px;
+        /* margin-left: 340px !important; */
+    }
+    .img2{
+        width: 100%;
+        height: 400px;
+    }
+    .img3{
+        width: 100%;
+        height: 400px;
+    }
+    .caro{
+        padding-top: 0px;
+    }
+    .abt{
+        font-family: 'Oxygen', sans-serif;
+    }
+    .abt h1{
+        font-size: 40px;                            /*About====================== class="abt h1"*/
+    }
+    .ndt{
+        text-indent: 40px;
+        font-size: 25px;                            /*About====================== class="ndt" for paraghrap*/
+    }
+
+    #hccciVideo{
+        width: 100%;
+        height: 480px;  
+        /* margin-left: 55px;  */
+    }
+    .cores{
+        margin-top: -40px;
+    }
+    .corevalues{
+        padding-top: 40px;
+    }
+    .vision{
+        padding-top: 40px;
+    }
+    .mission{
+        padding-top: 40px;
+    }
+    .cores{
+        padding-top: 40px;                          /*About====================== class="cores" all content of mission and vision*/
+    }
+    .cores h1{
+        font-size: 30px;                            /*About====================== class="cores h1" for title of core values, mission, & vision*/
+        padding-top: 20px;
+    }
+    .cores p{
+        font-size: 25px;                            /*About====================== class="cores p" for parag of mission and vision*/
+        text-align: center;
+    }
+    
+
+    /*School Seal ============================================= for about content*/
+ 
+    .seal h1{
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        padding-top: 80px;
+        font-size: 35px;
+    }
+    .first{
+        padding-top: 30px;
+    }
+    .first h3{
+        font-family: 'Roboto Slab', serif;
+        font-size: 25px;
+    }
+    .logo{
+        width: 200px;
+        height: 200px;  
+    }
+
+    .shield{
+        width: 200px;
+        height: 200px;
+    }
+    .second{
+        padding-top: 50px;
+    }
+    .second h3{
+        font-size: 35px;
+    }
+    .second p{
+        text-align: justify;
+        font-size: 25px;
+        text-indent: 20px;
+    }
+
+    .laurel{
+        width: 200px;
+        height: 200px;
+    }
+    .third h3{
+        font-size: 35px;
+    }
+    .third p{
+        text-align: justify;
+        font-size: 25px;
+        text-indent: 20px;
+    }
+
+    .torch{
+        width: 200px;
+        height: 200px;
+    }
+    .fourth h3{
+        font-size: 35px;
+    }
+    .fourth p{
+        text-align: justify;
+        font-size: 25px;
+        text-indent: 20px;
+    }
+
+    .hand{
+        width: 200px;
+        height: 200px; 
+    }
+    .fifth h3{
+        font-size: 35px;
+    }
+    .fifth p{
+        text-align: justify;
+        font-size: 25px;
+        text-indent: 20px;
+    }
+    .sixth{
+        padding-top: 50px;
+    }
+    .color{
+        width: 200px;
+        height: 200px;
+    }
+    .sixth h3{
+        font-size: 35px;
+        padding-top: 10px;
+    }
+    .sixth p{
+        text-align: justify;
+        font-size: 25px;
+        text-indent: 20px;
+    }
+
+    .book{
+        width: 200px;
+        height: 200px;
+    }
+    .seven h3{
+        font-size: 35px;
+    }
+    .seven p{
+        font-size: 25px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .child{
+        width: 200px;
+        height: 200px;
+    }
+    .eight h3{
+        font-size: 35px;
+    }
+    .eight p{
+        font-size: 25px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .cap{
+        width:200px;
+        height: 200px; 
+    }
+    .nine h3{
+        font-size: 35px;
+    }
+    .nine p{
+        font-size: 25px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+    .fot{
+        padding-top: 40px;
+    }
+
+    /* Footer ------- */
+    .dskfooter {
+        display: none;
+    }
+  }
+
+#mvDiv {
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+
+  /*For Disktop ============================================================*/
+
+  @media only screen and (min-width: 1025px){
+    
+    #mvDiv  {
+        background: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+
+    .img1{
+        width: 350px;
+        height: 400px;
+        /* margin-left: 510px !important; */
+    }
+    .img2{
+        width: 100%;
+        height: 400px;
+    }
+    .img3{
+        width: 100%;
+        height: 400px;
+    }
+    .caro{
+        padding-top: 0px;
+    }
+      .hide-mobile{
+          display: none;
+      }
+      .hide-desktop{
+          display: block;
+         
+      }
+    .abt{
+        font-family: 'Oxygen', sans-serif;
+    }
+    .abt h1{
+        font-size: 50px;
+        color:#655642;
+        text-shadow: #1b1b1a 2px 1px;
+        
+                                    
+    }
+    .ndt{
+        text-indent: 40px;                             
+        font-size: 20px;
+    }
+    .avp{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 30px;
+        font-family: 'Oxygen', sans-serif;
+        color:#655642;
+        margin-left: 125px;
+    }
+    
+    #hccciVideo{
+        width: 100%;
+        height: 720px;
+        /* position: relative; */
+        /* margin-left: 250px; */
+       
+    }
+    
+    .first{
+      text-align: center !important;
+    }
+    .first .logo{
+        width: 300px;
+        height: 300px;
+    }
+    .first p{
+        padding-top: 30px;
+        font-size: 25px;
+        color:#655642;
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    .second{
+        text-align: center;
+    }
+    .second img{
+        width: 200px;
+        height: 225px; 
+        padding-top: 30px;
+    }
+    .second p{
+        text-align: justify;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .second h4{
+        padding-top: 30px;
+        color:#655642;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .third{
+        text-align: center;
+    }
+    .third img{
+        width: 200px;
+        height: 200px; 
+        padding-top: 30px;
+    }
+    .third h4{
+        padding-top: 30px;
+        color:#655642;
+        font-family: 'Roboto Slab', serif;
+    }
+    .third p{
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .fourth{
+        text-align: center;
+    }
+    .fourth img{
+        width: 200px;
+        height: 200px; 
+        padding-top: 30px;
+    }
+    .fourth h4{
+        padding-top: 30px;
+        color:#655642;
+        font-family: 'Roboto Slab', serif;
+    }
+    .fourth p{
+        font-size: 18px;
+        text-align: justify;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .fifth{
+        text-align: center;
+    }
+    .fifth img{
+        width: 200px;
+        height: 200px; 
+        padding-top: 30px;
+    }
+    .fifth h4{
+        padding-top: 30px;
+        color:#655642;
+        font-family: 'Roboto Slab', serif;
+    }
+    .fifth p{
+        font-size: 18px;
+        text-align: justify;
+    }
+    video{
+        width: 800px;
+        height: 500px;
+        text-align: center;
+    }
+    .Desktop{
+        margin-top: 50px !important;
+        background-color:rgba(101,86,66,1);
+        color: white;
+        text-shadow: black 1px 1px;
+        font-family: 'Oxygen', sans-serif;
+    }
+    .values{
+        height: 400px;
+    }
+
+    .values .coreBack{
+        position: absolute;
+        font-size: 56px;
+        margin-top: 1em;
+        margin-left: 2.5em;
+        opacity: .08;
+    }
+
+    .values h4{
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        margin-top: 4em;
+        margin-bottom: 1.2em;
+        font-size: 28;
+        
+    }
+    .values li{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+    }
+    .mission{
+        height: 400px;
+        margin-top: 3em;
+    }
+    .mission .coreBack{
+        position: absolute;
+        font-size: 56px;
+        margin-top: 1em;
+        margin-left: 3.5em;
+        opacity: .08;
+    }
+    .mission h4{
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        margin-top: 4em;
+        margin-bottom: 1.2em;
+        font-size: 28;
+    }
+    .mission p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .vision{
+        height: 400px;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    .vision .coreBack{
+        position: absolute;
+        font-size: 56px;
+        margin-top: 1em;
+        margin-left: 4em;
+        opacity: .08;
+    }
+    .vision h4{
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        margin-top: 4em;
+        margin-bottom: 1.2em;
+        font-size: 28;
+    }
+    .vision p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+    .des h1{
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        padding-top: 80px;
+        font-size: 50px;
+        color:#655642;
+    }
+    
+    .fot{
+        padding-top: 40px;
+    }
+    
+    /* Footer ------------------ */
+    .ipadfooter {
+        display: none;
+    }
+    .dskfooter {
+        display: block;
+        bottom: 0 !important;
+        margin-top: -17px !important;
+    }
+    .dsktextlogo h5 {
+        font-size: 14px !important;
+        text-align: center;
+        color: #f3f3f3;
+    }
+    .dskfooter img {
+        width: 40%;
+        height: 40%;
+        position: auto;
+        margin-top: 10px;   
+    }
+
+    .ipadfc h2 {
+        font-size: 25px !important;
+    }
+    .deskcontact i {
+        font-size: 13px !important;
+        color: #f3f3f3;
+    }
+    .deskcontact span {
+        font-size: 13px;
+        font-weight: normal;
+    }
+    
+    .deskcontact .fa-icon {
+        font-size: 15px !important;
+    }
+    .socialicon {
+        margin-top: 15px !important;
+    }
+    .socialicon i {
+        font-size: 20px !important;
+        margin: 5px;
+    }
+    .socialicon h6 > i {
+        font-size: 15px !important;
+    }
+
+    .otherLinks {
+        text-align: center;
+    }
+    .otherLinks h2 {
+        font-family: 'Roboto Slab', serif;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 25px !important;
+        color: #f3f3f3;
+    }
+    .otherLinks a {
+        font-family: 'Montserrat', sans-serif;
+        color: #f3f3f3;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+    .contactForm .contact-form {
+        margin-top: 0px;
+        width: 100%;
+        justify-content: center !important;
+    }
+    .contact-form h2 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    .contact-form .contact-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr) !important;
+    }
+    .input-name{
+        margin-right: 2px;
+    }
+    .input-phone{
+        margin-top: -4px;
+        margin-left: 2px;
+    }
+    .comment textarea{
+        margin-top: -10px !important;
+    }
+    .cfc {
+        font-size: 13px !important;
+        margin-top: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .btnf {
+        padding: 5px 5px;
+        margin-top: 5px;
+    }
+    .btnf:hover {
+        transform: none;
+    }
+    .all-rights {
+        font-family: 'Roboto Slab', serif;
+        margin: 0;
+        color: #f3f3f3;
+        background-color: #655642;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1) ;
+    }
+  }
+ 
+  /* Slide-in from the left */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-out to the left */
+@keyframes slideOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Slide-in from the right */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-out to the right */
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Slide-in from the bottom */
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-out downwards */
+@keyframes slideOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%); /* Move downwards */
+    }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10%); /* Move downwards */
+    }
+}
+
+/* Add animation properties for each direction */
+
+/* Slide in from the left */
+.animate-slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Slide out to the left */
+.animate-slide-out-left {
+    animation: slideOutLeft 1s ease-out forwards;
+}
+
+/* Slide in from the right */
+.animate-slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Slide out to the right */
+.animate-slide-out-right {
+    animation: slideOutRight 1s ease-out forwards;
+}
+
+/* Slide in from the bottom */
+.animate-slide-down-in {
+    animation: slideInDown 1s ease-out forwards;
+}
+
+/* Slide out downwards */
+.animate-slide-down-out {
+    animation: slideOutDown 1s ease-out forwards;
+}
+
+/* Fade in */
+.animate-fade {
+    animation: fadeIn 1s ease-out forwards !important;
+}
+
+/* Fade out */
+.animate-fade-out {
+    animation: fadeOut 1s ease-out forwards !important;
+}

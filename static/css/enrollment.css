@@ -1,0 +1,92 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Enrollment Css */
+.card{
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.5em;
+}
+.card-body h3{
+    font-family: 'Roboto Slab', serif !important;
+    text-align: center;
+     
+}
+
+.enrollmentContent .enrollTitle{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.enrollmentContent b{
+    margin-top: .8em;
+}
+
+.enrollNumTitle{
+    font-family: 'Roboto Slab', serif !important;
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+
+.enrollmentBtnAction{
+    text-align: center;
+}
+
+.enrollmentBtnAction .enrollBtn{
+    margin-top: 2em;
+}
+
+.enrollBtn {
+    font-family: 'Roboto Slab', serif;
+    align-items: center;
+    background-color: #447996;
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: transparent;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+}
+.enrollBtn:focus {
+    outline: transparent;
+}
+.enrollBtn:hover {
+    font-weight: bolder;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #EDEDED;
+    color: #447996 !important;
+    border: solid 1px #447996;
+}
+
+/* Programs Offered */
+.btn-ms {
+    font-weight: bold;
+    width: 100%;
+    background-color: #c4c4c4;
+    margin-bottom: 20px;
+}
+
+.btnf {
+    width: 100%;
+    background-color: #447996;
+    border-color: rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    font-family: 'Oxygen', sans-serif;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.btnf:hover {
+   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: #447996;
+    outline: none;
+    border: none;
+}
+
