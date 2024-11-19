@@ -34,9 +34,10 @@
     /* Image within the card */
     .card-img-top {
         width: 100%;
-        min-height: 400px;
-        max-height: 400px;
-        object-fit: cover; 
+        min-height: 45vh;
+        max-height: 45vh; 
+        object-fit: cover;
+        border-radius: 12px 12px 0 0; 
     }
 
     /* Card body and text */
@@ -65,17 +66,228 @@
             font-size: 1rem; 
         }
     }
+
+    @media (min-width: 200px) and (max-width: 300px) {
+        .news-card-text {
+            font-size: 0.6rem; 
+        }
+        .card-img-top {
+            width: 100%;
+            min-height: 20vh;
+            max-height: 20vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .container-fluid h2 {
+            font-size: 1.5rem; 
+        }
+    }
+
+    @media (min-width: 301px) and (max-width: 401px) {
+        .news-card-text {
+            font-size: 0.7rem; 
+        }
+        .card-img-top {
+            width: 100%;
+            min-height: 23vh;
+            max-height: 23vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
     
-    @media (max-width: 640px) {
+    @media (min-width: 400px) and (max-width: 450px) {
         .news-card-text {
             font-size: 0.9rem; 
         }
         .card-img-top {
             width: 100%;
+            min-height: 30vh;
+            max-height: 30vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .container-fluid h2 {
+            font-size: 2.5rem; 
+        }
+    }
+
+    @media (min-width: 451px) and (max-width: 490px)  { 
+        .card-img-top {
+            width: 100%;
             min-height: 40vh;
             max-height: 40vh; 
-            object-fit: fill;
+            object-fit: cover;
             border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.9rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 490px) and (max-width: 549px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 45vh;
+            max-height: 45vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.9rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 550px) and (max-width: 700px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 25vh;
+            max-height: 25vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.7rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 701px) and (max-width: 800px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 30vh;
+            max-height: 30vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.9rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 801px) and (max-width: 900px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 40vh;
+            max-height: 40vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 1rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 901px) and (max-width: 1100px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 25vh;
+            max-height: 25vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.9rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 1101px) and (max-width: 1160px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 35vh;
+            max-height: 35vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.9rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+    
+    @media (min-width: 1160px) and (max-width: 1350px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 35vh;
+            max-height: 35vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 1rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 1351px) and (max-width: 1400px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 43vh;
+            max-height: 43vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 1rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 1401px) and (max-width: 1500px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 33vh;
+            max-height: 33vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 0.8rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
+        }
+    }
+
+    @media (min-width: 1501px) and (max-width: 1700px)  { 
+        .card-img-top {
+            width: 100%;
+            min-height: 38vh;
+            max-height: 38vh; 
+            object-fit: cover;
+            border-radius: 12px 12px 0 0; 
+        }
+        .news-card-text {
+            font-size: 1rem; 
+        }
+        .container-fluid h2 {
+            font-size: 2rem; 
         }
     }
 
@@ -110,6 +322,7 @@
     .glide__arrow:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
+
 </style>
 
 <div id="news_section">
@@ -194,7 +407,8 @@
                 autoplay: 3000,  
                 hoverpause: true, 
                 breakpoints: {
-                    640: { perView: 1, gap: 10 },
+                    549: { perView: 1, gap: 10 },
+                    550: { perView: 2, gap: 10 },
                     900: { perView: 2, gap: 20 },
                     1400: { perView: 3, gap: 30 },
                     1700: { perView: 4, gap: 30 }

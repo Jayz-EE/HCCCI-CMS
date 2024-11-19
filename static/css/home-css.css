@@ -378,3 +378,383 @@
     background-color: #0056b3; /* Darken button on hover */
     color: #fff;
 }
+
+/* Carousel */
+:root{
+    --title:36px;
+    --normal-text: 16px;
+}
+
+/* Image Styles */
+.carousel-item img {
+    width: 100%; /* Make the image fill the width */
+    height: 100%; /* Make the image fill the height */
+    object-fit: contain; /* Maintain the aspect ratio */
+}
+
+@media (max-width: 500px) {
+    .carousel-item img {
+        width: 100%; /* Make the image fill the width */
+        height: 50vh; /* Make the image fill the height */
+        object-fit: cover; /* Maintain the aspect ratio */
+    }
+}
+
+/* Low Opacity Layer */
+.low-opacity, .low-opacity-2 {
+    position: absolute; /* Position over the image */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Card Body Styling */
+.low-opacity .card-body {
+    height: auto; /* Auto height for card body */
+    max-width: 60vw; /* Control card body width */
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.low-opacity-2 .card-body {
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    align-content: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media (max-width: 576px) {
+    .card-body .card-text-2 {
+        max-width: 85%;
+    }
+    .text-container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .text-container .btn-cont {
+        padding: 0 !important;
+    }
+    .low-opacity-2 {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .low-opacity .card-body {
+        max-width: 80%;
+    }
+}
+
+/* Responsive Text Using Clamp */
+.card-text {
+    color: azure;
+    font-size: clamp(1.5rem, 3vw, 3rem); /* Responsive font size */
+}
+
+.card-text-2 {
+    color: azure;
+    font-size: clamp(1rem, 3vw, 3rem); /* Responsive font size */
+    max-width: 50%; /* Limit width to 90% of parent */
+    text-align: center; /* Center the text */
+}
+
+/* Carousel Button Styling */
+.carousel-button {
+    border: 4px solid rgba(255, 255, 255, 0.527);
+    color: white;
+    border-radius: clamp(2px, 1vw, 15px); /* Responsive border-radius */
+    padding: clamp(1px, 1vw, 5px) clamp(0px, 1vw, 20px); /* Responsive padding */
+    font-size: clamp(0.6rem, 1vw, 1.5rem); /* Responsive font size */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.carousel-button:hover {
+    background-color: #ffffff;
+    border: 4px solid rgba(255, 255, 255, 0.527);
+    color: #3d3d3d;
+}
+
+/* Remove fixed height for card backgrounds */
+.car-card-1, .car-card-2 {
+    font-family: "Poppins", serif !important;
+    position: relative;
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .car-card-1, .car-card-2 {
+        height: auto; /* Set height to auto for smaller screens */
+        width: 100vw; /* Maintain full width */
+    }
+}
+
+@media (max-width: 992px) {
+    .car-card-1, .car-card-2 {
+        height: auto; /* Set height to auto for smaller screens */
+        width: 100vw; /* Maintain full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .car-card-1, .car-card-2 {
+        height: auto; /* Set height to auto for smaller screens */
+        width: 100vw; /* Maintain full width */
+    }
+}
+
+@media (max-width: 576px) {
+    .car-card-1, .car-card-2 {
+        height: auto; /* Set height to auto for smaller screens */
+        width: 100vw; /* Maintain full width */
+    }
+}
+
+.fa-book-open {
+    color: #333;
+    text-shadow: 0 0 10px rgba(238, 196, 141, 0.973), 0 0 5px rgba(134, 102, 55, 0.897), 0 0px 10px rgba(238, 171, 109, 0.932);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+#future_section h1 {
+    color: #3d3d3d;
+}
+
+.future-button {
+    border: 4px solid rgba(0, 0, 0, 0.527);
+    color: #3d3d3d;
+    border-radius: 15px;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.future-button:hover {
+    border: 4px solid rgba(0, 0, 0, 0.527);
+    background-color: rgba(0, 0, 0, 0.527);
+    color: azure;
+}
+
+#news_section {
+    background-image: url('../img/bldg.jpg');
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+}
+
+.opacity-bg {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.owl-item .item {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.owl-item .item .card-body-news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    color: azure;
+}
+
+.card-body-news p {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.text-azure {
+    color: azure;
+    font-size: 2.75rem;
+}
+
+.hccciVideodiv {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#hccciVideo {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+.video-container {
+    height: 100%;
+    width: 70%;
+}
+
+@media (max-width: 500px) {
+    .video-container {
+        width: 100%;
+    }
+    .video-container #hccciVideo {
+        height: 350px;
+    }
+}
+
+/* Programs - Offered Section */
+.card-cont {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card-cont a {
+    max-height: 500px;
+    max-width: 400px;
+}
+
+.program-offered-title {
+    margin-top: 40px;
+}
+
+.news-ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll linear infinite;
+}
+
+.ticker-content {
+    display: inline-block;
+    padding-right: 100px; /* Space between repeated content */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.card-cont {
+    opacity: 1;
+}
+
+@media (min-width: 700px) {
+    /* Keyframes for continuous scrolling */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }    
+
+    /* Initial state before animation */
+    .card-cont {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    /* Entrance animation */
+    .card-cont.animate-in {
+        animation: fadeInUp 1.5s forwards ease-out;
+    }
+
+    .carousel-text.animate-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    .carousel-text.animate-in-down {
+        animation: fadeInDown 0.5s ease-in;
+    }
+
+    /* Exit animation */
+    .card-cont.animate-out {
+        animation: fadeOutDown 1.5s forwards ease-in;
+    }
+
+    /* Keyframes for animations */
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeOutDown {
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-70px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+.responsive-text-p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem); /* Responsive text size */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Text color for better contrast */
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+}
+
+.responsive-text-p p {
+    margin-bottom: 1rem;
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-height: 700px) {
+    .btn-cont {
+        margin-top: 0 !important;
+    }
+}
+
+.future-button {
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Ensure the button text is responsive */
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff; /* Example color for the button */
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.future-button i {
+    margin-left: 8px; /* Space between text and icon */
+}
+
+.future-button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+    color: #fff;
+}

@@ -207,6 +207,10 @@ footer {
     width: 100%;
 }
 
+#nav-cont {
+    position: fixed;
+}
+
 /* Sidebar links */
 .sidebar a {
     padding: 10px;
@@ -222,19 +226,28 @@ footer {
 }
 
 #sidenav {
-    position: fixed;
-    top: 16.5vh;
     height: fit-content;
     z-index: 9999;
+    justify-content: center;
+}
+
+.mainContent {
+    top: 16.5vh;
+    position: fixed;
     width: 3vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    z-index: 9999;
+}
+
+.toggle-btn.closed {
+    left: 0px !important;
 }
 
 /* Sidebar toggle button */
 #toggleBtn {
-    position: relative;
+    position: fixed;
+    left: 2.2vw;
     font-size: clamp(1rem, 1.2vw, 1.3rem);
     cursor: pointer;
     color: #ffffff;
@@ -245,6 +258,10 @@ footer {
             0 0 1em black;
     display: flex;
     justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    transition: left 0.3s ease;
 }
 
 /* Main content area */
@@ -281,5 +298,5 @@ footer {
 }
 
 .text-small-res {
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    font-size: clamp(0.6rem, 3vw, 1rem);
 }

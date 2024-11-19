@@ -141,3 +141,147 @@
     max-height: 85vh;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+/* Gallery Styles */
+
+.card-container {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.card {
+    padding: 1.5em;
+}
+
+.content-container  h3 {
+    text-align: center;
+    margin-top: 1.2em;
+    font-size: 1rem;
+}
+
+.card-img {
+    min-height: 300px;
+    max-height: 300px;
+    object-position: center;
+    object-fit: cover;
+    margin-bottom: 20px;
+    object-position: 50% 35%;
+
+    /* Apply the border-image */
+    border-width: 10px;  
+    border-style: solid;
+    border-image: url('../Image/pattern.jpg') 30 stretch; 
+}
+
+
+/* Optional: Add margin between images */
+.gallery-image {
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+}
+
+.content-title {
+    text-align: center;
+    margin-top: 1.2em;
+    font-size: 1.3rem;
+    font-family: 'Roboto slab', sans-serif !important;
+    max-width: 65%;
+}
+
+.ql-video {
+    height: 680px;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .content-title {
+        text-align: center;
+        margin-top: 1.2em;
+        font-size: 1rem;
+        font-family: 'Roboto Slab', sans-serif !important;
+        max-width: 90%;
+    }
+
+    .section-content {
+        font-size: 0.9rem;
+    }
+
+    .card-img {
+        height: auto;
+        max-height: 400px;
+        object-position: center;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .ql-video {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.text-justify {
+    text-indent: 10px;
+    line-height: 2em;
+    font-family: 'Roboto slab', sans-serif;
+}
+
+/* Allow specific text alignment from Quill */
+.section-content .ql-align-center {
+    text-align: center;
+}
+.section-content .ql-align-right {
+    text-align: right;
+}
+.section-content .ql-align-left {
+    text-align: left;
+}
+
+.section-content .ql-align-justify {
+    text-align: justify;
+}
+
+/* Define custom font sizes */
+.ql-size-2px { font-size: 2px; }
+.ql-size-4px { font-size: 4px; }
+.ql-size-6px { font-size: 6px; }
+.ql-size-8px { font-size: 8px; }
+.ql-size-10px { font-size: 10px; }
+.ql-size-12px { font-size: 12px; }
+.ql-size-14px { font-size: 14px; }
+.ql-size-16px { font-size: 16px; }
+.ql-size-18px { font-size: 18px; }
+.ql-size-20px { font-size: 20px; }
+
+.object-fit-contain {
+    object-fit: contain !important;
+    max-height: none;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    text-align: center;
+}
+
+.gallery-image img {
+    cursor: pointer;
+}
+
+.modal-dialog {
+    width: fit-content !important;
+}
+
+#expandedImage {
+    max-height: 85vh;
+}
+
