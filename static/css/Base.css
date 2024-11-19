@@ -279,3 +279,7 @@ footer {
         width: 5vw;
     }
 }
+
+.text-small-res {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
