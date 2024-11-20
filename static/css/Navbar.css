@@ -179,6 +179,7 @@
     .hcccititle {
         font-size: 0.6rem;
     }
+
     .navbar-nav {
         margin-left: 0;
     }
@@ -195,7 +196,11 @@
     }
 
     .brand-title h5 {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .hcccititle {
+        font-size: 0.5rem;
     }
 
     .loginbtn {
@@ -290,3 +295,5 @@
       margin-left: 30px;
     }
   }
+
+  

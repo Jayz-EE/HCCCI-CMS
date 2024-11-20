@@ -29,8 +29,6 @@
     bottom: 0; /* Align to the bottom */
     background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
     display: flex; /* Flexbox for centering content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
 }
 
 /* Card Body Styling */
@@ -38,8 +36,7 @@
     height: auto; /* Auto height for card body */
     max-width: 60vw; /* Control card body width */
     display: flex;
-    align-content: center;
-    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -47,8 +44,6 @@
     height: auto;
     max-width: 100%;
     display: flex;
-    align-content: start;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -59,8 +54,7 @@
     }
     .text-container {
         display: flex;
-        align-content: center;
-        justify-content: center;
+        align-items: center;
         height: 100%;
         flex-wrap: wrap;
         flex-direction: column;
@@ -84,7 +78,7 @@
 
 .card-text-2 {
     color: azure;
-    font-size: clamp(1rem, 3vw, 3rem); /* Responsive font size */
+    font-size: clamp(1rem, 2.5vw, 3rem); /* Responsive font size */
     max-width: 50%; /* Limit width to 90% of parent */
     text-align: center; /* Center the text */
 }
@@ -345,11 +339,6 @@
 
 .responsive-text-p p {
     margin-bottom: 1rem;
-}
-
-.btn-cont {
-    display: flex;
-    justify-content: center;
 }
 
 @media (min-height: 700px) {
@@ -409,8 +398,6 @@
     bottom: 0; /* Align to the bottom */
     background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
     display: flex; /* Flexbox for centering content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
 }
 
 /* Card Body Styling */
@@ -419,35 +406,60 @@
     max-width: 60vw; /* Control card body width */
     display: flex;
     align-content: center;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .low-opacity-2 .card-body {
     height: auto;
     max-width: 100%;
     display: flex;
-    align-content: start;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-@media (max-width: 576px) {
-    .card-body .card-text-2 {
-        max-width: 85%;
+@media (min-width: 700px) {
+    .carousel-image  .low-opacity-2 {
+        display: flex;
     }
+    
     .text-container {
         display: flex;
-        align-content: center;
-        justify-content: center;
-        height: 100%;
+        flex-direction: column;
+        width: 50vw;
+        padding: 40px;
+    }
+    .card-body .card-text-2 {
+        max-width: 100%;
+    }
+    .low-opacity-2 .card-body {
+        height: auto;
+        max-width: 100%;
+        display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
     .text-container .btn-cont {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body .card-text-2 {
+        max-width: 90%;
+    }
+    .text-container {
+        display: flex;
+        align-content: center;
+        height: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 15vh;
+    }
+    .text-container .btn-cont {
         padding: 0 !important;
     }
+
     .low-opacity-2 {
         background: rgba(0, 0, 0, 0.6);
     }
@@ -464,7 +476,7 @@
 
 .card-text-2 {
     color: azure;
-    font-size: clamp(1rem, 3vw, 3rem); /* Responsive font size */
+    font-size: clamp(1rem, 2vw, 3rem); /* Responsive font size */
     max-width: 50%; /* Limit width to 90% of parent */
     text-align: center; /* Center the text */
 }
@@ -725,11 +737,6 @@
 
 .responsive-text-p p {
     margin-bottom: 1rem;
-}
-
-.btn-cont {
-    display: flex;
-    justify-content: center;
 }
 
 @media (min-height: 700px) {
