@@ -10,6 +10,7 @@ from django.core.files.base import ContentFile
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils import timezone
 from PIL import Image, ExifTags
+from django.core.files.storage import default_storage
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, password=None, **extra_fields):
@@ -81,13 +82,18 @@ class GalleryImage(models.Model):
     thumbnail = models.ImageField(upload_to='gallery_images/thumbnails/', editable=False, blank=True, null=True)
     title = models.CharField(max_length=255, blank=True)
     is_featured = models.BooleanField(default=False)
-    marked_for_deletion = models.BooleanField(default=False)  # New field to track deletion
+    marked_for_deletion = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title or f'Image for {self.page.title}'
 
     def save(self, *args, **kwargs):
         is_new = self.pk is None  # Check if this is a new instance
+
+        # Check if an existing thumbnail needs to be deleted
+        if not is_new and self.image_changed() and self.thumbnail:
+            self.delete_thumbnail()  # Delete the old thumbnail file
+
         super().save(*args, **kwargs)
 
         # Generate and save thumbnail if it's a new instance or if the image has changed
@@ -96,6 +102,13 @@ class GalleryImage(models.Model):
             thumbnail_name = self.generate_thumbnail_name()
             self.thumbnail.save(thumbnail_name, thumbnail_content, save=False)
             super().save(update_fields=['thumbnail'])  # Only save the thumbnail field
+
+    def delete_thumbnail(self):
+        """
+        Delete the existing thumbnail file from storage.
+        """
+        if self.thumbnail and default_storage.exists(self.thumbnail.name):
+            default_storage.delete(self.thumbnail.name)
 
     def image_changed(self):
         try:
@@ -109,9 +122,8 @@ class GalleryImage(models.Model):
         Generate a high-quality, compressed thumbnail with max dimensions of 400x400.
         Corrects orientation based on EXIF data before resizing.
         """
-        # Open the image and correct orientation based on EXIF data
         img = Image.open(image)
-        
+
         # Handle EXIF orientation data
         try:
             exif = img._getexif()
@@ -127,13 +139,10 @@ class GalleryImage(models.Model):
         except (AttributeError, KeyError, IndexError):
             pass  # EXIF data is not present or could not be processed
 
-        # Convert the image to RGB if it's in RGBA or other formats
-        img = img.convert("RGB")
+        img = img.convert("RGB")  # Convert to RGB if necessary
+        img.thumbnail(size, Image.LANCZOS)  # Resize with aspect ratio maintained
 
-        # Resize the image while maintaining aspect ratio
-        img.thumbnail(size, Image.LANCZOS)
-
-        # Save the thumbnail to a BytesIO object with optimized quality
+        # Save thumbnail to a BytesIO object
         thumb_io = BytesIO()
         img.save(thumb_io, format='JPEG', quality=100, optimize=True)
 
