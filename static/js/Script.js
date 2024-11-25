@@ -45,6 +45,25 @@ window.addEventListener('resize', function () {
     }
 });
 
+// Scroll to Top Functionality
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) { // Show the button when scrolled down 200px
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+scrollToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling to top
+    });
+});
+
 // // Function to handle scroll changes
 // function updateStickyBackground() {
 //     const navbar = document.querySelector('#navbar');
