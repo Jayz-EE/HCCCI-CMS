@@ -34,15 +34,9 @@ body h1{
     text-align: center;
     
 }
-div a{
-    
-    color:black !important;
-    
-}
 
 .card{
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    
+    border: 1px solid rgba(0, 0, 0, 0.3); 
 }
 
 .grade-list .row1 {
