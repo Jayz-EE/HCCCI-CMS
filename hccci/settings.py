@@ -78,6 +78,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     #cors 
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -191,14 +192,21 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Allow all domains to make requests
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
-# OR allow specific origins
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://172.16.0.61:8001",
     "http://127.0.0.1:8000",
-    "http://localhost:8000",
-    # Add other origins if needed
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://172.16.0.61:8001",
+    "http://127.0.0.1:8000",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 AUTH_USER_MODEL = 'website.CustomUser'
 

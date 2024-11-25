@@ -6,140 +6,7 @@
     margin: 0;
     padding: 0;
 }
-/* Header */
-.iPadHeader {
-    display: none;
-}
 
-header {
-    background-color: #655642;
-    margin-top: 0 !important;
-}
-.headerinfo  {
-    text-align: center;
-    color:rgba(255, 255, 255, 0.898) !important;
-}
-.headicon1, .headicon2 {
-    margin-top: .5rem;
-}
-.headicon2 {
-    margin-left: .5rem;
-    margin-bottom: .5rem;
-}
-.headicon3 {
-    margin-bottom: .5rem;
-    background-color: #655642;
-}
-.socialicon {
-    margin-bottom: .5rem;
-}
-.fa-facebook-f {
-    color: #f3f3f3;
-    margin: 2px;
-}
-.fa-youtube {
-    color: #f3f3f3;
-    margin: 2px;
-}
-/* navbar-------------------------------------------------- */
-.navpro {
-    display: none;
-}
-.ipadproenrollbtn, .ipadprologinbtn {
-    display: none;
-}
-.nvb {
-    top: 0;
-    width: 100%;
-    z-index: 9;
-}
-.hccci-logo {
-    left: 0;
-    width: 3rem;
-    height: 3rem;
-}
-
-.navactive {
-    font-weight: bold;
-    color: #011842 !important;
-}
-.ht {
-    padding-left: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    color: #011842 !important;
-    position: absolute;
-    margin-top: .4rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.hcccititle {
-    font-size: 0.6rem;
-    position: relative;
-}
-.nt1, .nti1 {
-    display: inline-block;
-    width:  2rem;
-    height: 2rem;
-}
-.navbar-toggler .nti1{
-    color: rgb(24, 24, 24) !important;
-}
-.nti1 {
-    margin-top: -6px;
-    margin-left: -13px;
-}
-.linecolor {
-    color: #c3b091;
-}
-.navul li{
-    font-size: 14px;
-    text-align: justify !important;
-    margin-right: 12px;
-    font-family: 'Roboto Slab', serif !important;
-    
-}
-.navul .nhome {
-    margin-top: -1px !important;
-}
-.nav-link{
-    color: #062969 !important;
-}
-.nav-link:hover {
-    font-weight: bold;
-}
-
-.nav-dm  li{
-    font-size: 12px;
-    text-align: center !important;
-    width: 100%;
-}
-.dropdown ul a:hover{
-    font-weight: bold !important;
-    background-color: #94c7e3;
-}
-nav .loginbtn {
-    font-weight: normal !important;
-    padding: 0 15px;
-    background-color:#447996;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: .3rem;
-    box-shadow: 1px 2px 6px rgba(0,0,0,.4);
-    margin: 20px 30px 5px 0 !important;
-    color: #f3f3f3;
-    margin-right: 10px;
-    border-radius: 15px;
-    border: transparent;
-}
-.sticky {
-    position: fixed;
-    margin-top: 0 !important;
-    width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    background-color: #EDEDED !important;
-  }
 /* Carousel */
 
 .carousel-item img {
@@ -881,7 +748,7 @@ footer {
 
 /* Default carousel image styling */
 .carousel-item img {
-    object-fit: fill; /* Ensures the image covers the area without distortion */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     object-position: top;
     width: 100%; /* Full width */
     height: auto; /* Let height adjust automatically for aspect ratio */
@@ -891,7 +758,7 @@ footer {
 /* For smaller screens */
 @media (max-width: 768px) {
     .carousel-item img {
-        height: 60vh; /* Adjust height for smaller screens */
+        height: 40vh; /* Adjust height for smaller screens */
     }
 }
 
@@ -899,12 +766,14 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
     .carousel-item img {
         height: 70vh; /* Adjust for tablets and medium screens */
+        object-position: 50% 20%;
     }
 }
 
 /* For large desktop screens */
 @media (min-width: 1025px) {
     .carousel-item img {
-        height: 85vh; /* Taller images on large screens */
+        height: 90vh; /* Taller images on large screens */
+        object-position: 50% 20%;
     }
 }
