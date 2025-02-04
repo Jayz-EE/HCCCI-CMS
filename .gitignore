@@ -66,10 +66,10 @@ coverage.xml
 *.secret
 
 # Static files
-/static/
+# /static/
 
 # Media files
-/media/
+# /media/
 
 # SQLite database files
 *.sqlite3
