@@ -1,6 +1,9 @@
 # hccci/settings/development.py
 
 from . import settings
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Override settings for development
 DEBUG = True
@@ -13,3 +16,6 @@ DATABASES = {
         'NAME': settings.BASE_DIR / 'db.sqlite3',
     }
 }
+
+ROOT_URLCONF = 'hccci.urls'
+
