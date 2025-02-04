@@ -1,21 +1,24 @@
-# hccci/settings/development.py
+# development.py
 
-from . import settings
-import os
+from .settings import *
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Override settings for development
+# Override settings specific to development
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # For local development, allow all hosts
 
-# Database configurations for local development (SQLite for dev)
+# Database settings for development (local PostgreSQL)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': settings.BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hccci_dev',
+        'USER': 'devuser',
+        'PASSWORD': 'devpassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
-ROOT_URLCONF = 'hccci.urls'
+# Static files setup for development
+STATIC_URL = '/static/'
 
+# Any other settings you wish to customize for development

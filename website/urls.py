@@ -1,7 +1,5 @@
 from django.urls import path
 from .views import *
-from django.conf import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
     path('', Home, name='Home'),
@@ -77,5 +75,3 @@ urlpatterns = [
     # # Import Database
     path('cms/import/', import_database, name='import_database'),
 ] 
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
