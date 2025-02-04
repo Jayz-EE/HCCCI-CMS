@@ -18,7 +18,9 @@ DATABASES = {
     }
 }
 
-# Static files setup for development
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
+STATIC_ROOT = None  
 
-# Any other settings you wish to customize for development
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
