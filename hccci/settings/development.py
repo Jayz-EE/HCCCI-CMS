@@ -1,26 +1,22 @@
 # development.py
 
 from .settings import *
+import environ
 
 # Override settings specific to development
 DEBUG = True
 ALLOWED_HOSTS = ['*']  # For local development, allow all hosts
 
-# Database settings for development (local PostgreSQL)
+env = environ.Env()
+environ.Env.read_env()
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hccci_dev',
-        'USER': 'devuser',
-        'PASSWORD': 'devpassword',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': env.db(), 
 }
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
-STATIC_ROOT = None  
+STATIC_ROOT = BASE_DIR  
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
