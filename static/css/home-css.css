@@ -151,7 +151,6 @@
 }
 
 .future-button {
-    border: 4px solid rgba(0, 0, 0, 0.527);
     color: #3d3d3d;
     border-radius: 15px;
     padding: 5px 20px;
@@ -160,7 +159,6 @@
 }
 
 .future-button:hover {
-    border: 4px solid rgba(0, 0, 0, 0.527);
     background-color: rgba(0, 0, 0, 0.527);
     color: azure;
 }
@@ -351,7 +349,6 @@
     font-size: clamp(1rem, 2vw, 1.25rem); /* Ensure the button text is responsive */
     padding: 10px 20px;
     color: #fff;
-    background-color: #007bff; /* Example color for the button */
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
@@ -364,7 +361,6 @@
 }
 
 .future-button:hover {
-    background-color: #0056b3; /* Darken button on hover */
     color: #fff;
 }
 
@@ -549,7 +545,6 @@
 }
 
 .future-button {
-    border: 4px solid rgba(0, 0, 0, 0.527);
     color: #3d3d3d;
     border-radius: 15px;
     padding: 5px 20px;
@@ -558,7 +553,6 @@
 }
 
 .future-button:hover {
-    border: 4px solid rgba(0, 0, 0, 0.527);
     background-color: rgba(0, 0, 0, 0.527);
     color: azure;
 }
@@ -748,13 +742,13 @@
 .future-button {
     font-size: clamp(1rem, 2vw, 1.25rem); /* Ensure the button text is responsive */
     padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff; /* Example color for the button */
+    color: #3d3d3d;
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
+    border: 1px #3d3d3d solid;
 }
 
 .future-button i {
@@ -762,6 +756,5 @@
 }
 
 .future-button:hover {
-    background-color: #0056b3; /* Darken button on hover */
     color: #fff;
 }

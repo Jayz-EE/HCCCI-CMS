@@ -34,7 +34,7 @@ p, h1, h2, h3, h4, h5, h6, span, button, a {
 /* General Styles */
 body {
     font-family: 'Roboto Slab', serif;
-    background-color: #FFF2E1;
+    background-color: #FFF2E1 !important;
     color: #333;
 }
 

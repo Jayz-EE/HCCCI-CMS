@@ -21,6 +21,11 @@ from django.utils.timezone import make_aware
 from datetime import datetime
 from django.utils.timezone import make_aware, is_aware
 from django.utils import timezone
+from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib import messages
+from django.utils.text import slugify
+from .models import Page, ContentSection, GalleryImage
+from .forms import PageForm
 
 # Home page view
 def Home(request):
@@ -112,14 +117,6 @@ def create_page(request):
         page_form = PageForm()
 
     return render(request, 'cms_plugins/create_page.html', {'form': page_form})
-
-from django.shortcuts import get_object_or_404, redirect, render
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.utils.text import slugify
-from .models import Page, ContentSection, GalleryImage
-from .forms import PageForm
-
 
 @login_required
 def edit_page(request, slug):
@@ -431,11 +428,15 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            messages.success(request, 'Welcome back, {}!'.format(user.username))
+            messages.success(request, f'Welcome back, {user.username}!')
             
             # Get the next parameter from the request or fallback to the cms_dashboard
             next_url = request.GET.get('next', 'cms_dashboard')
-            return redirect(next_url)  # Redirect to 'next' or 'cms_dashboard' if 'next' is not provided
+            return redirect(next_url)
+        else:
+            # Form is invalid, collect error messages from the form
+            for error in form.non_field_errors():
+                messages.error(request, error)
     else:
         form = CustomLoginForm()
 

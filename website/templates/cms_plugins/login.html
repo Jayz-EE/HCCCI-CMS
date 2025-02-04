@@ -36,6 +36,9 @@
         color: #FF5349;
     }
 
+    .input-group-text {
+        cursor: pointer;
+    }
 </style>
 {% endblock title %}
 
@@ -44,24 +47,64 @@
     <h2 class="text-center mb-4">CMS Login</h2>
     <form method="POST" class="border p-4 rounded shadow">
         {% csrf_token %}
+        
+        <!-- General form errors -->
+        {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+                {% for error in form.non_field_errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Username field -->
         <div class="form-group mt-3">
             <label for="id_username">Username</label>
-            <input type="text" name="username" id="id_username" class="form-control" value="{{ form.username.value|default_if_none:'' }}">
+            <input type="text" name="username" id="id_username" class="form-control {% if form.username.errors %}is-invalid{% endif %}" value="{{ form.username.value|default_if_none:'' }}">
             {% if form.username.errors %}
-                <div class="text-danger">{{ form.username.errors }}</div>
+                <div class="invalid-feedback">
+                    {{ form.username.errors|join:", " }}
+                </div>
             {% endif %}
         </div>
 
+        <!-- Password field -->
         <div class="form-group mt-3">
             <label for="id_password">Password</label>
-            <input type="password" name="password" id="id_password" class="form-control" value="{{ form.password.value|default_if_none:'' }}">
+            <div class="input-group">
+                <input type="password" name="password" id="id_password" class="form-control {% if form.password.errors %}is-invalid{% endif %}" value="{{ form.password.value|default_if_none:'' }}">
+                <span class="input-group-text" id="toggle-password">
+                    <i class="fas fa-eye" id="password-icon"></i>
+                </span>
+            </div>
             {% if form.password.errors %}
-                <div class="text-danger">{{ form.password.errors }}</div>
+                <div class="invalid-feedback">
+                    {{ form.password.errors|join:", " }}
+                </div>
             {% endif %}
         </div>
+
+        <!-- Submit button -->
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary btn-block mt-3 w-25">Login</button>
         </div>
     </form>
 </div>
+
+<!-- Password Toggle Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const togglePassword = document.getElementById('toggle-password');
+        const passwordInput = document.getElementById('id_password');
+        const passwordIcon = document.getElementById('password-icon');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            // Toggle the icon
+            passwordIcon.classList.toggle('fa-eye');
+            passwordIcon.classList.toggle('fa-eye-slash');
+        });
+    });
+</script>
 {% endblock %}

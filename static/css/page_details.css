@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 /* Gallery Styles */
 
-.card-container {
-    background: rgba(255, 255, 255, 0.4);
-}
-
 .card {
     padding: 1.5em;
 }
@@ -141,12 +137,8 @@
     max-height: 85vh;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
-/* Gallery Styles */
-
 .card-container {
-    background: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .card {

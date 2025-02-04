@@ -6,7 +6,6 @@
 .navbar .nav-link {
     color: #062969 !important;
     font-size: 0.9rem;
-    margin-right: 20px;
 }
 
 .navbar .nav-item:hover {
@@ -74,7 +73,7 @@
     font-family: 'Roboto Slab', serif;
     color: #FFFFFF;
     margin-right: 10px;
-    margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .loginbtn:hover {
@@ -82,6 +81,10 @@
     color: #447996;
     border: 1px solid #447996;
     font-weight: bold;
+}
+
+.navbar-nav li {
+    white-space: nowrap;
 }
 
 /* Media Queries for Responsiveness */
@@ -125,6 +128,7 @@
     .loginbtn {
         font-size: 0.8rem;
         margin: 10px 0;
+        width: 100%;
     }
     .navbar-nav {
         margin-left: 0;
@@ -174,6 +178,7 @@
         padding: 6px 20px;
         font-size: 0.75rem;
         margin-bottom: 15px;
+        width: 100%;
     }
 
     .hcccititle {
@@ -222,6 +227,8 @@
 
     .navbar-nav {
         margin-left: 0;
+        align-items: start !important;
+        
     }
 }
 
@@ -250,9 +257,11 @@
 }
 
 .navbar-nav {
+    align-items: center;
     margin-left: 0;
     height: 100%;
     transition: 1s ease-in-out !important;
+    justify-content: space-evenly;
 }
 
 @media (min-width: 990px) {
@@ -283,6 +292,7 @@
         flex-direction: column !important;
         height: 100%;
         width: 100%;
+        align-items: start !important;
     }
     #mynavbar {
         display: flex;
@@ -295,5 +305,3 @@
       margin-left: 30px;
     }
   }
-
-  
