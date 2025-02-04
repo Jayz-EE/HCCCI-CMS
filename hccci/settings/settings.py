@@ -203,6 +203,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://172.16.0.61:8001",
     "http://127.0.0.1:8000",
+    "https://hccci-cms.onrender.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -211,6 +212,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://testweb.hccci.edu.ph",
     "https://testweb.hccci.edu.ph",
+    "https://hccci-cms.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
