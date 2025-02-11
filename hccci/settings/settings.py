@@ -224,3 +224,4 @@ LOGIN_URL = '/cms/login/'
 SESSION_COOKIE_AGE = 7200  # Session will expire after 2 hours (7200 seconds)
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Session expires when the browser is closed
 
+WKHTMLTOPDF_CMD = "/opt/render/.local/bin/wkhtmltopdf"
