@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Create a directory for wkhtmltopdf
+# Create directory for wkhtmltopdf
 mkdir -p $HOME/.local/bin
 
-# Download the prebuilt binary directly
-curl -L -o $HOME/.local/bin/wkhtmltopdf https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6_linux-generic-amd64.tar.xz
+# Download the correct prebuilt binary for Linux
+curl -L -o $HOME/.local/bin/wkhtmltopdf https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.6/wkhtmltox_0.12.6-1.bionic_amd64.deb
 
-# Extract the binary
-tar -xJf $HOME/.local/bin/wkhtmltopdf -C $HOME/.local/bin/
+# Install the downloaded .deb file
+dpkg -i $HOME/.local/bin/wkhtmltopdf
 
 # Ensure it's executable
 chmod +x $HOME/.local/bin/wkhtmltopdf
