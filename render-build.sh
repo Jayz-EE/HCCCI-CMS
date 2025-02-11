@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-sudo apt-get update
-sudo apt-get install -y wkhtmltopdf
+apt-get update
+apt-get install -y wkhtmltopdf
